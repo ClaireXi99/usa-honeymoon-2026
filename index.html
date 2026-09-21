@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="2026年9月29日至10月14日美国蜜月执行路书">
+  <meta name="theme-color" content="#12283a">
+  <title>2026 美国蜜月之旅</title>
+  <style>
+    :root{
+      --ink:#152536;--muted:#667585;--paper:#f4f1ea;--card:#fffefa;--line:#dcd5ca;
+      --navy:#12283a;--sea:#247c7a;--orange:#ef7547;--blue:#3a6f9b;--green:#31745c;
+      --warn:#9b4a27;--shadow:0 10px 30px rgba(20,37,54,.08);--radius:18px
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.58}
+    a{color:inherit}
+    button{font:inherit}
+    .shell{width:min(1180px,calc(100% - 34px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:30;background:rgba(18,40,58,.96);color:#fff;border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px)}
+    .topbar .shell{display:flex;align-items:center;gap:20px;min-height:66px}
+    .brand{white-space:nowrap;font-weight:800}.brand small{display:block;color:#b9cad7;font-size:10px;letter-spacing:.13em}
+    .tabs{display:flex;gap:5px;overflow:auto;padding:8px 0;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+    .tab{border:0;background:transparent;color:#c2d1dc;border-radius:999px;padding:9px 13px;cursor:pointer;white-space:nowrap;font-size:13px;font-weight:750}
+    .tab.active{background:var(--orange);color:#fff}
+    .hero{background:linear-gradient(135deg,#102436,#1b5062);color:#fff;padding:54px 0 40px}
+    .hero-grid{display:grid;grid-template-columns:1.35fr .75fr;gap:32px;align-items:end}
+    .eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#ffca9d}
+    h1,h2,h3,p{margin-top:0}h1{font-size:clamp(40px,6vw,70px);line-height:1.02;letter-spacing:-.04em;margin:10px 0 16px}h2{font-size:clamp(27px,4vw,42px);line-height:1.13;letter-spacing:-.025em;margin-bottom:8px}h3{line-height:1.25;margin-bottom:8px}
+    .hero p{color:#d8e4eb;max-width:720px;margin-bottom:0}
+    .ticket{background:#fffaf1;color:var(--ink);border-radius:18px;padding:22px;box-shadow:0 22px 55px rgba(0,0,0,.23)}
+    .ticket strong{display:block;font-size:21px;margin:10px 0 3px}.ticket small{color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}.stat{border:1px solid rgba(255,255,255,.16);border-radius:13px;padding:12px;background:rgba(255,255,255,.07)}.stat b{display:block}.stat span{font-size:12px;color:#bdd0dc}
+    main{padding:32px 0 72px}.panel{display:none}.panel.active{display:block;animation:in .22s ease}@keyframes in{from{opacity:.55;transform:translateY(5px)}}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:26px;margin:18px 0}.section-head p{max-width:530px;margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:15px}.span-4{grid-column:span 4}.span-5{grid-column:span 5}.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}.span-12{grid-column:1/-1}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 4px 18px rgba(20,37,54,.04)}.card p{color:var(--muted);margin-bottom:10px}.card p:last-child{margin-bottom:0}
+    .dark{background:var(--navy);color:#fff;border:0}.dark p{color:#d8e4eb}.dark a{color:#fff}.accent{border-left:4px solid var(--orange)}
+    .badge{display:inline-flex;border-radius:999px;padding:4px 9px;font-size:11px;font-weight:800;background:#e9f3f1;color:#1e6864;margin-bottom:8px}.badge.orange{background:#ffeadf;color:#9f431e}.badge.blue{background:#e5eef6;color:#315f84}.badge.darkbadge{background:#1b3449;color:#fff}
+    .notice{border:1px solid #adcdbc;background:#eff8f3;border-radius:15px;padding:15px 17px;margin:15px 0}.notice.warn{border-color:#e1b095;background:#fff5ed}.notice b{display:block}.notice p{margin:3px 0 0;color:#587064}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:var(--card)}table{width:100%;border-collapse:collapse;min-width:820px}th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid #e8e1d7}th{background:#eee9e1;color:var(--muted);font-size:11px;letter-spacing:.05em}td{font-size:14px}tr:last-child td{border-bottom:0}.ok{color:var(--green);font-weight:800}.pending{color:var(--warn);font-weight:800}
+    .timeline{display:grid;gap:9px}.time-row{display:grid;grid-template-columns:92px 1fr;gap:12px}.time{font-weight:850;color:var(--orange);font-size:14px}.time-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 15px}.time-card strong{display:block}.time-card p{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:8px 12px;background:var(--navy);border:1px solid var(--navy);color:#fff;text-decoration:none;font-size:12px;font-weight:800}.btn.light{background:transparent;color:var(--navy)}.btn.xhs{background:#ee3f5a;border-color:#ee3f5a}.btn.orange{background:var(--orange);border-color:var(--orange)}
+    .route-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:22px 0}.route-stop{border-top:3px solid var(--sea);padding:10px 7px;background:rgba(255,255,255,.55);border-radius:0 0 10px 10px;font-size:12px;color:var(--muted)}.route-stop b{display:block;color:var(--ink);font-size:14px}
+    .map{overflow:hidden;border-radius:18px;border:1px solid var(--line);background:#dae6e3}.map iframe{width:100%;height:340px;border:0;display:block}.map-note{padding:12px 14px;background:#fff;font-size:12px;color:var(--muted)}
+    .shot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.shot{margin:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}.shot img{width:100%;height:310px;object-fit:cover;display:block}.shot figcaption{padding:12px 13px;font-size:12px;color:var(--muted)}.shot figcaption b{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}.shot .source{display:inline-block;margin-top:6px;color:#315f84;text-underline-offset:2px}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.compare>div{border:1px solid var(--line);border-radius:15px;padding:15px;background:#fff}.compare .recommended{border:2px solid var(--orange);background:#fff8f3}.compare ul,.card ul{padding-left:20px;margin:9px 0}.compare li,.card li{margin:5px 0}
+    .checklist{list-style:none;padding:0!important;margin:0;display:grid;gap:7px}.checklist li{position:relative;padding-left:25px}.checklist li:before{content:"✓";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#dcefe7;color:var(--green);font-size:11px;font-weight:900}
+    .source-list{columns:2;font-size:12px;color:var(--muted)}.source-list a{display:block;margin:7px 0;color:#315f84}
+    .daybook{display:grid;gap:18px}.day{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+    .day-head{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:18px 20px;background:#12283a;color:#fff}.day-head h3{margin:0;font-size:22px}.day-head p{margin:3px 0 0;color:#c8d7e1;font-size:13px}.day-head .day-no{font-size:12px;font-weight:850;color:#ffca9d;white-space:nowrap}
+    .day-body{padding:18px 20px}.detail-grid{display:grid;grid-template-columns:1.45fr .75fr;gap:15px}.ops{border:1px solid var(--line);border-radius:15px;background:#fff;padding:14px}.ops h4{margin:0 0 8px}.ops p{margin:5px 0;color:var(--muted);font-size:13px}.ops b{color:var(--ink)}
+    .photo-duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.photo-mini{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.photo-mini img{width:100%;height:240px;object-fit:cover;display:block}.photo-mini figcaption{padding:10px 11px;color:var(--muted);font-size:12px}.photo-mini b{color:var(--ink)}
+    .micro{font-size:11px;color:var(--muted)}.fee{color:var(--warn);font-weight:800}.safety{border-left:3px solid var(--warn);padding-left:10px}.route-note{border-left:3px solid var(--sea);padding-left:10px}.tip{display:inline-block;margin-top:7px;padding:4px 8px;border-radius:8px;background:#fff1d6;color:#7c5012;font-size:11px;font-weight:800}
+    footer{background:#0c1b28;color:#b8c8d4;padding:26px 0;font-size:12px}
+    @media(max-width:860px){.hero-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.span-4,.span-5,.span-6,.span-7,.span-8{grid-column:1/-1}.shot-grid{grid-template-columns:1fr 1fr}.route-strip{grid-template-columns:1fr 1fr 1fr}.brand{display:none}.section-head{align-items:start;flex-direction:column}.source-list{columns:1}.detail-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.shell{width:min(100% - 22px,1180px)}.hero{padding-top:36px}.stats,.shot-grid,.compare,.route-strip,.photo-duo{grid-template-columns:1fr}.time-row{grid-template-columns:1fr;gap:3px}.shot img,.photo-mini img{height:300px}h1{font-size:41px}.card{padding:17px}.day-head{align-items:flex-start;flex-direction:column}}
+    @media print{.topbar,.actions{display:none!important}.panel{display:block!important;break-before:page}.hero{padding:25px 0}.card{box-shadow:none}.map iframe{height:180px}}
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="城市导航">
+    <div class="shell">
+      <div class="brand">美国 · 2026<small>蜜月执行路书</small></div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="overview">总览</button>
+        <button class="tab" data-tab="daily">逐日执行</button>
+        <button class="tab" data-tab="sf">旧金山</button>
+        <button class="tab" data-tab="road">硅谷与海岸</button>
+        <button class="tab" data-tab="la">洛杉矶</button>
+        <button class="tab" data-tab="vegas">拉斯维加斯</button>
+        <button class="tab" data-tab="nyc">纽约</button>
+        <button class="tab" data-tab="tips">小费</button>
+        <button class="tab" data-tab="book">交通·采购·安全</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <div class="eyebrow">2026年9月29日—10月14日</div>
+        <h1>美国蜜月之旅</h1>
+        <p>Shanghai（上海）→ San Francisco（旧金山）→ Silicon Valley（硅谷）→ Cambria（坎布里亚）→ Los Angeles（洛杉矶）→ Las Vegas（拉斯维加斯）→ New York City（纽约）→ Shanghai（上海）</p>
+        <div class="stats">
+          <div class="stat"><b>15晚</b><span>含机场前夜</span></div>
+          <div class="stat"><b>2天租车</b><span>San Francisco（旧金山）取、Hollywood（好莱坞）还</span></div>
+          <div class="stat"><b>2段美国国内航班</b><span>Hollywood Burbank Airport（好莱坞伯班克机场）→ Las Vegas（拉斯维加斯）→ New York City（纽约）</span></div>
+          <div class="stat"><b>7个住宿点</b><span>住宿均已确定</span></div>
+        </div>
+      </div>
+      <aside class="ticket">
+        <span class="badge orange">国际机票已确认</span>
+        <strong>9月29日 11:30</strong>
+        <small>Shanghai（上海）出发，同日10:30到达 San Francisco（旧金山）</small>
+        <strong>10月14日 06:30</strong>
+        <small>John F. Kennedy International Airport（JFK，纽约肯尼迪国际机场）返回 Shanghai（上海）</small>
+      </aside>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="panel active" id="overview" role="tabpanel">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">行程总览</div><h2>执行版</h2></div>
+        <p>先完成交通与入住，再安排景点。每天保留一组可删除项目。</p>
+      </div>
+
+      <div class="route-strip">
+        <div class="route-stop"><b>San Francisco（旧金山）</b>9月29日</div>
+        <div class="route-stop"><b>Silicon Valley（硅谷）/ Cambria（坎布里亚）</b>9月30日</div>
+        <div class="route-stop"><b>Los Angeles（洛杉矶）</b>10月1—6日</div>
+        <div class="route-stop"><b>Las Vegas（拉斯维加斯）</b>10月6—10日</div>
+        <div class="route-stop"><b>New York City（纽约）</b>10月10—13日</div>
+        <div class="route-stop"><b>JFK Airport（肯尼迪机场）</b>10月13—14日</div>
+      </div>
+
+      <div class="notice"><b>本版四个结论</b><p>租车确定用 Avis（安飞士租车）：9月29日在 San Francisco International Airport（SFO，旧金山国际机场）取车，10月1日在 1333 North Highland Avenue（北高地大道1333号，门店代码Z9U）的 Hollywood（好莱坞）门店还车；10月3日晚在 Kali Restaurant（卡利餐厅）安排米其林一星餐厅；10月6—8日住 Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店），10月8—10日住 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）；10月4日只游玩 Disneyland Park（迪士尼乐园主园），购买 1-Day, 1-Park Ticket（单日单园票）。</p></div>
+
+      <div class="section-head"><div><h2>酒店付款核对</h2></div><p>2026年9月21日按 Booking.com（缤客）有效订单逐笔核对；押金为信用卡预授权，不等于实际消费。</p></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>住宿</th><th>订单状态</th><th>还需要支付</th><th>入住时准备</th></tr></thead>
+          <tbody>
+            <tr><td>Queen Anne Hotel（安妮女王酒店）<br>9月29—30日</td><td><span class="ok">已付 US$243.17</span><br>订单原总价 US$261.10，其中 Booking.com（缤客）承担 US$17.93</td><td>订单未显示强制尾款</td><td>带同名信用卡；可能做常规杂费预授权。早餐已含。</td></tr>
+            <tr><td>El Colibri Hotel &amp; Spa（雅黛科乐比酒店及水疗中心）<br>9月30日—10月1日</td><td><span class="ok">已付 ¥1,057.29</span></td><td>订单未显示强制尾款</td><td>带同名信用卡；可能做常规杂费预授权。</td></tr>
+            <tr><td>Loews Hollywood Hotel（洛伊斯好莱坞酒店）<br>10月1—6日</td><td><span class="ok">已付 US$1,375.32</span></td><td>订单未显示强制尾款；每晚 US$35.40 的 Destination Fee（目的地服务费）已计入并付清</td><td>可能做杂费预授权。房价不含早餐；不在酒店过夜停车可避免停车费。</td></tr>
+            <tr><td>Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）<br>10月6—8日</td><td><span class="badge orange">尚未预付</span></td><td><b>US$335.72</b>，含房费、税费及两晚 Resort Fee（度假村费），不要重复再加度假村费</td><td><b>US$150</b> 可退损坏押金预授权；房型到店分配，早餐不含。</td></tr>
+            <tr><td>Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）<br>10月8—10日</td><td>外部平台已订</td><td>Booking.com（缤客）账号内无法核对；以外部订单的“已付 / 到店付 / Resort Fee（度假村费）”为准</td><td>把外部订单最终价格页截图保存到手机；确认押金金额。</td></tr>
+            <tr><td>Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）<br>10月10—13日</td><td><span class="badge orange">酒店收款</span><br>入住前约2—3天预扣首晚房费及税费</td><td><b>订单总价 US$1,310.67</b>；已含每晚 US$28.45 度假村费及每晚 US$3.50 城市税</td><td><b>US$100/晚</b>杂费预授权，3晚合计 US$300；退房后按银行时间释放。</td></tr>
+            <tr><td>John F. Kennedy International Airport（JFK，纽约肯尼迪国际机场）附近酒店<br>10月13—14日</td><td>外部平台已订</td><td>Booking.com（缤客）账号内无法核对</td><td>确认房费是否付清、押金、凌晨接驳是否免费及是否需预约。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice"><b>当前可确认的未付酒店款</b><p>Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）US$335.72，加上 Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）US$1,310.67；合计 <b>US$1,646.39</b>。另准备两家酒店合计 <b>US$450</b> 的可退预授权额度。Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）和 JFK（纽约肯尼迪国际机场）附近酒店不在 Booking.com（缤客）账号中，尚未计入。</p></div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>日期</th><th>住宿</th><th>主安排</th><th>交通</th><th>可删除项</th></tr></thead>
+          <tbody>
+            <tr><td><b>9月29日</b></td><td><span class="ok">Queen Anne Hotel（安妮女王酒店）已订</span></td><td>Ferry Building（旧金山渡轮大楼）、California Street Cable Car（加州街缆车）、Golden Gate Bridge（金门大桥）</td><td>San Francisco International Airport（SFO，旧金山国际机场）取车</td><td>Chase Center（大通中心）外观</td></tr>
+            <tr><td><b>9月30日</b></td><td><span class="ok">El Colibri Hotel &amp; Spa（雅黛科乐比酒店及水疗中心）已订 ¥1,057</span></td><td>Stanford University（斯坦福大学）、Apple Park Visitor Center（苹果园区游客中心）、Moonstone Beach Boardwalk（月光石海滩木栈道）</td><td>US-101（美国101号公路）</td><td>Apple Park Visitor Center Roof Terrace（苹果园区游客中心屋顶露台）</td></tr>
+            <tr><td><b>10月1日</b></td><td><span class="ok">Loews Hollywood Hotel（洛伊斯好莱坞酒店）已订</span></td><td>Boathouse at Hendry's Beach（亨德里海滩船屋餐厅）早午餐、Avis Car Rental – Hollywood（安飞士租车好莱坞门店）还车</td><td>US-101（美国101号公路）+ 网约车</td><td>Hendry's Beach（亨德里海滩）短停</td></tr>
+            <tr><td><b>10月2日</b></td><td>Loews Hollywood Hotel（洛伊斯好莱坞酒店）</td><td>Universal Studios Hollywood（好莱坞环球影城）</td><td>Metro B Line（洛杉矶地铁B线）</td><td>Universal CityWalk Hollywood（好莱坞环球城市大道）晚餐</td></tr>
+            <tr><td><b>10月3日</b></td><td>Loews Hollywood Hotel（洛伊斯好莱坞酒店）</td><td>Lake Hollywood Park（好莱坞湖公园）、Academy Museum of Motion Pictures（美国电影艺术与科学学院博物馆）、Griffith Observatory（格里菲斯天文台）、Kali Restaurant（卡利餐厅）</td><td>网约车</td><td>Academy Museum of Motion Pictures（美国电影艺术与科学学院博物馆）</td></tr>
+            <tr><td><b>10月4日</b></td><td>Loews Hollywood Hotel（洛伊斯好莱坞酒店）</td><td>Disneyland Park（迪士尼乐园主园）单园</td><td>往返网约车</td><td>Sleeping Beauty Castle（睡美人城堡）</td></tr>
+            <tr><td><b>10月5日</b></td><td>Loews Hollywood Hotel（洛伊斯好莱坞酒店）</td><td>Fairfax Avenue（费尔法克斯大道）、Rodeo Drive（罗迪欧大道）、Santa Monica Pier（圣塔莫尼卡码头）</td><td>网约车</td><td>Rodeo Drive（罗迪欧大道）</td></tr>
+            <tr><td><b>10月6日</b></td><td><span class="ok">Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）已订</span></td><td>12:10飞 Las Vegas（拉斯维加斯）、Flamingo Wildlife Habitat（弗拉明戈野生动物栖息地）、Fountains of Bellagio（百乐宫喷泉）</td><td>Southwest Airlines（西南航空）直飞 + 网约车 + 步行</td><td>The Forum Shops at Caesars Palace（凯撒宫购物中心）</td></tr>
+            <tr><td><b>10月7日</b></td><td>Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）</td><td>Lower Antelope Canyon（下羚羊谷）、Horseshoe Bend（马蹄湾）一日团</td><td>07:00小团</td><td>无</td></tr>
+            <tr><td><b>10月8日</b></td><td><span class="ok">Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）已订</span></td><td>Battlefield Vegas（战场拉斯维加斯射击场）、购物、换酒店、O by Cirque du Soleil（太阳马戏《O》）</td><td>网约车 + 步行</td><td>Fashion Show Mall（时尚秀购物中心）</td></tr>
+            <tr><td><b>10月9日</b></td><td>Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）</td><td>Sphere（拉斯维加斯巨型球）、酒店休息、演唱会</td><td>网约车</td><td>演唱会</td></tr>
+            <tr><td><b>10月10日</b></td><td><span class="ok">Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）已订 ¥8,778</span></td><td>09:59飞 New York City（纽约），18:12到达</td><td>Delta Air Lines（达美航空）直飞</td><td>当晚不排景点</td></tr>
+            <tr><td><b>10月11日</b></td><td>Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）</td><td>Empire State Building（帝国大厦）、Lower Manhattan（曼哈顿下城）、Statue of Liberty（自由女神像）、DUMBO（丹波区）、Brooklyn Bridge（布鲁克林大桥）</td><td>地铁 + 两段渡轮 + 步行</td><td>9/11 Museum（九一一纪念博物馆）内部</td></tr>
+            <tr><td><b>10月12日</b></td><td>Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）</td><td>Central Park（中央公园）、Fifth Avenue（第五大道）、Grand Central Terminal（中央车站）、Times Square（时代广场）、Madison Square Garden（麦迪逊广场花园）季前赛</td><td>步行 + 地铁</td><td>登顶观景台</td></tr>
+            <tr><td><b>10月13日</b></td><td><span class="ok">John F. Kennedy International Airport（纽约肯尼迪国际机场）附近酒店已订</span></td><td>Hudson Yards（哈德逊城市广场）、The High Line（高线公园）、Chelsea Market（切尔西市场）、Little Island（小岛公园）、顺路购物</td><td>步行 + 3段出租车</td><td>Whitney Museum of American Art（惠特尼美国艺术博物馆）</td></tr>
+            <tr><td><b>10月14日</b></td><td>返程</td><td>03:30前到航站楼，06:30起飞</td><td>酒店接驳 / 出租车</td><td>无</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid" style="margin-top:15px">
+        <article class="card span-4 dark"><span class="badge orange">租车已定方向</span><h3>Avis Car Rental – Hollywood（安飞士租车好莱坞门店）</h3><p>选择 1333 North Highland Avenue（北高地大道1333号，门店代码Z9U），不要选酒店大堂门店。10月1日周四17:00关门，目标16:15到店、16:40前完成交车。</p></article>
+        <article class="card span-4"><span class="badge blue">机票</span><h3>10月6日</h3><p>Southwest Airlines（西南航空）12:10—13:20，Hollywood Burbank Airport（BUR，好莱坞伯班克机场）→ Harry Reid International Airport（LAS，哈里·里德国际机场）。两人票面约¥2,738。</p></article>
+        <article class="card span-4"><span class="badge blue">机票</span><h3>10月10日</h3><p>Delta Air Lines（达美航空）09:59—18:12，Harry Reid International Airport（LAS，哈里·里德国际机场）→ John F. Kennedy International Airport（JFK，纽约肯尼迪国际机场）。两人票面约¥2,323。</p></article>
+      </div>
+    </section>
+
+    <section class="panel" id="daily" role="tabpanel">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">9月29日—10月14日</div><h2>逐日执行</h2></div>
+        <p>时间是目标值，不是强制打卡。路况、营业时间与票面规则以出发当天为准。</p>
+      </div>
+
+      <div class="notice"><b>名称与执行规则</b><p>地点统一使用 Google Maps（谷歌地图）可搜索的英文名称，后接中文解释；例如 California Street Cable Car（加州街缆车）是线路名称，California St &amp; Powell St（加州街与鲍威尔街交叉口）是拍照点。每天只保留一条主线；拍照不站车道、轨道或封闭区域；车辆内不留行李。所有需要付小费的节点已按日期列入“小费”页面。</p></div>
+
+      <div class="section-head"><div><h2>单人拍摄与化妆安排</h2></div><p>以给女生拍单人照为主；双人照片只作为背景比例和光线参考。</p></div>
+      <div class="grid">
+        <article class="card span-6"><span class="badge orange">全身照</span><h3>默认镜头与机位</h3><ul><li>优先手机1.5—2倍，摄影者后退取景；不用0.5倍贴近人物拍全身。</li><li>镜头保持在腰部至胸口高度，手机竖直，不明显向下压；脚下保留少量空间。</li><li>先拍站姿，再拍慢走、回头和整理头发；每个动作连拍3—5张。</li><li>人物与背景拉开距离，用道路、桥体或建筑线条做纵深。</li></ul></article>
+        <article class="card span-6"><span class="badge blue">半身与夜景</span><h3>拍摄顺序</h3><ul><li>身体转约30—45度，肩线放松；先看镜头，再看向景物，各拍一组。</li><li>日落前用侧逆光，点按人脸后稍降曝光；夜景先用1倍，人物停稳后再拍。</li><li>到达机位先试拍3张并检查脸部、衣服和背景，再继续，不累计大量重复照片。</li><li>景点拥挤时先拍半身或走动照，不为了空背景占用车道和主通道。</li></ul></article>
+      </div>
+
+      <div class="table-wrap" style="margin-top:15px">
+        <table>
+          <thead><tr><th>日期</th><th>建议</th><th>预留时间</th><th>主要拍摄内容</th></tr></thead>
+          <tbody>
+            <tr><td>9月29日</td><td>不安排完整化妆</td><td>13:20—13:50快速整理</td><td>California Street Cable Car（加州街缆车）、Golden Gate Bridge（金门大桥）</td></tr>
+            <tr><td>9月30日</td><td><b>完整化妆</b></td><td>06:30—07:30</td><td>Stanford University（斯坦福大学）、Moonstone Beach Boardwalk（月光石海滩木栈道）</td></tr>
+            <tr><td>10月1日</td><td>不安排完整化妆</td><td>07:05—07:30整理与防晒</td><td>Hendry's Beach（亨德里海滩）短拍</td></tr>
+            <tr><td>10月2日</td><td><b>轻妆，仍预留1小时</b></td><td>06:00—07:00</td><td>Universal Studios Hollywood（好莱坞环球影城）；以防晒、持妆为主</td></tr>
+            <tr><td>10月3日</td><td><b>完整化妆</b></td><td>07:15—08:15</td><td>Hollywood Sign（好莱坞标志）、Griffith Observatory（格里菲斯天文台）、晚餐</td></tr>
+            <tr><td>10月4日</td><td><b>完整化妆</b></td><td>05:00—06:00</td><td>Main Street, U.S.A.（美国小镇大街）、Sleeping Beauty Castle（睡美人城堡）与夜间表演</td></tr>
+            <tr><td>10月5日</td><td><b>完整化妆</b></td><td>08:15—09:15</td><td>Rodeo Drive（罗迪欧大道）、Santa Monica State Beach（圣塔莫尼卡州立海滩）日落</td></tr>
+            <tr><td>10月6日</td><td><b>抵达后完整化妆</b></td><td>15:45—16:45</td><td>Flamingo Wildlife Habitat（弗拉明戈野生动物栖息地）、Fountains of Bellagio（百乐宫喷泉）</td></tr>
+            <tr><td>10月7日</td><td><b>完整化妆</b></td><td>04:45—05:45</td><td>Lower Antelope Canyon（下羚羊谷）、Horseshoe Bend（马蹄湾）</td></tr>
+            <tr><td>10月8日</td><td><b>晚间完整化妆</b></td><td>15:45—16:45</td><td>O by Cirque du Soleil（太阳马戏《O》）前的酒店与夜景</td></tr>
+            <tr><td>10月9日</td><td><b>完整化妆</b></td><td>08:30—09:30</td><td>Sphere（拉斯维加斯巨型球）、演唱会</td></tr>
+            <tr><td>10月10日</td><td>不安排完整化妆</td><td>06:45—07:05整理</td><td>飞行转场，不设正式拍摄任务</td></tr>
+            <tr><td>10月11日</td><td><b>完整化妆</b></td><td>07:15—08:15</td><td>The Oculus（世贸中心交通枢纽）、Dumbo – Manhattan Bridge View（丹波区曼哈顿大桥观景点）</td></tr>
+            <tr><td>10月12日</td><td><b>完整化妆</b></td><td>07:15—08:15</td><td>Central Park（中央公园）、Fifth Avenue（第五大道）、Madison Square Garden（麦迪逊广场花园）</td></tr>
+            <tr><td>10月13日</td><td>不安排完整化妆</td><td>08:10—08:35整理</td><td>The High Line（高线公园）、Little Island（小岛公园）随走随拍</td></tr>
+            <tr><td>10月14日</td><td>不安排</td><td>无</td><td>凌晨离店与返程</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="daybook">
+        <article class="day">
+          <div class="day-head"><div><h3>9月29日 · San Francisco（旧金山）落地</h3><p>Ferry Building（旧金山渡轮大楼）→ California Street Cable Car（加州街缆车）→ Golden Gate Bridge（金门大桥）</p></div><div class="day-no">第1天</div></div>
+          <div class="day-body">
+            <div class="detail-grid">
+              <div class="timeline">
+                <div class="time-row"><div class="time">10:30—12:45</div><div class="time-card"><strong>San Francisco International Airport（SFO，旧金山国际机场）</strong><p>入境、取行李，搭 AirTrain Blue Line（机场轻轨蓝线）到 Rental Car Center（租车中心）。取车后拍四角、轮胎、玻璃、油量；所有行李先送酒店。</p></div></div>
+                <div class="time-row"><div class="time">13:20—13:55</div><div class="time-card"><strong>Queen Anne Hotel（安妮女王酒店）寄存行李与停车</strong><p>地址为 1590 Sutter Street（萨特街1590号）。所有行李进酒店；落地日不安排完整化妆，只做洗脸、补水、防晒和头发整理。随后叫网约车前往 Ferry Building（旧金山渡轮大楼）。</p></div></div>
+                <div class="time-row"><div class="time">14:10—14:45</div><div class="time-card"><strong>Ferry Building（旧金山渡轮大楼）</strong><p>简餐后从钟楼正面拍单人照。周二 Ferry Plaza Farmers Market（轮渡广场农夫市集）10:00—14:00，大概率只能逛室内。</p></div></div>
+                <div class="time-row"><div class="time">14:50—15:40</div><div class="time-card"><strong>California Street Cable Car（加州街缆车）</strong><p>步行约6分钟到 California St &amp; Drumm St（加州街与德拉姆街交叉口）上车，坐到 California St &amp; Powell St（加州街与鲍威尔街交叉口）。单程每人9美元；下车后在人行道完成街道纵深照。</p></div></div>
+                <div class="time-row"><div class="time">15:40—16:15</div><div class="time-card"><strong>返回酒店取车</strong><p>从 California St &amp; Powell St（加州街与鲍威尔街交叉口）叫网约车回 Queen Anne Hotel（安妮女王酒店），取车前确认随身物品齐全。</p></div></div>
+                <div class="time-row"><div class="time">16:25—17:00</div><div class="time-card"><strong>Warming Hut Park Store（暖屋公园商店）</strong><p>先拍书店窗框中的大桥，再查看教材接力；商店17:00关门，若16:40后才到则直接去桥边，不为商店赶路。</p></div></div>
+                <div class="time-row"><div class="time">17:05—19:10</div><div class="time-card"><strong>Golden Gate Bridge（金门大桥）</strong><p>先到 Golden Gate Bridge Welcome Center（金门大桥游客中心），再步行到 Battery East Vista（东炮台观景台）。教材可能在游客中心下方斜坡、隧道附近的树与木桩间，属于民间接力，无法保证当天仍在。18:55前后日落，19:10离开。</p></div></div>
+              </div>
+              <aside class="ops"><h4>交通、停车与安全</h4><p><b>酒店：</b>Queen Anne Hotel（安妮女王酒店）已订。酒店提供收费停车，当前公开价约30美元一晚、可进出；入住前48小时确认停车位、入口和提前寄存行李。市区段用网约车与缆车，行李留在酒店。</p><p><b>Warming Hut Park Store（暖屋公园商店）：</b>停 Crissy Field West Bluff Parking（克里西草坪西侧停车区）付费车位，费率以咪表为准。</p><p><b>Golden Gate Bridge Welcome Center（金门大桥游客中心）：</b>导航该名称并进入桥南侧游客停车区；官方费率每小时5美元、最多3小时、开放约07:00—21:00。</p><p class="safety"><b>拍摄：</b>California St &amp; Powell St（加州街与鲍威尔街交叉口）只用于识别构图。人物站人行道，或绿灯时正常过街；不在公交道和轨道上停留。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=San%20Francisco%20International%20Airport&amp;destination=Queen%20Anne%20Hotel%2C%20San%20Francisco&amp;travelmode=driving">机场到酒店</a><a class="btn light" target="_blank" rel="noopener" href="https://www.sfmta.com/fares/cable-car-single-ride">缆车票价</a></div></aside>
+            </div>
+            <div class="photo-duo">
+              <figure class="photo-mini"><img src="assets/sf-ferry-couple.jpg" alt="旧金山渡轮大楼人物景别参考"><figcaption><b>Ferry Building（旧金山渡轮大楼）</b>图中双人照只参考人与钟楼的比例。实际拍她单人站在中央广场，摄影者退到 Market Street（市场街）一侧，用2倍焦距压缩钟楼；拍一组看镜头、一组侧身看钟楼。<a class="source" target="_blank" rel="noopener" href="https://bilykart.com/ferry-building/">真实客片来源</a></figcaption></figure>
+              <figure class="photo-mini"><img src="assets/sf-california-slope-person.jpg" alt="加州街与鲍威尔街交叉口真人拍照参考"><figcaption><b>California St &amp; Powell St（加州街与鲍威尔街交叉口）</b>Google Maps（谷歌地图）请直接搜索这个交叉口。摄影者站西南角人行道，用2—3倍焦距；人物在人行道或绿灯时正常过街。<a class="source" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/60d7dc63000000002103a05c">小红书原图</a></figcaption></figure>
+              <figure class="photo-mini"><img src="assets/sf-golden-gate-fortpoint-person.jpg" alt="东炮台观景台金门大桥真人站位参考"><figcaption><b>Battery East Vista（东炮台观景台）</b>人物靠步道内侧，摄影者用2倍镜头把桥塔拉近；红色或浅色外套更清楚。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2479387">真人图源</a></figcaption></figure>
+              <figure class="photo-mini"><img src="assets/sf-book-relay-person.jpg" alt="金门大桥中文教材接力实拍"><figcaption><b>教材接力</b>先拍人在木桩旁翻书，再拍签名页与桥同框。找到后放回防水袋，不新增物品，不走封闭或过陡坡面。<a class="source" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/ZUbISCdFitE">真实记录来源</a></figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>9月30日 · Stanford University（斯坦福大学）、Apple Park Visitor Center（苹果园区游客中心）、Cambria（坎布里亚）</h3><p>US-101（美国101号公路）为主，不把这天做成 California State Route 1（加州1号公路）自驾游</p></div><div class="day-no">第2天</div></div>
+          <div class="day-body"><div class="detail-grid">
+            <div class="timeline">
+              <div class="time-row"><div class="time">06:30—07:30</div><div class="time-card"><strong>完整化妆</strong><p>前一晚备好衣服、早餐与随身包；这60分钟只用于化妆和头发。07:30后吃已买好的早餐，07:45准时出发。</p></div></div>
+              <div class="time-row"><div class="time">07:45—10:40</div><div class="time-card"><strong>San Francisco（旧金山）→ Stanford University（斯坦福大学）</strong><p>约1小时15分。导航 Galvez Lot L-96（加尔韦斯L-96访客停车场），步行 Stanford Visitor Center（斯坦福游客中心）、Main Quad（主方庭）与 Stanford Memorial Church（斯坦福纪念教堂）。</p></div></div>
+              <div class="time-row"><div class="time">10:50—12:20</div><div class="time-card"><strong>Apple Park Visitor Center（苹果园区游客中心）</strong><p>车程约25分钟。看园区模型、商店与屋顶；员工园区不对外。12:20离开，在库比蒂诺吃午餐。</p></div></div>
+              <div class="time-row"><div class="time">13:15—16:00</div><div class="time-card"><strong>US-101 South（美国101号公路南向）</strong><p>中途在 Target Paso Robles（塔吉特帕索罗布尔斯店，2305 Theatre Drive）与 Starbucks（星巴克）休息20分钟，补水、上洗手间。</p></div></div>
+              <div class="time-row"><div class="time">16:50—19:05</div><div class="time-card"><strong>El Colibri Hotel &amp; Spa（雅黛科乐比酒店及水疗中心）与 Moonstone Beach Boardwalk（月光石海滩木栈道）</strong><p>先入住、放行李，再短途开车去木栈道。日落前45分钟到，日落后15—20分钟离开。</p></div></div>
+            </div>
+            <aside class="ops"><h4>停车与拍照</h4><p><b>Galvez Lot L-96（加尔韦斯L-96访客停车场）：</b>工作日用 ParkMobile（停车缴费应用）；按每小时约4.46美元另加0.40美元交易费预留，现场分区牌为准。</p><p><b>Apple Park Visitor Center（苹果园区游客中心）：</b>公共停车场通常免费；行李仍放封闭后备厢。</p><p><b>Moonstone Beach Boardwalk（月光石海滩木栈道）：</b>沿线公共停车位通常免费，优先停靠近主入口的人多区域。</p><p class="safety"><b>驾驶：</b>下午若犯困，先休息再走；不为赶日落连续驾驶。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=San%20Francisco%2C%20CA&amp;destination=El%20Colibri%20Hotel%20%26%20Spa&amp;waypoints=Stanford%20Visitor%20Center%7CApple%20Park%20Visitor%20Center%7CTarget%2C%202305%20Theatre%20Dr%2C%20Paso%20Robles%7CMoonstone%20Beach%20Boardwalk&amp;travelmode=driving">打开当天路线</a></div></aside>
+          </div><div class="photo-duo"><figure class="photo-mini"><img src="assets/road-stanford-person.jpg" alt="斯坦福纪念教堂真人构图"><figcaption><b>Stanford Memorial Church（斯坦福纪念教堂）</b>人物站 Main Quad（主方庭）中轴线，摄影者退入拱廊阴影，用1倍竖拍。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2385650">真人图源</a></figcaption></figure><figure class="photo-mini"><img src="assets/road-moonstone-02.webp" alt="月光石海滩木栈道附近真人构图"><figcaption><b>Moonstone Beach Boardwalk（月光石海滩木栈道）</b>从木栈道下到开放沙滩后，人物沿湿沙走动；不要背对突然上涌的浪。<a class="source" target="_blank" rel="noopener" href="https://www.flyingdawnmarie.com/new-blog/cambria-moonstone-beach">真实客片来源</a></figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月1日 · Cambria（坎布里亚）到 Los Angeles（洛杉矶）</h3><p>Hendry's Beach（亨德里海滩）→ Avis Car Rental – Hollywood（安飞士租车好莱坞门店）→ Loews Hollywood Hotel（洛伊斯好莱坞酒店）</p></div><div class="day-no">第3天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">07:45—10:20</div><div class="time-card"><strong>Cambria（坎布里亚）→ Hendry's Beach（亨德里海滩）</strong><p>走 US-101 South（美国101号公路南向），按约2小时35分预留。全程只在犯困或需要洗手间时短停，不再绕去港口。</p></div></div>
+            <div class="time-row"><div class="time">10:20—10:45</div><div class="time-card"><strong>Hendry's Beach（亨德里海滩）短走与拍照</strong><p>先到餐厅登记候位，再走海滩入口和餐厅旁的小坡高位。人物沿湿沙平行海岸慢走；海边风大，外套放在随身包中。</p></div></div>
+            <div class="time-row"><div class="time">10:45—12:00</div><div class="time-card"><strong>Boathouse at Hendry's Beach（亨德里海滩船屋餐厅）</strong><p>地址为 2981 Cliff Drive（克利夫路2981号），每日约07:30—21:00。按现场候位执行，选择 first available（最先可用座位），不要为户外第一排额外等候。推荐 Crab Cake（蟹肉饼）和 Clam Chowder（蛤蜊浓汤）；两人按70—100美元含税和小费预留。</p></div></div>
+            <div class="time-row"><div class="time">12:00—15:35</div><div class="time-card"><strong>Santa Barbara（圣塔芭芭拉）→ Hollywood（好莱坞）</strong><p>正常约2小时至2小时45分，另留洛杉矶拥堵余量。接近门店后先加油或完成电动车补能；目标15:35前到还车点。</p></div></div>
+            <div class="time-row"><div class="time">15:35—16:15</div><div class="time-card"><strong>Avis Car Rental – Hollywood（安飞士租车好莱坞门店）</strong><p>地址为 1333 North Highland Avenue（北高地大道1333号），门店代码Z9U，周四17:00关门。拍最终油量或电量、里程和车身，柜台交钥匙并取得结算凭证；带行李叫网约车约5—10分钟到 Loews Hollywood Hotel（洛伊斯好莱坞酒店）。</p></div></div>
+          </div><aside class="ops"><h4>停车与冗余</h4><p><b>海滩：</b>使用 Arroyo Burro Beach County Park（阿罗约布罗海滩县立公园）餐厅前公共停车场，通常免费但午餐时段可能满位；先绕场一圈，不在路边违规停放。</p><p><b>候位：</b>官网当前未显示线上订位入口，按现场候位准备；可在出发前2—3天致电 (805) 898-2628 再确认。10月1日为周四，仍预留25分钟；12:00必须离开，若10:55仍未入座则改为外带或附近快速用餐。</p><p><b>硬截止：</b>12:00离开 Santa Barbara（圣塔芭芭拉）；16:15前完成交车。门店明确要求在营业时间内还车，不能把17:00当作到店时间。</p><p><b>不要选错：</b>Avis at Loews Hollywood Hotel（安飞士洛伊斯好莱坞酒店店，门店代码AVHL1）工作日15:00关门；本行程使用附近的Z9U门店。</p><p class="safety"><b>行李：</b>在 Cambria（坎布里亚）出发前把全部行李锁入后备厢；到海滩后不要当众开启后备厢，座舱不留包、衣物或线材。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=El%20Colibri%20Hotel%20%26%20Spa&amp;destination=Avis%20Car%20Rental%2C%201333%20N%20Highland%20Ave%2C%20Los%20Angeles&amp;waypoints=Boathouse%20at%20Hendry%27s%20Beach&amp;travelmode=driving">打开当天路线</a><a class="btn light" target="_blank" rel="noopener" href="https://boathousesb.com/menu">查看菜单</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/63d64af1000000001d02033f">小红书实拍</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini"><img src="https://karendphoto.com/wp-content/uploads/2018/04/04-12265-post/hendrys-beach-santa-barbara-3.jpg" alt="亨德里海滩真人拍照参考"><figcaption><b>Hendry's Beach（亨德里海滩）</b>先拍开阔海面，再让她沿湿沙平行海岸慢走；摄影者站在靠内陆一侧，用2倍焦距压缩海面。不要为拍照接近海浪或岩石边缘。<a class="source" target="_blank" rel="noopener" href="https://karendphoto.com/hendrys-beach-engagement-photos-suzypaul/">真实客片来源</a></figcaption></figure><figure class="photo-mini"><img src="assets/la-hollywood-sign-person.jpg" alt="好莱坞标志真人参考"><figcaption><b>到达 Los Angeles（洛杉矶）</b>当天不再去 Hollywood Sign（好莱坞标志）；此机位留到10月3日。入住后只吃饭、采购与休息。</figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月2日 · Universal Studios Hollywood（好莱坞环球影城）</h3><p>Metro B Line（洛杉矶地铁B线）一站 + Universal Studios Shuttle（环球影城免费接驳车），不租车</p></div><div class="day-no">第4天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">06:00—07:00</div><div class="time-card"><strong>轻妆与防晒</strong><p>按完整60分钟预留，以持妆、防晒和方便补妆为主；不使用容易被水上项目影响的复杂造型。</p></div></div>
+            <div class="time-row"><div class="time">07:15—08:15</div><div class="time-card"><strong>酒店 → Universal Studios Hollywood（好莱坞环球影城）</strong><p>步行到 Hollywood / Highland Station（好莱坞/高地站），乘地铁B线一站到 Universal / Studio City（环球/影城城站），再乘免费上山接驳车。基础票价每人1.75美元。</p></div></div>
+            <div class="time-row"><div class="time">09:00—12:00</div><div class="time-card"><strong>Super Nintendo World（超级任天堂世界）与 Studio Tour（影城之旅）</strong><p>开园先 Mario Kart: Bowser's Challenge（马力欧赛车：库巴的挑战），10:30前后去 Studio Tour（影城之旅）。若买 Early Access（提前入园），入园再提前1小时。</p></div></div>
+            <div class="time-row"><div class="time">12:00—17:15</div><div class="time-card"><strong>Lower Lot（下园区）→ The Wizarding World of Harry Potter（哈利·波特的魔法世界）</strong><p>午餐后完成 Jurassic World – The Ride（侏罗纪世界激流勇进）、Transformers: The Ride-3D（变形金刚3D骑乘）与 Revenge of the Mummy – The Ride（木乃伊复仇骑乘），15:00后去哈利·波特园区。</p></div></div>
+            <div class="time-row"><div class="time">17:15—19:00</div><div class="time-card"><strong>Universal CityWalk Hollywood（好莱坞环球城市大道）</strong><p>如果当天18:00为万圣节活动清场时间，17:15开始购物拍照，18:00离园。晚餐在城市大道或回酒店周边。</p></div></div>
+          </div><aside class="ops"><h4>票与拍照</h4><p><b>门票：</b>普通单日票即可；提前入园是附加票，不含入园门票。购买前看10月2日官方日历。</p><p><b>机位：</b>任天堂区从上层扶梯平台用0.5倍拍全景；城堡前人物站在路边，不堵主通道。</p><p class="safety"><b>设备：</b>不带大三脚架；项目寄存柜按现场规则操作，手机绳只在允许时使用。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Loews%20Hollywood%20Hotel&amp;destination=Universal%20Studios%20Hollywood&amp;travelmode=transit">打开地铁路线</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini" style="grid-column:1/-1"><img src="assets/la-universal-person.jpg" alt="好莱坞环球影城地球仪真人拍照参考"><figcaption><b>Universal Globe（环球影城地球仪）</b>开园前或离园时拍，人物站护栏内侧，摄影者用1倍竖拍；正面站姿与回头抓拍二选一，不在人流出口停住。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2405995">真人图源</a></figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月3日 · Los Angeles（洛杉矶）城市日与米其林一星</h3><p>Lake Hollywood Park（好莱坞湖公园）→ The Original Farmers Market（始祖农夫市集）→ Academy Museum of Motion Pictures（美国电影艺术与科学学院博物馆）→ Griffith Observatory（格里菲斯天文台）→ Kali Restaurant（卡利餐厅）</p></div><div class="day-no">第5天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">07:15—08:15</div><div class="time-card"><strong>完整化妆</strong><p>当天有白天人像、日落和米其林晚餐，统一完成妆发；08:15收尾，08:30出发。</p></div></div>
+            <div class="time-row"><div class="time">08:30—09:45</div><div class="time-card"><strong>Lake Hollywood Park（好莱坞湖公园）</strong><p>网约车上山。人物站草坪北侧，摄影者靠道路内侧用2倍焦距；不走居民区陡坡找野机位。</p></div></div>
+            <div class="time-row"><div class="time">10:15—11:30</div><div class="time-card"><strong>The Original Farmers Market（始祖农夫市集）</strong><p>早午餐。与 The Grove（格罗夫购物中心）连在一起，控制在75分钟。</p></div></div>
+            <div class="time-row"><div class="time">12:00—14:45</div><div class="time-card"><strong>Academy Museum of Motion Pictures（美国电影艺术与科学学院博物馆）</strong><p>看电影服装、道具与露台。若起床晚或需要休息，整段删除，不挤压天文台和晚餐。</p></div></div>
+            <div class="time-row"><div class="time">16:20—18:50</div><div class="time-card"><strong>Griffith Observatory（格里菲斯天文台）</strong><p>网约车上山；16:30前到，先外部平台，再入馆。18:34前后日落，18:50开始叫车。</p></div></div>
+            <div class="time-row"><div class="time">19:45—21:30</div><div class="time-card"><strong>Kali Restaurant（卡利餐厅）· 米其林一星</strong><p>地址 5722 Melrose Avenue（梅尔罗斯大道5722号）。Griffith Observatory（格里菲斯天文台）到餐厅预留35—50分钟。两人共享牛排、蘑菇烩饭、蔬菜与招牌蛋白霜冰淇淋，含税和约20%小费按230—270美元准备。</p></div></div>
+          </div><aside class="ops"><h4>交通与订位</h4><p><b>全日：</b>使用网约车，不再租车。Griffith Observatory（格里菲斯天文台）周末停车拥堵，网约车比自驾稳定。</p><p><b>订位：</b>优先19:45；若只有19:30，18:35离开天文台；若只有20:00，仍在19:00前下山。</p><p class="route-note"><b>取舍：</b>Academy Museum of Motion Pictures（学院电影博物馆）是当天可删除段；Kali Restaurant（卡利餐厅）与天文台顺路衔接。</p><div class="actions"><a class="btn orange" target="_blank" rel="noopener" href="https://resy.com/cities/los-angeles-ca/venues/kali?date=2026-10-03&amp;seats=2">Kali Restaurant（卡利餐厅）订位</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Loews%20Hollywood%20Hotel&amp;destination=Kali%20Restaurant%2C%205722%20Melrose%20Ave&amp;waypoints=Lake%20Hollywood%20Park%7COriginal%20Farmers%20Market%7CAcademy%20Museum%20of%20Motion%20Pictures%7CGriffith%20Observatory&amp;travelmode=driving">打开当天路线</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini"><img src="assets/la-hollywood-sign-person.jpg" alt="好莱坞标志真人站位"><figcaption><b>Lake Hollywood Park（好莱坞湖公园）</b>摄影者站 Canyon Lake Drive（峡谷湖路）靠公园一侧，用2倍竖拍；人物不站车道。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2531971">真人图源</a></figcaption></figure><figure class="photo-mini"><img src="assets/la-griffith-night-person.jpg" alt="格里菲斯天文台夜景真人站位"><figcaption><b>Griffith Observatory East Terrace（格里菲斯天文台东侧露台）</b>蓝调时刻人物靠石栏内侧，摄影者用1倍夜景模式，人物保持2秒不动。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2484319">真人图源</a></figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月4日 · Disneyland Park（迪士尼乐园主园）单园</h3><p>西侧热门项目 → 午间休息 → Fantasyland（幻想世界）与 Tomorrowland（明日世界）→ 夜间表演</p></div><div class="day-no">第6天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">05:00—06:00</div><div class="time-card"><strong>完整化妆</strong><p>前一晚完成洗头、衣服和随身包准备；妆面以防晒和持妆为主。06:00收尾，带走早餐、充电宝、补妆用品和薄外套。</p></div></div>
+            <div class="time-row"><div class="time">06:15—07:20</div><div class="time-card"><strong>Loews Hollywood Hotel（洛伊斯好莱坞酒店）→ Disneyland Resort（迪士尼度假区）</strong><p>网约车前往 Anaheim（安纳海姆），通常45—75分钟。目的地选择 Disneyland Resort Transportation Plaza（迪士尼度假区交通广场）；07:20前下车，给安检和入园队列留出余量。</p></div></div>
+            <div class="time-row"><div class="time">07:20—08:00</div><div class="time-card"><strong>安检、检票与应用操作</strong><p>门票和主题公园预约均选择 Disneyland Park（迪士尼乐园主园）。建议两人都购买 Lightning Lane Multi Pass（闪电通道多项目通票）；扫票入园后先预约 Indiana Jones Adventure（印第安纳琼斯冒险），不要停在城堡正面拍照。</p></div></div>
+            <div class="time-row"><div class="time">08:00—10:45</div><div class="time-card"><strong>Star Wars: Galaxy's Edge（星球大战：银河边缘）→ Adventureland（探险世界）</strong><p>开园直奔 Star Wars: Rise of the Resistance（星球大战：抵抗组织崛起）普通队列；结束后按预约玩 Indiana Jones Adventure（印第安纳琼斯冒险），再顺路玩 Pirates of the Caribbean（加勒比海盗）。若抵抗组织崛起临时停运，立即改去印第安纳琼斯，不在入口等待。</p></div></div>
+            <div class="time-row"><div class="time">10:45—13:00</div><div class="time-card"><strong>New Orleans Square（新奥尔良广场）→ Frontierland（边疆世界）</strong><p>预约 Haunted Mansion Holiday（幽灵公馆节日版）或 Big Thunder Mountain Railroad（巨雷山铁路）；另一项看现场队列。12:15前用 Mobile Order（手机点餐）取午餐，坐下休息45分钟。每次使用预约后立刻约下一项，不等到下一片区域再操作。</p></div></div>
+            <div class="time-row"><div class="time">13:00—16:30</div><div class="time-card"><strong>Fantasyland（幻想世界）→ Mickey's Toontown（米奇卡通城）</strong><p>先到 Sleeping Beauty Castle（睡美人城堡）侧桥拍照，再选 Alice in Wonderland（爱丽丝梦游仙境）、“it's a small world”（小小世界）和 Mickey &amp; Minnie's Runaway Railway（米奇与米妮的失控铁路）。13:30—15:00客流较高，保留一段咖啡或室内休息。</p></div></div>
+            <div class="time-row"><div class="time">16:30—19:15</div><div class="time-card"><strong>Tomorrowland（明日世界）与晚餐</strong><p>使用 Multi Pass（多项目闪电通道）玩 Space Mountain（太空山），再按队列选择 Buzz Lightyear Astro Blasters（巴斯光年星际历险）或 Matterhorn Bobsleds（马特洪雪橇）。18:15左右提前吃晚餐，19:15前回到城堡一带。</p></div></div>
+            <div class="time-row"><div class="time">19:15—22:00</div><div class="time-card"><strong>蓝调拍照、夜间表演与离园</strong><p>先在 Sleeping Beauty Castle（睡美人城堡）侧桥和护城河边拍蓝调时刻；10月4日主园公布营业时间为08:00—22:00。Halloween Screams with Fireworks（万圣节尖叫烟花秀）与 Fantasmic!（幻想奇观）若时间冲突，优先城堡烟花。散场后按应用指定上车区叫车，预计23:00—23:40回到酒店。</p></div></div>
+          </div><aside class="ops"><h4>日期、门票与闪电通道</h4><p><b>10月4日：</b>1-Day, 1-Park Tier 4 Ticket（单日单园第四档票）184美元/人，两人368美元；主园08:00—22:00。</p><p><b>10月5日：</b>同为184美元/人，两人368美元；主园08:00—23:00。票价没有下降，只多开放1小时。</p><p><b>日期结论：</b>保留10月4日。10月5日已有从 Fairfax（费尔法克斯）到 Santa Monica（圣塔莫尼卡）的顺路安排；若把迪士尼改到5日，22:00—23:00离园后，第二天09:20还要从酒店出发去机场，恢复时间更少。</p><p><b>推荐加速：</b>两人都买 Lightning Lane Multi Pass（闪电通道多项目通票），34美元/人起；门票加通票两人合计436美元起。10月4日是周日，单园也值得用它减少折返和排队。</p><p><b>单项目票：</b>Star Wars: Rise of the Resistance（星球大战：抵抗组织崛起）的 Lightning Lane Single Pass（闪电通道单项目票）按当天应用动态定价。先在开园排普通队列；队列明显超过75分钟或项目恢复后集中回流时再购买。</p><div class="actions"><a class="btn orange" target="_blank" rel="noopener" href="https://disneyland.disney.go.com/admission/tickets/">官方购票</a><a class="btn" target="_blank" rel="noopener" href="https://disneyland.disney.go.com/lightning-lane-passes/">闪电通道规则</a><a class="btn light" target="_blank" rel="noopener" href="https://disneyland.disney.go.com/calendars/">官方日历</a><a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Loews%20Hollywood%20Hotel&amp;destination=Disneyland%20Resort%20Transportation%20Plaza%2C%20Anaheim&amp;travelmode=driving">实时车程</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini"><img src="assets/la-disneyland-person.jpg" alt="迪士尼乐园睡美人城堡真人拍照参考"><figcaption><b>Sleeping Beauty Castle（睡美人城堡）</b>下午先拍一轮；人物站侧桥，摄影者靠外侧栏杆，用1倍竖拍保留塔尖。蓝调时刻再补夜景。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2240572">真人图源</a></figcaption></figure><div class="photo-mini" style="padding:20px"><h4>小红书路线共识</h4><p>主园单日不要一早拍城堡；开园先处理不含在 Multi Pass（多项目闪电通道）内的 Star Wars: Rise of the Resistance（星球大战：抵抗组织崛起），随后按西侧到东侧推进。午后拍照、吃饭和室内项目，晚间看烟花。</p><p><b>执行重点：</b>入园即约第一项；每次核销后马上约下一项；餐食使用 Mobile Order（手机点餐）；商店留到离园前。</p><div class="actions"><a class="btn light" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/651a6542000000002202960a">主园万圣节参考</a><a class="btn light" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/66e2006a000000002603e2f5">星战与鬼屋参考</a></div></div></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月5日 · Fairfax Avenue（费尔法克斯大道）、Rodeo Drive（罗迪欧大道）、Santa Monica Pier（圣塔莫尼卡码头）</h3><p>由东向西，日落结束</p></div><div class="day-no">第7天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">08:15—09:15</div><div class="time-card"><strong>完整化妆</strong><p>当天重点是城市街拍和海边日落；09:15结束后吃简单早餐，09:45出门。</p></div></div>
+            <div class="time-row"><div class="time">10:00—12:00</div><div class="time-card"><strong>Fairfax / La Brea（费尔法克斯 / 拉布雷亚）</strong><p>Stüssy（斯图西）、Supreme（至上）、BAPE（猿人头）、Undefeated（不败）中选2—3家。先查当日营业。</p></div></div>
+            <div class="time-row"><div class="time">12:30—14:15</div><div class="time-card"><strong>Rodeo Drive（罗迪欧大道）</strong><p>在 Via Rodeo（罗迪欧步行街）与 Beverly Wilshire（比弗利威尔希尔酒店）外观短拍，午餐后离开；购物兴趣低时删掉。</p></div></div>
+            <div class="time-row"><div class="time">15:15—19:10</div><div class="time-card"><strong>Santa Monica Pier（圣塔莫尼卡码头）</strong><p>先拍 Route 66 End of the Trail Sign（66号公路终点牌），再到 Santa Monica State Beach（圣塔莫尼卡州立海滩）码头南侧拍 Pacific Wheel（太平洋摩天轮）和人物，18:35前后日落；19:10离开。</p></div></div>
+          </div><aside class="ops"><h4>交通与晚间安全</h4><p><b>全日：</b>网约车分三段，不用地铁横穿洛杉矶。</p><p><b>下车：</b>导航 1550 Appian Way（阿皮安路1550号）或应用内官方码头上落客点。</p><p><b>回程：</b>天黑后不去 Venice Beach（威尼斯海滩）；从人多、照明好的码头入口或市中心圣塔莫尼卡上车。</p><p><b>拍摄：</b>66号牌排队时只拍一组；摩天轮照到码头左侧沙滩，用2倍焦距。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Loews%20Hollywood%20Hotel&amp;destination=Santa%20Monica%20Pier&amp;waypoints=La%20Brea%20Avenue%2C%20Los%20Angeles%7CRodeo%20Drive%2C%20Beverly%20Hills&amp;travelmode=driving">打开当天路线</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/69d1d149000000001a0323fe">小红书机位原帖</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini"><img src="assets/la-santa-monica-couple.jpg" alt="圣塔莫尼卡码头下方人物景别参考"><figcaption><b>Santa Monica State Beach – South of Pier（圣塔莫尼卡州立海滩码头南侧）</b>图中双人照只参考侧逆光与栈桥比例。实际让她站在栈桥柱外的干沙区，身体侧转、看向海面，再慢走一组；不要在柱间潮水上涨时停留。<a class="source" target="_blank" rel="noopener" href="https://akikoliu.photos/2020/01/17/santa-monica-pier-session/">真实客片来源</a></figcaption></figure><figure class="photo-mini"><img src="assets/la-santa-monica-person.jpeg" alt="圣塔莫尼卡太平洋摩天轮真人拍照参考"><figcaption><b>Pacific Wheel View from Santa Monica State Beach（从圣塔莫尼卡州立海滩拍太平洋摩天轮）</b>摄影者退远后用2倍焦距，把人放在画面下方三分之一、摩天轮放在肩部外侧；日落前45分钟完成。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2658899">真人图源</a></figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月6日 · Los Angeles（洛杉矶）到 Las Vegas（拉斯维加斯）</h3><p>Hollywood Burbank Airport（好莱坞伯班克机场）直飞，入住 Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）</p></div><div class="day-no">第8天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">09:20—10:10</div><div class="time-card"><strong>Loews Hollywood Hotel（洛伊斯好莱坞酒店）→ Hollywood Burbank Airport（BUR，好莱坞伯班克机场）</strong><p>网约车约25—40分钟；目标10:10前进入航站楼。</p></div></div>
+            <div class="time-row"><div class="time">12:10—13:20</div><div class="time-card"><strong>Southwest Airlines（西南航空）直飞</strong><p>Hollywood Burbank Airport（BUR，好莱坞伯班克机场）→ Harry Reid International Airport（LAS，哈里·里德国际机场）。托运行李按最终票面规则核对。</p></div></div>
+            <div class="time-row"><div class="time">14:15—15:40</div><div class="time-card"><strong>Harry Reid International Airport（哈里·里德国际机场）→ Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）</strong><p>按机场标识走到网约车上车层，通常车程约15—25分钟。16:00起入住；提前到则先寄存行李。</p></div></div>
+            <div class="time-row"><div class="time">15:45—16:45</div><div class="time-card"><strong>完整化妆</strong><p>飞行日不在早晨化妆；入住后重新洗脸、完成妆发。16:45结束，吃简单晚午餐后出门。</p></div></div>
+            <div class="time-row"><div class="time">17:30—21:15</div><div class="time-card"><strong>Flamingo Wildlife Habitat（弗拉明戈野生动物栖息地）→ The Forum Shops at Caesars Palace（凯撒宫购物中心）→ Fountains of Bellagio（百乐宫喷泉）</strong><p>先在酒店内短逛，再沿 Las Vegas Strip（拉斯维加斯大道）有人流的主段步行。日落后在 Bellagio Hotel &amp; Casino（百乐宫酒店及赌场）湖边看喷泉，21:15前回酒店。</p></div></div>
+          </div><aside class="ops"><h4>衔接与拍照</h4><p><b>Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）：</b>已订10月6—8日，地址为3555 South Las Vegas Boulevard（南拉斯维加斯大道3555号），位于 Las Vegas Strip（拉斯维加斯大道）中段，去 Paris Las Vegas（巴黎拉斯维加斯酒店）与 Bellagio Hotel &amp; Casino（百乐宫酒店及赌场）可步行。</p><p><b>付款：</b>入住时支付订单总价 US$335.72，已含两晚 Resort Fee（度假村费）；另做 US$150 可退损坏押金预授权。</p><p><b>喷泉机位：</b>Fountains of Bellagio（百乐宫喷泉）前栏杆拍酒店正面；想把 Eiffel Tower at Paris Las Vegas（巴黎拉斯维加斯酒店埃菲尔铁塔）带入背景，走到 Bellagio Hotel &amp; Casino（百乐宫酒店及赌场）临湖步道偏南侧。</p><p class="safety"><b>夜间：</b>只走 Las Vegas Strip（拉斯维加斯大道）主路和酒店内部通道；鞋不舒服或回程晚时直接叫车。</p></aside></div>
+          <div class="photo-duo"><figure class="photo-mini"><img src="assets/vegas-bellagio-couple.webp" alt="百乐宫与巴黎铁塔人物景别参考"><figcaption><b>Fountains of Bellagio（百乐宫喷泉）湖边</b>图中双人照只参考夜景比例。实际让她靠栏杆内侧侧身站立，摄影者用1倍竖拍，把 Eiffel Tower at Paris Las Vegas（巴黎拉斯维加斯酒店埃菲尔铁塔）放在肩部上方；不坐栏杆。<a class="source" target="_blank" rel="noopener" href="https://ivandianaphotography.com/elopement-at-las-vegas-bellagio-fountain-flamingo-hotel-slots/">真实客片来源</a></figcaption></figure><figure class="photo-mini"><img src="assets/vegas-bellagio-person.jpg" alt="百乐宫喷泉真人机位"><figcaption><b>Fountains of Bellagio（百乐宫喷泉）演出</b>提前10分钟占位，演出开始后用1倍连拍；让她先看喷泉再回头看镜头，不长时间遮挡后排。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2362031">真人图源</a></figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月7日 · Lower Antelope Canyon（下羚羊谷）与 Horseshoe Bend（马蹄湾）</h3><p>选择从 Paris Las Vegas（巴黎拉斯维加斯酒店）07:00出发的小团</p></div><div class="day-no">第9天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">04:45—05:45</div><div class="time-card"><strong>完整化妆</strong><p>这是全程最早的一次妆发。前一晚把衣服、证件和早餐全部摆好；以轻薄、耐久为主，不带运营商禁止的化妆包入谷。若前一晚22:15后才回房，取消这次完整化妆，优先保证睡眠。</p></div></div>
+            <div class="time-row"><div class="time">05:45—06:40</div><div class="time-card"><strong>早餐、物品检查与前往集合点</strong><p>若订 MaxTour（马克斯小团），集合点为 Paris Las Vegas Tour Lobby（巴黎拉斯维加斯酒店旅游大堂），07:00出发；06:25从 Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）出发，沿有照明的主路步行约10—15分钟，疲劳或天气不适时改叫短途网约车。</p></div></div>
+            <div class="time-row"><div class="time">07:00—21:45</div><div class="time-card"><strong>Lower Antelope Canyon（下羚羊谷）、Horseshoe Bend（马蹄湾）、Lake Powell（鲍威尔湖）</strong><p>小团报价约每人249美元起，包含下羚羊谷门票、马蹄湾费用、午餐与水。最终以订单凭证为准。</p></div></div>
+          </div><aside class="ops"><h4>装备与拍照</h4><p><b>下羚羊谷：</b>通常不允许背包、手提包、相机包和三脚架；带手机或相机及水，按运营商最新规则。</p><p><b>机位：</b>人在岩壁透光处侧身，摄影者用1倍略仰拍；一次只拍5—10秒，不拖慢队伍。</p><p><b>选择下谷：</b>10月光柱不稳定，下谷的纹理与人像更稳定；膝盖不适或不愿走陡梯时才改上谷。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.maxtour.co/tours/antelope-canyon-tour-from-las-vegas/">查看小团</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini"><img src="assets/vegas-antelope-person2.jpg" alt="下羚羊谷真人拍照参考"><figcaption><b>下羚羊谷</b>人物靠亮面岩壁，身体转30度，摄影者保持队伍方向拍一组。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/1996308">真人图源</a></figcaption></figure><figure class="photo-mini"><img src="assets/vegas-antelope-person.jpg" alt="羚羊谷人物构图参考"><figcaption><b>第二种构图</b>用岩壁作前景框住人物；不触摸脆弱岩面，不离开向导路线。</figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月8日 · 换酒店、购物与 O by Cirque du Soleil（太阳马戏《O》）</h3><p>Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）→ Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）</p></div><div class="day-no">第10天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">10:30—11:15</div><div class="time-card"><strong>退房与行李寄存</strong><p>网约车直接到枫丹白露北侧主入口，先把行李交 Bell Desk（行李服务台），不要带箱去射击场。</p></div></div>
+            <div class="time-row"><div class="time">11:15—13:00</div><div class="time-card"><strong>Battlefield Vegas（战场拉斯维加斯射击场）</strong><p>建议预约11:30档。Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）到射击场约5—10分钟；预留签到、免责协议、安全说明、体验和车辆区拍照共60—90分钟。</p></div></div>
+            <div class="time-row"><div class="time">13:10—14:35</div><div class="time-card"><strong>午餐与 Fashion Show Mall（时尚秀购物中心）</strong><p>只做午餐和定向采购；若前一晚睡眠不足，商场直接删除，回 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）休息。</p></div></div>
+            <div class="time-row"><div class="time">15:00—17:15</div><div class="time-card"><strong>入住、清洁、休息与晚间化妆</strong><p>15:00取行李、洗手洗脸和换上衣；15:45—16:45完整化妆；之后在房间短休，不安排泳池。</p></div></div>
+            <div class="time-row"><div class="time">17:20—21:15</div><div class="time-card"><strong>O by Cirque du Soleil（太阳马戏《O》）</strong><p>18:30场次，17:20叫车去 Bellagio（百乐宫），至少提前45分钟到。演出约90分钟，结束后看温室花园或一轮喷泉，再叫车回酒店。</p></div></div>
+          </div><aside class="ops"><h4>射击与演出</h4><p><b>预约：</b>优先10月8日11:30，不受10月6日航班延误影响。免费 Humvee（军用悍马车）接送需至少提前2小时预订；本段距离短，网约车更可控。</p><p><b>证件：</b>两人携带护照原件；套餐按每位射手计费。官网写明全程由 Range Safety Officer（靶场安全员）陪同。</p><p class="safety"><b>安全：</b>射击前不饮酒；穿圆领或高领上衣、长裤、包脚鞋。对后坐力或噪声不适立即告诉安全员并停止，不选大口径项目。</p><p><b>《O》：</b>17:20叫车去 Bellagio（百乐宫），至少提前45分钟到；座位优先中间偏后、正对舞台。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.battlefieldvegas.com/packages/fan-favorites/group-shooting-packages/">射击套餐</a><a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Fontainebleau%20Las%20Vegas&amp;destination=Battlefield%20Vegas&amp;travelmode=driving">酒店到射击场</a><a class="btn" target="_blank" rel="noopener" href="https://www.ticketmaster.com/cirque-du-soleil-o-las-vegas-nevada-10-08-2026/event/2E00631D02E26AFD">《O》门票</a></div></aside></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月9日 · Sphere（拉斯维加斯巨型球）与演唱会</h3><p>白天 The Wizard of Oz at Sphere（巨型球《绿野仙踪》沉浸体验），晚间在 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）内看演出</p></div><div class="day-no">第11天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">08:30—09:30</div><div class="time-card"><strong>完整化妆</strong><p>兼顾白天 Sphere（拉斯维加斯巨型球）人像和晚间演唱会；演唱会前只补妆，不再重做。</p></div></div>
+            <div class="time-row"><div class="time">09:50—12:30</div><div class="time-card"><strong>The Wizard of Oz at Sphere（巨型球《绿野仙踪》沉浸体验）</strong><p>11:00场次，09:50从酒店叫车，至少提前45分钟安检入场；体验约75分钟。</p></div></div>
+            <div class="time-row"><div class="time">12:30—14:30</div><div class="time-card"><strong>The Venetian Resort Las Vegas（威尼斯人度假村）午餐与外部机位</strong><p>午餐后走到 Sphere Vista Point (Bridge)（巨型球观景天桥）拍外部人像；白天先确定构图，夜景无需再专程返回。</p></div></div>
+            <div class="time-row"><div class="time">15:00—17:30</div><div class="time-card"><strong>回房休息</strong><p>为晚间演唱会保留2小时以上。</p></div></div>
+            <div class="time-row"><div class="time">18:30—22:00</div><div class="time-card"><strong>TLC &amp; Salt-N-Pepa with En Vogue（TLC、盐-N-佩帕与雅时尚合唱团）</strong><p>19:30在 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）内演出，18:30离房、用餐并入场，不需要跨城交通。</p></div></div>
+          </div><aside class="ops"><h4>Sphere（拉斯维加斯巨型球）机位</h4><p><b>位置：</b>The Venetian Resort Las Vegas（威尼斯人度假村）与 Wynn Las Vegas（拉斯维加斯永利酒店）方向之间、横跨 Sands Avenue（金沙大道）的行人天桥；Google Maps（谷歌地图）搜索 Sphere Vista Point (Bridge)（巨型球观景天桥）。</p><p><b>拍法：</b>人物靠玻璃内侧，摄影者降低手机，用0.5倍或1倍；玻璃反光时让镜头贴近玻璃，不把手机伸出护栏。</p><p class="safety"><b>不去：</b>不进入停车场行车区，不为低机位站车道。</p><div class="actions"><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/6a8c3fb5000000001402bd45">小红书真人机位</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini" style="grid-column:1/-1"><img src="assets/vegas-sphere-person.jpeg" alt="巨型球真人天桥机位"><figcaption><b>观景天桥</b>人物放在画面下方三分之一，球体完整进入背景；等待屏幕出现眼睛或纯色图案，一张正面、一张回头即可。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/3234310">真人图源</a></figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月10日 · Las Vegas（拉斯维加斯）到 New York City（纽约市）</h3><p>Harry Reid International Airport（哈里·里德国际机场）直飞 John F. Kennedy International Airport（纽约肯尼迪国际机场），晚上只入住与采购</p></div><div class="day-no">第12天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">07:15—08:00</div><div class="time-card"><strong>Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）→ Harry Reid International Airport（LAS，哈里·里德国际机场）</strong><p>网约车约20—35分钟，目标08:00前进航站楼。</p></div></div>
+            <div class="time-row"><div class="time">09:59—18:12</div><div class="time-card"><strong>Delta Air Lines（达美航空）直飞 New York City（纽约）</strong><p>Harry Reid International Airport（LAS，哈里·里德国际机场）→ John F. Kennedy International Airport（JFK，纽约肯尼迪国际机场）。</p></div></div>
+            <div class="time-row"><div class="time">19:00—20:45</div><div class="time-card"><strong>性价比方案：JFK（纽约肯尼迪国际机场）→ Manhattan（曼哈顿）</strong><p>从航站楼乘 AirTrain JFK（肯尼迪机场捷运）到 Jamaica Station（牙买加站），转乘 LIRR（长岛铁路）到 Penn Station（宾夕法尼亚车站）。出站后不拖行李步行，直接乘短途黄色出租车前往 Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店），地址为38 West 36th Street（西36街38号）。</p></div></div>
+          </div><aside class="ops"><h4>费用、安全与备选</h4><p><b>AirTrain（机场捷运）：</b>8.75美元/人；<b>LIRR CityTicket（长岛铁路城市票）：</b>周末约5.25美元/人。两人铁路合计约28美元。</p><p><b>最后一段：</b>Penn Station（宾夕法尼亚车站）到酒店短途出租车约10—15美元；两人全程约38—45美元。LIRR（长岛铁路）比地铁更适合携带行李，座位与行李空间更充足。</p><p><b>购票：</b>AirTrain（机场捷运）在 Jamaica Station（牙买加站）出闸时支付；LIRR（长岛铁路）使用 TrainTime（列车时刻）应用程序或售票机购买 CityTicket（城市票），上车前完成激活。</p><p><b>备选：</b>若航班延误、两人明显疲劳或行李过多，直接在机场官方出租车排队点乘黄色出租车到酒店，预计总支出约90—105美元。</p><p class="safety"><b>安全：</b>只跟随机场 AirTrain（机场捷运）和 Taxi（出租车）官方标识；护照、手机放贴身包；拒绝陌生人主动揽车或“帮忙”购票；在 Penn Station（宾夕法尼亚车站）进入正式出租车上车点后再等车。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=John%20F.%20Kennedy%20International%20Airport&amp;destination=Executive%20Hotel%20Le%20Soleil%20New%20York&amp;travelmode=transit">打开换乘路线</a><a class="btn light" target="_blank" rel="noopener" href="https://www.mta.info/guides/airports/jfk/jfk-airport-to-manhattan">MTA（纽约大都会运输署）机场指南</a></div></aside></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月11日 · Lower Manhattan（曼哈顿下城）与 DUMBO（丹波区）</h3><p>New York City Subway（纽约地铁）→ 步行 → NYC Ferry（纽约渡轮）→ 步行</p></div><div class="day-no">第13天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">07:15—08:15</div><div class="time-card"><strong>完整化妆</strong><p>当天拍建筑内景、街景和日落；08:15结束，08:30出门。早餐提前买好，路上吃。</p></div></div>
+            <div class="time-row"><div class="time">08:20—08:35</div><div class="time-card"><strong>Empire State Building（帝国大厦）外观</strong><p>酒店步行约6分钟，在 Fifth Avenue &amp; West 34th Street（第五大道与西34街交叉口）拍外观；不登顶，08:35前进地铁。</p></div></div>
+            <div class="time-row"><div class="time">09:00—10:30</div><div class="time-card"><strong>The Oculus（世贸中心交通枢纽）与 9/11 Memorial（九一一纪念广场）</strong><p>从34街乘地铁到 Cortlandt Street Station（科特兰街站）。The Oculus（世贸中心交通枢纽）内部拍对称线条，纪念广场保持安静。当天不进 9/11 Museum（九一一纪念博物馆）和 One World Observatory（世贸一号观景台），给自由女神和布鲁克林留出时间。</p></div></div>
+            <div class="time-row"><div class="time">10:40—13:20</div><div class="time-card"><strong>Wall Street（华尔街）→ Statue of Liberty（自由女神像）</strong><p>依次经过 New York Stock Exchange（纽约证券交易所）、Federal Hall（联邦国家纪念堂）、Charging Bull（华尔街铜牛）和 Battery Park（炮台公园）。从 Whitehall Terminal（白厅码头）乘免费的 Staten Island Ferry（史泰登岛渡轮）往返看 Statue of Liberty（自由女神像）；到 St. George Terminal（圣乔治码头）后必须下船，再跟标识重新排队回程。</p></div></div>
+            <div class="time-row"><div class="time">13:25—14:05</div><div class="time-card"><strong>Stone Street（石街）午餐</strong><p>控制在40分钟；天气冷或排队长时改买简餐，14:10前步行去 Wall Street / Pier 11（华尔街11号码头）。</p></div></div>
+            <div class="time-row"><div class="time">14:20—18:35</div><div class="time-card"><strong>NYC Ferry（纽约渡轮）→ DUMBO（丹波区）→ Brooklyn Bridge（布鲁克林大桥）</strong><p>乘 East River Route（东河航线）到 DUMBO / Fulton Ferry（丹波区富尔顿码头）。依次去 Dumbo – Manhattan Bridge View（丹波区曼哈顿大桥观景点）、Jane's Carousel（简氏旋转木马）和 Pebble Beach（卵石海滩）；17:15左右从 Brooklyn Bridge Walkway Entrance（布鲁克林大桥步行入口）上桥，步行回 Manhattan（曼哈顿）。若体力不足，取消走桥，从 High Street–Brooklyn Bridge Station（高街—布鲁克林大桥站）坐地铁。</p></div></div>
+          </div><aside class="ops"><h4>交通与拍照</h4><p><b>Staten Island Ferry（史泰登岛渡轮）：</b>免费；去程站船右侧更容易看到 Statue of Liberty（自由女神像）。码头外主动兜售的“官方船票”不买。</p><p><b>NYC Ferry（纽约渡轮）：</b>单程约4.50美元，以官方应用为准；提前10分钟到码头。</p><p><b>Dumbo – Manhattan Bridge View（丹波区曼哈顿大桥观景点）：</b>人物只站路边安全区，摄影者用2倍焦距压缩 Manhattan Bridge（曼哈顿大桥）；不要长时间占车道。</p><p><b>当天取舍：</b>默认不进博物馆、不登观景台；保留免费渡轮、DUMBO（丹波区）和走桥，覆盖首次到纽约的主要地标。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Executive%20Hotel%20Le%20Soleil%20New%20York&amp;destination=Whitehall%20Terminal%2C%20New%20York&amp;waypoints=Empire%20State%20Building%7COculus%20World%20Trade%20Center%7CCharging%20Bull&amp;travelmode=transit">打开下城路线</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/65a0aab0000000001c011bb3">小红书渡轮与大桥路线</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini"><img src="assets/nyc-dumbo-person.jpg" alt="丹波区曼哈顿大桥观景点真人参考"><figcaption><b>Dumbo – Manhattan Bridge View（丹波区曼哈顿大桥观景点）</b>位置在 Washington Street &amp; Water Street（华盛顿街与水街交叉口）附近；人物靠边，摄影者用2倍焦距。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/703414">真人图源</a></figcaption></figure><figure class="photo-mini"><img src="assets/nyc-carousel-person.jpg" alt="简氏旋转木马真人参考"><figcaption><b>Jane's Carousel（简氏旋转木马）</b>人物站玻璃建筑外，摄影者朝 Brooklyn Bridge（布鲁克林大桥）方向取景。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/1429599">真人图源</a></figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月12日 · Central Park（中央公园）、Fifth Avenue（第五大道）与 New York Knicks（纽约尼克斯）</h3><p>白天步行，晚上 Madison Square Garden（麦迪逊广场花园）</p></div><div class="day-no">第14天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">07:15—08:15</div><div class="time-card"><strong>完整化妆</strong><p>当天从公园拍到比赛，按全天持妆处理；16:30回酒店后只补妆。</p></div></div>
+            <div class="time-row"><div class="time">08:30—12:15</div><div class="time-card"><strong>Central Park（中央公园）</strong><p>地铁到72街，从 Bow Bridge（弓桥）→Bethesda Terrace（贝塞斯达露台）→The Mall（林荫大道）→Gapstow Bridge（加普斯托桥），从东南角出园。</p></div></div>
+            <div class="time-row"><div class="time">12:30—15:10</div><div class="time-card"><strong>Fifth Avenue（第五大道）地标与购物</strong><p>从 Apple Fifth Avenue（苹果第五大道店）向南，经过 The Tiffany Landmark（蒂芙尼地标旗舰店）、St. Patrick's Cathedral（圣帕特里克大教堂）、Rockefeller Center（洛克菲勒中心）和 MoMA Design Store（纽约现代艺术博物馆设计商店）。购物只选两家；想买运动鞋可用 Nike House of Innovation NYC（耐克纽约创新旗舰店）替换。</p></div></div>
+            <div class="time-row"><div class="time">15:15—16:45</div><div class="time-card"><strong>Grand Central Terminal（中央车站）→ Bryant Park（布莱恩特公园）→ Times Square（时代广场）</strong><p>先看中央车站主大厅，再沿42街向西经过 New York Public Library（纽约公共图书馆）与 Bryant Park（布莱恩特公园），最后到 Times Square（时代广场）红色台阶。全程约2.1公里，可在中央车站到时代广场之间改乘地铁。</p></div></div>
+            <div class="time-row"><div class="time">16:45—18:15</div><div class="time-card"><strong>回酒店、放购物袋、提前吃饭</strong><p>从 Times Square（时代广场）步行约12—15分钟回酒店。补妆、确认电子票已经转入官方票务账号或手机钱包；不带大包。</p></div></div>
+            <div class="time-row"><div class="time">18:15—22:15</div><div class="time-card"><strong>Madison Square Garden（麦迪逊广场花园）</strong><p>酒店步行约10分钟。19:30森林狼对尼克斯季前赛，目标提前60—75分钟到。赛后沿第七大道主路步行回酒店。</p></div></div>
+          </div><aside class="ops"><h4>机位、购物与比赛</h4><p><b>弓桥：</b>从桥东侧草坪拍人物和桥拱，摄影者用2倍焦距；上午较少逆光。</p><p><b>购物：</b>第五大道以旗舰店和体验为主；纽约购物没有游客退税。大件商品先比较国内到手价，购物袋16:45带回酒店。</p><p><b>Times Square（时代广场）：</b>红色台阶停留15—20分钟即可；保管手机，不接受主动递来的光盘、手环或合影。</p><p><b>比赛：</b>Viagogo（票务转售平台）的停车通行证加购不需要。只认已转入的电子票，不以订单截图入场。</p><p class="safety"><b>赛后：</b>跟随主流人群离场，不进入宾夕法尼亚车站周边小巷。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Apple%20Fifth%20Avenue%2C%20New%20York&amp;destination=Times%20Square%2C%20New%20York&amp;waypoints=St.%20Patrick's%20Cathedral%7CRockefeller%20Center%7CGrand%20Central%20Terminal%7CNew%20York%20Public%20Library&amp;travelmode=walking">打开中城路线</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/65464ee0000000001f038dd8">小红书中城顺路路线</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini" style="grid-column:1/-1"><img src="assets/nyc-central-park-person.jpeg" alt="中央公园真人拍照参考"><figcaption><b>Bow Bridge（弓桥）与 The Mall（林荫大道）</b>让她沿道路慢走、回头或抬手整理头发，摄影者用2倍连拍；正面、侧身和背影各一组。10月中旬不保证红叶峰值。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/guide/1001999">真人图源</a></figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月13日 · Manhattan West Side（曼哈顿西侧）收尾与机场前夜</h3><p>Hudson Yards（哈德逊城市广场）→ The High Line（高线公园）→ Chelsea Market（切尔西市场）→ Little Island（小岛公园）</p></div><div class="day-no">第15天</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">08:45—09:20</div><div class="time-card"><strong>退房、寄存行李、短途出租车</strong><p>大箱寄存在 Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店），护照和贵重物品随身。乘出租车到 Vessel（维塞尔），避免一早乘地铁和绕路。</p></div></div>
+            <div class="time-row"><div class="time">09:20—11:30</div><div class="time-card"><strong>Hudson Yards（哈德逊城市广场）→ The High Line（高线公园）</strong><p>在 Vessel（维塞尔）外部短拍；若要购物，在 The Shops at Hudson Yards（哈德逊城市广场购物中心）停留不超过30分钟，优先看 Alo Yoga（阿洛瑜伽）、Aritzia（阿里齐亚）或 Lululemon（露露乐蒙）中的一家。随后从高线北端向南单向步行，途中停靠旧铁轨、10th Avenue Square（第十大道广场）和街景观景台。</p></div></div>
+            <div class="time-row"><div class="time">11:30—13:15</div><div class="time-card"><strong>Chelsea Market（切尔西市场）午餐与小店</strong><p>选择1份主食和1份甜品，不在多家热门摊位重复排队。想买小礼物可逛 Artists &amp; Fleas（艺术家与跳蚤市集），限时20分钟；同时购买次日凌晨可携带的固体早餐，饮料过安检后再买。</p></div></div>
+            <div class="time-row"><div class="time">13:20—16:00</div><div class="time-card"><strong>Little Island（小岛公园）与 Meatpacking District（肉库区）</strong><p>从切尔西市场步行约8—12分钟到 Little Island（小岛公园），登高点看 Hudson River（哈德逊河）。之后在 Meatpacking District（肉库区）喝咖啡或短逛；下雨时改为在 Chelsea Market（切尔西市场）和 Whitney Museum of American Art（惠特尼美国艺术博物馆）二选一停留。</p></div></div>
+            <div class="time-row"><div class="time">16:00—17:00</div><div class="time-card"><strong>出租车回酒店、取行李</strong><p>16:00开始叫车，目标16:25—16:40回酒店。取行李、使用洗手间并核对机场酒店地址；17:00前再次上车。</p></div></div>
+            <div class="time-row"><div class="time">17:00—19:30</div><div class="time-card"><strong>Manhattan（曼哈顿）→ JFK（纽约肯尼迪国际机场）附近酒店</strong><p>直接乘黄色出租车或网约车到机场酒店，不再换乘 LIRR（长岛铁路）和 AirTrain（机场捷运）。工作日晚高峰按75—120分钟并增加30分钟缓冲，预计18:30—19:30入住。</p></div></div>
+          </div><aside class="ops"><h4>当天交通逻辑</h4><p><b>不是全程坐车：</b>酒店到 Hudson Yards（哈德逊城市广场）打车；西侧景点之间连续步行；Little Island（小岛公园）回酒店打车；取行李后再直接打车到机场酒店。</p><p><b>城市内两段短途：</b>合计准备约25—45美元，遇晚高峰或下雨会增加。</p><p><b>去机场酒店：</b>下午17:00出发，准备约85—120美元；机场外酒店未必适用JFK—曼哈顿70美元固定基础车费，以叫车软件或出租车计价为准。</p><p><b>凌晨接驳：</b>入住后立即确认03:00—03:15班次、是否预约及是否送到航站楼；只到 Federal Circle（联邦环路站）时，再乘机场内部免费的 AirTrain（机场捷运）。</p><p class="safety"><b>硬截止：</b>16:00结束游玩，17:00从曼哈顿酒店出发。因为当晚只入住机场酒店而非直接赶航班，晚高峰即使达到2小时仍有余量。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Vessel%2C%20New%20York&amp;destination=Little%20Island%2C%20New%20York&amp;waypoints=The%20High%20Line%7CChelsea%20Market&amp;travelmode=walking">打开西侧步行路线</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/6a4da9ad000000000f01fde3">小红书顺路路线</a></div></aside></div>
+          <div class="photo-duo"><figure class="photo-mini" style="grid-column:1/-1"><img src="assets/nyc-highline-couple.webp" alt="纽约高线公园人物景别参考"><figcaption><b>The High Line（高线公园）绿植步道</b>图中双人照只参考步道纵深。实际让她站步道一侧或向前慢走，摄影者用2倍竖拍保留旧铁路轨道引导线；拍正面、回头和背影各一组，不堵窄通道。<a class="source" target="_blank" rel="noopener" href="https://www.rachelwatkinson.com/rachelwatkinson/new-york-city-the-highline-engagement-photography-session">真实客片来源</a></figcaption></figure></div></div>
+        </article>
+
+        <article class="day">
+          <div class="day-head"><div><h3>10月14日 · 返回 Shanghai（上海）</h3><p>06:30国际航班</p></div><div class="day-no">返程</div></div>
+          <div class="day-body"><div class="detail-grid"><div class="timeline">
+            <div class="time-row"><div class="time">02:30—03:30</div><div class="time-card"><strong>起床、退房、前往航站楼</strong><p>机场外酒店按前一晚确认的03:00或03:15接驳；住 TWA Hotel（环球航空酒店）则按出发航站楼使用 AirTrain JFK（肯尼迪机场轻轨）或步行连接。</p></div></div>
+            <div class="time-row"><div class="time">03:30—06:30</div><div class="time-card"><strong>值机、托运、安检与登机</strong><p>目标起飞前3小时到航站楼。先确认航站楼，再排队；安检后买水和热饮。</p></div></div>
+          </div><aside class="ops"><h4>前夜必须完成</h4><p>护照、签证页、机票、充电宝、退税无关、托运行李重量、易碎品与药物分装。</p><p>截图保存接驳班次和酒店电话；凌晨若接驳缺席，立即叫正规出租车或网约车，不继续等待。</p></aside></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="sf" role="tabpanel">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">9月29日 · SAN FRANCISCO（旧金山）</div><h2>落地日</h2></div>
+        <p>Ferry Building（旧金山渡轮大楼）后乘 California Street Cable Car（加州街缆车），再取车去 Golden Gate Bridge（金门大桥）。Chase Center（大通中心）只作有余量时的备选。</p>
+      </div>
+
+      <div class="grid">
+        <article class="card span-7">
+          <div class="timeline">
+            <div class="time-row"><div class="time">10:30—12:45</div><div class="time-card"><strong>San Francisco International Airport（SFO，旧金山国际机场）入境、取行李、取车</strong><p>搭 AirTrain Blue Line（机场轻轨蓝线）到 Rental Car Center（租车中心）。取车时拍四角、轮胎、玻璃与油量。</p></div></div>
+            <div class="time-row"><div class="time">13:20—13:55</div><div class="time-card"><strong>Queen Anne Hotel（安妮女王酒店）寄存行李与停车</strong><p>地址为 1590 Sutter Street（萨特街1590号）。落地日不安排完整化妆，只做洗脸、补水、防晒和头发整理；所有行李进酒店，随后叫网约车去 Ferry Building（旧金山渡轮大楼）。</p></div></div>
+            <div class="time-row"><div class="time">14:10—14:45</div><div class="time-card"><strong>Ferry Building（旧金山渡轮大楼）</strong><p>简餐和短逛；周二的 Ferry Plaza Farmers Market（轮渡广场农夫市集）到14:00，大概率只能逛室内。先在钟楼正面完成单人照，再进室内。</p></div></div>
+            <div class="time-row"><div class="time">14:45—15:40</div><div class="time-card"><strong>California Street Cable Car（加州街缆车）</strong><p>在 California St &amp; Drumm St（加州街与德拉姆街交叉口）上车，坐到 California St &amp; Powell St（加州街与鲍威尔街交叉口）。单程每人9美元；在安全人行道拍上坡构图。</p></div></div>
+            <div class="time-row"><div class="time">15:40—16:15</div><div class="time-card"><strong>返回酒店取车</strong><p>从 California St &amp; Powell St（加州街与鲍威尔街交叉口）叫网约车回 Queen Anne Hotel（安妮女王酒店），再开车前往海边。</p></div></div>
+            <div class="time-row"><div class="time">16:25—17:00</div><div class="time-card"><strong>Warming Hut Park Store（暖屋公园商店）</strong><p>拍书店窗框中的大桥并查看中文教材接力。商店17:00关门；若16:40后才到，直接去桥边。</p></div></div>
+            <div class="time-row"><div class="time">17:05—19:10</div><div class="time-card"><strong>Golden Gate Bridge（金门大桥）</strong><p>Golden Gate Bridge Welcome Center（金门大桥游客中心）→ 中文教材接力附近 → Battery East Vista（东炮台观景台）。18:55前后日落，19:10离开。</p></div></div>
+          </div>
+          <div class="actions">
+            <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=San%20Francisco%20International%20Airport&amp;destination=Queen%20Anne%20Hotel%2C%20San%20Francisco&amp;travelmode=driving">机场到酒店</a>
+            <a class="btn light" target="_blank" rel="noopener" href="https://www.sfmta.com/routes/california-cable-car">加州街缆车</a>
+            <a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/6a881034000000000501569a">教材接力记录</a>
+          </div>
+        </article>
+        <article class="card span-5 accent"><span class="badge orange">停车与安全</span><h3>具体停车点</h3><ul><li>市区车辆留在 Queen Anne Hotel（安妮女王酒店）收费停车位；Ferry Building（旧金山渡轮大楼）与缆车段使用网约车和步行。</li><li>Warming Hut Park Store（暖屋公园商店）停 Crissy Field West Bluff Parking（克里西草坪西侧停车区）付费位，费率看咪表。</li><li>金门大桥导航 Golden Gate Bridge Welcome Center（金门大桥游客中心）；现场使用游客中心东南侧付费停车区：每小时5美元、最多3小时，约07:00—21:00开放。</li><li>座舱保持空；充电线、衣物、购物袋也不外露。</li><li>不在 Tenderloin（田德隆区）、6th Street（第六街）与 Market Street（市场街）中段停留。</li></ul><h3 style="margin-top:18px">第二天早餐</h3><p>Queen Anne Hotel（安妮女王酒店）房价含欧陆早餐，公开时段约07:00—09:30；07:00吃早餐，07:45退房出发。入住时确认次日时段。</p></article>
+        <div class="span-12 map"><iframe title="旧金山金门大桥地图" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Battery+East+Vista,+San+Francisco,+CA&output=embed"></iframe><div class="map-note">地图中心为 Battery East Vista（东炮台观景台）。日落时间与雾况当天再核对。</div></div>
+      </div>
+
+      <div class="section-head"><div><h2>已确认住宿</h2></div><p>不再比较酒店，只保留入住与交通信息。</p></div>
+      <div class="grid">
+        <article class="card span-7 dark"><span class="badge orange">9月29日入住 · 9月30日退房</span><h3>Queen Anne Hotel（安妮女王酒店）</h3><p><b>地址：</b>1590 Sutter Street（萨特街1590号）。</p><p><b>执行：</b>抵达后先寄存全部行李并停车，再使用网约车前往 Ferry Building（旧金山渡轮大楼）。入住前48小时确认停车入口、约30美元停车费和提前寄存安排。</p></article>
+        <article class="card span-5"><span class="badge blue">次日</span><h3>早餐与退房</h3><p>房价含欧陆早餐，公开时段约07:00—09:30；入住时确认。9月30日07:00早餐，07:45退房开往 Stanford University（斯坦福大学）。</p><div class="actions"><a class="btn light" target="_blank" rel="noopener" href="https://www.queenanne.com/">酒店官网</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Queen%20Anne%20Hotel%2C%20San%20Francisco&amp;destination=Stanford%20Visitor%20Center&amp;travelmode=driving">第二天出发路线</a></div></article>
+      </div>
+
+      <div class="section-head"><div><h2>给她拍 · 真人机位</h2></div><p>以单人照为主；双人照片只用于判断背景比例和光线，不照搬动作。</p></div>
+      <div class="shot-grid">
+        <figure class="shot"><img loading="lazy" src="assets/sf-ferry-couple.jpg" alt="轮渡大楼人物景别参考"><figcaption><b>Ferry Building（旧金山渡轮大楼）</b>图中双人照只参考人物与钟楼比例。实际让她在中央广场侧身站立，摄影者退到 Market Street（市场街）一侧，用2倍焦距。<a class="source" target="_blank" rel="noopener" href="https://bilykart.com/ferry-building/">真实客片来源</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/sf-cablecar-couple.jpg" alt="加州街缆车人物景别参考"><figcaption><b>California Street Cable Car（加州街缆车）</b>在终点或车辆停稳时给她拍车门、扶手和车厢环境照；听从工作人员，不在行驶中探身。<a class="source" target="_blank" rel="noopener" href="https://bilykart.com/cable-car/">真实客片来源</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/sf-california-slope-person.jpg" alt="加州街上坡真人参考"><figcaption><b>California St &amp; Powell St（加州街与鲍威尔街交叉口）</b>Google Maps（谷歌地图）请直接搜索这个交叉口。摄影者站人行道，用2—3倍焦距，人物不在轨道上静止摆拍。<a class="source" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/60d7dc63000000002103a05c">小红书真人原图</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/sf-golden-gate-fortpoint-person.jpg" alt="金门大桥真人站位"><figcaption><b>Battery East Vista（东炮台观景台）</b>人物靠步道内侧，摄影者用2倍焦距把桥塔拉近。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2479387">真人图源</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/sf-book-relay-person.jpg" alt="金门大桥中文教材接力实拍"><figcaption><b>中文教材接力</b>书籍位置会变化，也可能已被取走。找到后拍签名页与人物，放回防水袋，不新增物品。<a class="source" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/ZUbISCdFitE">真实记录来源</a></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="panel" id="road" role="tabpanel">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">9月30日—10月1日 · ROAD（驾车段）</div><h2>Silicon Valley（硅谷）、Moonstone Beach（月光石海滩）、Los Angeles（洛杉矶）</h2></div>
+        <p>不是 California State Route 1（加州1号公路）自驾游。主线使用 US-101（美国101号公路），海景集中在 Moonstone Beach（月光石海滩）。</p>
+      </div>
+
+      <div class="grid">
+        <article class="card span-6">
+          <span class="badge darkbadge">9月30日</span><h3>San Francisco（旧金山）→ Silicon Valley（硅谷）→ Cambria（坎布里亚）</h3>
+          <div class="timeline">
+            <div class="time-row"><div class="time">07:45</div><div class="time-card"><strong>San Francisco（旧金山）出发</strong><p>避开更晚的通勤车流。导航 Stanford Visitor Center（斯坦福游客中心）。</p></div></div>
+            <div class="time-row"><div class="time">09:00—10:40</div><div class="time-card"><strong>Stanford University（斯坦福大学）</strong><p>Main Quad（主方庭）、Memorial Church（纪念教堂）外观、胡佛塔周边。校园可步行参观；建筑开放以当天为准。</p></div></div>
+            <div class="time-row"><div class="time">11:10—12:20</div><div class="time-card"><strong>Apple Park Visitor Center（苹果园区游客中心）</strong><p>公众只能进入游客中心，不可进入员工园区。看模型、商店和屋顶。</p></div></div>
+            <div class="time-row"><div class="time">12:30—13:20</div><div class="time-card"><strong>硅谷午餐</strong><p>在 Cupertino（库比蒂诺）用餐并补水。不要再加 Meta（脸书母公司）或 Google（谷歌）绕行。</p></div></div>
+            <div class="time-row"><div class="time">13:15—16:50</div><div class="time-card"><strong>US-101 South（美国101号公路南向）</strong><p>15:35左右在 Target Paso Robles（塔吉特帕索罗布尔斯店，2305 Theatre Drive）与 Starbucks（星巴克）休息20分钟。之后直接到酒店。</p></div></div>
+            <div class="time-row"><div class="time">16:50—19:05</div><div class="time-card"><strong>El Colibri Hotel &amp; Spa（雅黛科乐比酒店及水疗中心）与 Moonstone Beach Boardwalk（月光石海滩木栈道）</strong><p>先到酒店放行李，再短途开车去木栈道。日落后15—20分钟离开。</p></div></div>
+          </div>
+          <div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Queen%20Anne%20Hotel%2C%20San%20Francisco&destination=El%20Colibri%20Hotel%20%26%20Spa%2C%20Cambria&waypoints=Stanford%20Visitor%20Center%7CApple%20Park%20Visitor%20Center%7CMoonstone%20Beach%20Boardwalk&travelmode=driving">打开9月30日路线</a></div>
+        </article>
+
+        <article class="card span-6">
+          <span class="badge darkbadge">10月1日</span><h3>Cambria（坎布里亚）→ Santa Barbara（圣塔芭芭拉）→ Hollywood（好莱坞）</h3>
+          <div class="timeline">
+            <div class="time-row"><div class="time">07:45</div><div class="time-card"><strong>退房出发</strong><p>不走 California State Route 1（加州1号公路）慢线，直接接 US-101 South（美国101号公路南向）。</p></div></div>
+            <div class="time-row"><div class="time">10:20—12:00</div><div class="time-card"><strong>Hendry's Beach（亨德里海滩）与 Boathouse at Hendry's Beach（亨德里海滩船屋餐厅）</strong><p>先登记候位，再短走海滩并吃早午餐。选择最先可用座位，不为海景第一排延长等待；12:00离开。</p></div></div>
+            <div class="time-row"><div class="time">12:00—15:35</div><div class="time-card"><strong>驶向 Hollywood（好莱坞）</strong><p>正常约2小时至2小时45分；为洛杉矶交通和补能预留余量。</p></div></div>
+            <div class="time-row"><div class="time">15:35—16:15</div><div class="time-card"><strong>Avis Car Rental – Hollywood（安飞士租车好莱坞门店）还车</strong><p>1333 North Highland Avenue（北高地大道1333号，门店代码Z9U）。周四08:00—17:00。完成加油或补能，拍油量或电量、里程与车况，索取结算凭证。</p></div></div>
+            <div class="time-row"><div class="time">16:20—16:45</div><div class="time-card"><strong>Loews Hollywood Hotel（洛伊斯好莱坞酒店）</strong><p>距还车点约1.3公里。带行李叫网约车约5—10分钟，不建议拖箱步行。</p></div></div>
+          </div>
+          <div class="notice warn"><b>预订时锁定门店代码Z9U</b><p>官方页面不接受19:00还到Z9U，最晚可选17:00；实际目标为16:15到、16:40前完成交车。如果当天想在 Santa Barbara（圣塔芭芭拉）停留到下午，需把还车点改成 Hollywood Burbank Airport（BUR，好莱坞伯班克机场），不能直接晚到Z9U。</p></div>
+          <div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=El%20Colibri%20Hotel%20%26%20Spa%2C%20Cambria&destination=Avis%20Car%20Rental%2C%201333%20N%20Highland%20Ave%2C%20Los%20Angeles%2C%20CA&waypoints=Boathouse%20at%20Hendry%27s%20Beach&travelmode=driving">打开10月1日路线</a><a class="btn light" target="_blank" rel="noopener" href="https://www.avis.com/en/locations/nam/us/ca/hollywood/z9u">好莱坞门店</a></div>
+        </article>
+
+        <article class="card span-5 accent"><span class="badge orange">停车与安全</span><ul><li>斯坦福停 Galvez Lot L-96（加尔韦斯访客停车场），用 ParkMobile（停车缴费应用）付款；两小时按约9.50美元预留，现场分区牌为准。</li><li>苹果游客中心使用公共停车场；所有行李仍放后备厢，座舱保持空。</li><li>月光石海滩停木栈道沿线公共位，通常免费。</li><li>圣塔芭芭拉使用 Arroyo Burro Beach County Park（阿罗约布罗海滩县立公园）公共停车场，通常免费；午餐时段可能需要等车位。</li><li>连续驾驶不超过2小时30分；任何一人犯困就进服务区。</li></ul></article>
+        <article class="card span-7"><span class="badge blue">早餐采购</span><h3>坎布里亚</h3><p>Cookie Crock Market（曲奇克罗克市场），1240 Knollwood Drive（诺尔伍德路1240号），周一至周六约07:00—21:00。9月30日入住后18:45—20:00开车采购；不要日落后沿公路步行。买水、酸奶、香蕉、三明治和咖啡。</p></article>
+        <div class="span-12 map"><iframe title="美国101号公路路线地图" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Moonstone+Beach+Boardwalk,+Cambria,+CA&output=embed"></iframe><div class="map-note">海边住宿为 El Colibri Hotel &amp; Spa（雅黛科乐比酒店及水疗中心）；步行到 Moonstone Beach Boardwalk（月光石海滩木栈道）仍需注意路段照明，推荐短途开车。</div></div>
+      </div>
+
+      <div class="section-head"><div><h2>给她拍 · 真人机位</h2></div><p>科技园区以单人与建筑线条为主，海边用走动照和地面纹理。</p></div>
+      <div class="shot-grid">
+        <figure class="shot"><img loading="lazy" src="assets/road-stanford-person.jpg" alt="斯坦福大学真人拍照参考"><figcaption><b>Memorial Church（纪念教堂）</b>人站主方庭中轴线，摄影者退到拱廊阴影内；上午顺光。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2385650">图源与参考</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/road-apple-visitor-people.jpg" alt="苹果园区游客中心真实游客参考"><figcaption><b>Apple Park Visitor Center（苹果园区游客中心）</b>室内园区模型最能说明“只能参观游客中心”。人物站模型短边，摄影者侧拍，避免玻璃反光。<a class="source" target="_blank" rel="noopener" href="https://www.tripadvisor.com/Attraction_Review-g32273-d13331376-Reviews-Apple_Park_Visitor_Center-Cupertino_California.html">真实游客图源</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/road-moonstone-02.webp" alt="月光石海滩真人拍照参考"><figcaption><b>Moonstone Beach Boardwalk（月光石海滩木栈道）</b>从木栈道下到允许进入的沙滩后，人站湿沙边缘，摄影者略低机位连拍走动；不要背对大浪太久。<a class="source" target="_blank" rel="noopener" href="https://www.flyingdawnmarie.com/new-blog/cambria-moonstone-beach">图源与参考</a></figcaption></figure>
+      </div>
+      <div class="actions"><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/692527bb000000001e00558b">小红书斯坦福机位</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/6853dc6b000000000b01d6fe">小红书硅谷路线</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/647806610000000012032074">小红书月光石海滩</a></div>
+    </section>
+
+    <section class="panel" id="la" role="tabpanel">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">10月1—6日 · LOS ANGELES（洛杉矶）</div><h2>住在好莱坞，不换酒店</h2></div>
+        <p>Loews Hollywood Hotel（洛伊斯好莱坞酒店）适合 Universal Studios Hollywood（好莱坞环球影城）、Griffith Observatory（格里菲斯天文台）与 Hollywood Burbank Airport（好莱坞伯班克机场）。Disneyland Resort（迪士尼度假区）距离较远，但只往返一天。</p>
+      </div>
+
+      <div class="grid">
+        <article class="card span-4"><span class="badge darkbadge">10月1日</span><h3>入住与补给</h3><p>16:30入住，18:00在 Ovation Hollywood（好莱坞综合体）或酒店附近吃饭。20:30前结束采购，回房休息。</p><p><b>采购：</b>Trader Joe's（乔氏超市），1600 North Vine Street（北藤街1600号），约09:00—21:00；酒店往返用网约车。Ralphs（拉尔夫超市），7257 West Sunset Boulevard（西日落大道7257号），营业至约01:00，仅作为晚到备选。</p></article>
+        <article class="card span-4"><span class="badge orange">10月2日</span><h3>好莱坞环球影城</h3><p>07:15出发，08:00前到安检。优先 Super Nintendo World（超级任天堂世界）、Studio Tour（影城之旅）、Harry Potter（哈利·波特园区）。17:30后按体力决定是否留城市大道晚餐。</p><p>酒店步行到 Hollywood / Highland Station（好莱坞/高地站），坐地铁B线至 Universal / Studio City（环球/影城城站），再转免费接驳车。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Loews%20Hollywood%20Hotel&destination=Universal%20Studios%20Hollywood&travelmode=transit">地铁路线</a><a class="btn light" target="_blank" rel="noopener" href="https://www.universalstudioshollywood.com/web/en/us/theme-park-tickets">官方门票</a></div></article>
+        <article class="card span-4"><span class="badge blue">10月3日</span><h3>城市日 + 米其林一星</h3><p>09:00 Lake Hollywood Park（好莱坞湖公园）；10:15 The Original Farmers Market（始祖农夫市集）；12:00 Academy Museum of Motion Pictures（美国电影艺术与科学学院博物馆，可删除）；16:30到 Griffith Observatory（格里菲斯天文台）；19:45在 Kali Restaurant（卡利餐厅）晚餐。</p><p>全日用网约车。18:50离开天文台，给拥堵与叫车留出余量。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Loews%20Hollywood%20Hotel&amp;destination=Kali%20Restaurant%2C%205722%20Melrose%20Ave&amp;waypoints=Lake%20Hollywood%20Park%7COriginal%20Farmers%20Market%7CAcademy%20Museum%20of%20Motion%20Pictures%7CGriffith%20Observatory&amp;travelmode=driving">当天完整路线</a></div></article>
+        <article class="card span-4 dark"><span class="badge orange">10月4日</span><h3>Disneyland Park（迪士尼乐园主园）单园</h3><p>06:15叫车，目标07:20到安检。08:00开园先去 Star Wars: Rise of the Resistance（星球大战：抵抗组织崛起），随后按西侧到东侧推进，晚上看主园夜间表演。</p><p>10月4日单日单园票184美元/人；两人368美元。主园营业至22:00，回程按应用指定上车区叫车。</p><div class="actions"><a class="btn orange" target="_blank" rel="noopener" href="https://disneyland.disney.go.com/admission/tickets/">官方购票</a><a class="btn light" style="border-color:#fff;color:#fff" target="_blank" rel="noopener" href="https://disneyland.disney.go.com/calendars/">官方日历</a></div></article>
+        <article class="card span-8"><span class="badge blue">10月5日</span><h3>购物、比弗利山庄、圣塔莫尼卡</h3><div class="timeline"><div class="time-row"><div class="time">10:00—12:00</div><div class="time-card"><strong>Fairfax / La Brea（费尔法克斯 / 拉布雷亚）</strong><p>从 Stüssy（斯图西）、Supreme（至上）、BAPE（猿人头）、Undefeated（不败）中选2—3家。</p></div></div><div class="time-row"><div class="time">12:30—14:00</div><div class="time-card"><strong>Beverly Hills（比弗利山庄）</strong><p>Rodeo Drive（罗迪欧大道）午餐与短走；购物不是目标可删除。</p></div></div><div class="time-row"><div class="time">15:30—19:15</div><div class="time-card"><strong>Santa Monica Pier（圣塔莫尼卡码头）</strong><p>66号公路终点牌、码头、摩天轮和日落。日落后30分钟离开。</p></div></div></div><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Loews%20Hollywood%20Hotel&destination=Santa%20Monica%20Pier&waypoints=La%20Brea%20Avenue%2C%20Los%20Angeles%7CRodeo%20Drive%2C%20Beverly%20Hills&travelmode=driving">当天路线</a></div></article>
+        <article class="card span-12 accent"><span class="badge orange">10月6日</span><h3>Los Angeles（洛杉矶）→ Las Vegas（拉斯维加斯）</h3><p><b>09:20</b> 从 Loews Hollywood Hotel（洛伊斯好莱坞酒店）出发；<b>09:50—10:10</b>到 Hollywood Burbank Airport（BUR，好莱坞伯班克机场）；<b>12:10—13:20</b> Southwest Airlines（西南航空）直飞 Harry Reid International Airport（LAS，哈里·里德国际机场）。小机场与酒店距离短，保留约2小时值机和安检时间。</p><p>当前两人票面约¥2,738，随身行李规则与托运行李费以支付页为准。Frontier Airlines（边疆航空）13:24班只在两人加完行李与选座后仍不超过¥2,800时考虑。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/travel/flights?hl=zh-CN&curr=CNY&q=Flights%20from%20BUR%20to%20LAS%20on%202026-10-06%20oneway">核对航班</a><a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Loews%20Hollywood%20Hotel&destination=Hollywood%20Burbank%20Airport&travelmode=driving">酒店到机场</a></div></article>
+      </div>
+
+      <div class="section-head"><div><h2>Disneyland Park（迪士尼乐园主园）购票与加速方案</h2></div><p>10月4日只进入主园。与10月5日相比票价相同，保留原日程更利于10月6日赶早班机。</p></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>方案</th><th>每人价格</th><th>两人价格</th><th>适用方式</th></tr></thead>
+          <tbody>
+            <tr><td><b>仅单日单园票</b></td><td>184美元</td><td>368美元</td><td>全部普通队列；适合接受只完成6—8个重点项目。</td></tr>
+            <tr><td><b>单园票 + Multi Pass（多项目闪电通道）</b></td><td>218美元起</td><td>436美元起</td><td>Multi Pass（多项目闪电通道）34美元/人起；这是本行程推荐方案。</td></tr>
+            <tr><td><b>按需增加 Single Pass（单项目闪电通道）</b></td><td>218美元起 + 动态价</td><td>436美元起 + 动态价</td><td>只在 Star Wars: Rise of the Resistance（星球大战：抵抗组织崛起）队列过长时临时购买。</td></tr>
+            <tr><td><b>Premier Pass（尊享通票）</b></td><td>动态价格</td><td>动态价格</td><td>适用项目各走一次闪电通道且不用选择时段；不作为默认方案。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="compare" style="margin-top:15px">
+        <div class="recommended"><span class="badge orange">购票时</span><h3>1-Day, 1-Park Ticket（单日单园票）</h3><ul><li>日期选择2026年10月4日，票档为 Tier 4（第四档）。</li><li>两位成人184美元/人，合计368美元。</li><li>主题公园预约选择 Disneyland Park（迪士尼乐园主园），不选择跨园。</li><li>付款后把两张票关联到同一个 Disneyland App（迪士尼乐园应用程序）账户，便于同时预约。</li></ul></div>
+        <div><span class="badge blue">入园后</span><h3>Lightning Lane（闪电通道）操作</h3><ul><li>打开 Tip Board（项目看板），购买或启用 Multi Pass（多项目闪电通道），先约 Indiana Jones Adventure（印第安纳琼斯冒险）。</li><li>每次核销当前预约后立刻选择下一项；若系统仍在等待时间内，以应用显示的下一次可预约时间为准。</li><li>Star Wars: Rise of the Resistance（星球大战：抵抗组织崛起）不包含在 Multi Pass（多项目闪电通道）内；先走开园普通队列，必要时再看 Single Pass（单项目闪电通道）。</li><li>两人需要各买一份 Multi Pass（多项目闪电通道），不能共用一份。</li></ul><div class="actions"><a class="btn light" target="_blank" rel="noopener" href="https://disneyland.disney.go.com/lightning-lane-passes/">官方规则与项目清单</a></div></div>
+      </div>
+      <div class="notice"><b>日期对比</b><p>10月4日与10月5日的单日单园票均为184美元/人。10月5日主园开放至23:00，比4日多1小时，但没有票价优势；保留10月4日，10月5日继续执行购物与 Santa Monica（圣塔莫尼卡）海边行程。</p></div>
+
+      <div class="grid" style="margin-top:15px">
+        <article class="card span-12 accent"><span class="badge orange">米其林一星餐厅 · 10月3日19:45</span><h3>Kali Restaurant（卡利餐厅）</h3><p><b>位置：</b>5722 Melrose Avenue（梅尔罗斯大道5722号）。从 Griffith Observatory（格里菲斯天文台）叫车约25—40分钟，再从餐厅短途叫车回 Loews Hollywood Hotel（洛伊斯好莱坞酒店）。</p><p><b>点单：</b>两人共享 New York strip（纽约客牛排，12盎司）、Mushroom risotto（蘑菇烩饭）、一份时令蔬菜和 The Original Kali Meringue Gelato（卡利蛋白霜冰淇淋）。按当前菜单与税费、小费，两人准备230—270美元，不点配酒。</p><p><b>选择原因：</b>加州食材与美国牛排特征明确；路线正好接在天文台之后；不会占用环球影城、迪士尼或机场日。</p><div class="actions"><a class="btn orange" target="_blank" rel="noopener" href="https://resy.com/cities/los-angeles-ca/venues/kali?date=2026-10-03&amp;seats=2">查看10月3日订位</a><a class="btn light" target="_blank" rel="noopener" href="https://kalirestaurant.com/food-menu">官方菜单</a><a class="btn light" target="_blank" rel="noopener" href="https://guide.michelin.com/en/california/us-los-angeles/restaurant/kali">米其林指南</a></div></article>
+      </div>
+
+      <div class="section-head"><div><h2>给她拍 · 真人机位</h2></div><p>每个主要日程保留一个明确的单人机位，先拍全身，再拍半身。</p></div>
+      <div class="shot-grid">
+        <figure class="shot"><img loading="lazy" src="assets/la-universal-person.jpg" alt="环球影城真人拍照参考"><figcaption><b>Universal Studios Hollywood（好莱坞环球影城）</b>入园前人多，改为离园时在旋转地球侧前方拍；摄影者用0.5倍至1倍。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2107514">图源与参考</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/la-hollywood-sign-person.jpg" alt="好莱坞标志真人拍照参考"><figcaption><b>Lake Hollywood Park（好莱坞湖公园）</b>人物站草坪前半区，摄影者用2倍焦距压缩标志；不要靠近住宅道路。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2287561">图源与参考</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/la-disneyland-person.jpg" alt="迪士尼城堡真人拍照参考"><figcaption><b>Sleeping Beauty Castle（睡美人城堡）</b>不要只在正中主路拍。人站城堡侧桥，摄影者贴外侧栏杆，可避开部分人流。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/1465235">图源与参考</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/la-griffith-night-person.jpg" alt="格里菲斯天文台夜景真人参考"><figcaption><b>Griffith Observatory（格里菲斯天文台）</b>蓝调时刻在东侧露台拍城市灯光；人物靠石栏内侧，手机用夜景模式。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2484319">真人图源</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/la-santa-monica-couple.jpg" alt="圣塔莫尼卡码头人物景别参考"><figcaption><b>Santa Monica State Beach – South of Pier（圣塔莫尼卡州立海滩码头南侧）</b>图中双人照只参考光线与栈桥比例。实际让她侧身看海或沿干沙慢走，摄影者用2倍侧逆光连拍；注意潮水。<a class="source" target="_blank" rel="noopener" href="https://akikoliu.photos/2020/01/17/santa-monica-pier-session/">真实客片来源</a></figcaption></figure>
+      </div>
+      <div class="actions"><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/6702a038000000001a022ca2">小红书环球影城单人动作</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/6626b25f0000000003023e84">小红书天文台单人机位</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/67e61741000000001d0085c4">小红书好莱坞标志机位</a></div>
+    </section>
+
+    <section class="panel" id="vegas" role="tabpanel">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">10月6—10日 · LAS VEGAS（拉斯维加斯）</div><h2>大道中段两晚，大道北段两晚</h2></div>
+        <p>10月6—8日住 Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）；10月8—10日住 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）。两段之间用网约车。</p>
+      </div>
+
+      <div class="grid">
+        <article class="card span-7 dark"><span class="badge orange">10月6—8日 · 已订 · 到店付款</span><h3>Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）</h3><p>位于 Las Vegas Strip（拉斯维加斯大道）中段，对面是 Caesars Palace（凯撒宫），步行可到 Paris Las Vegas（巴黎拉斯维加斯酒店）、Bellagio Hotel &amp; Casino（百乐宫酒店及赌场）和 LINQ Promenade（林荫大道步行街）。</p><p><b>入住：</b>10月6日16:00起；<b>退房：</b>10月8日11:00前。订单总价 US$335.72 尚未预付，已含两晚 Resort Fee（度假村费）；入住另做 US$150 可退损坏押金预授权。</p></article>
+        <article class="card span-5"><span class="badge blue">10月8—10日 · 已订</span><h3>Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）</h3><p>10月8日先寄存行李，再去 Fashion Show Mall（时尚秀购物中心）；15:00入住。10月9日演唱会在酒店内，Sphere（拉斯维加斯巨型球）结束后回房休息。</p><p>赌场酒店的网约车点可能不在正门，以应用内指定区域为准。</p></article>
+
+        <article class="card span-4"><span class="badge darkbadge">10月6日</span><h3>落地、入住、Fountains of Bellagio（百乐宫喷泉）</h3><p>13:20到达，14:15前后离开 Harry Reid International Airport（哈里·里德国际机场），16:00入住；提前到先寄存。傍晚先看 Flamingo Wildlife Habitat（弗拉明戈野生动物栖息地），再步行经过 The Forum Shops at Caesars Palace（凯撒宫购物中心）到 Fountains of Bellagio（百乐宫喷泉），21:15前回酒店。</p><p>不在飞行日预付不可灵活改期的射击时段。早餐和次日饮水在酒店内或大道主路上的连锁便利店购买。</p></article>
+        <article class="card span-8 accent"><span class="badge orange">10月7日</span><h3>Lower Antelope Canyon（下羚羊谷）+ Horseshoe Bend（马蹄湾）</h3><p><b>05:45</b>起床，<b>06:25</b>从 Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）出发，<b>06:40</b>到 Paris Las Vegas Tour Lobby（巴黎拉斯维加斯酒店旅游大堂），<b>07:00</b>出发，约<b>21:45</b>返回。主路步行约10—15分钟；疲劳或天气不适时叫短途网约车。</p><p>当前约每人249美元起，通常含 Lower Antelope Canyon（下羚羊谷）门票、Navajo（纳瓦霍）向导、Horseshoe Bend（马蹄湾）费用、午餐、水与小团交通；付款页逐项核对。</p><p><b>推荐 Lower Antelope Canyon（下羚羊谷）：</b>10月光柱不稳定，下羚羊谷的岩壁层次与人像更稳定；只有膝盖不适或不愿走陡梯时改 Upper Antelope Canyon（上羚羊谷）。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.maxtour.co/tours/antelope-canyon-tour-from-las-vegas/">查看07:00小团</a></div></article>
+        <article class="card span-5"><span class="badge blue">10月8日</span><h3>射击、换酒店、表演</h3><p><b>10:30</b>退房；<b>11:00</b>到 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）寄存；<b>11:30—13:00</b> Battlefield Vegas（战场拉斯维加斯射击场）；<b>13:10—14:35</b>午餐和短购物；<b>15:00</b>入住休息；<b>18:30</b>看 O by Cirque du Soleil（太阳马戏《O》）。</p><p>Fashion Show Mall（时尚秀购物中心）是当天可删除项。睡眠不足就射击后直接回酒店，保留15:00—17:15的洗澡、休息和化妆时间。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.ticketmaster.com/cirque-du-soleil-o-las-vegas-nevada-10-08-2026/event/2E00631D02E26AFD">O by Cirque du Soleil（太阳马戏《O》）门票</a></div></article>
+        <article class="card span-7"><span class="badge orange">10月9日</span><h3>Sphere（拉斯维加斯巨型球）与演唱会</h3><p><b>11:00</b> The Wizard of Oz at Sphere（巨型球《绿野仙踪》沉浸体验）；<b>13:00—14:30</b> The Venetian Resort Las Vegas（拉斯维加斯威尼斯人度假村）午餐；<b>15:00—17:30</b>回房休息；<b>19:30</b> TLC &amp; Salt-N-Pepa with En Vogue（TLC、盐-N-佩帕与雅时尚合唱团）在 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）内演出。</p><p>如果对演唱会无感，只保留 Sphere（拉斯维加斯巨型球）。不要在同一天再走完整条 Las Vegas Strip（拉斯维加斯大道）。</p><div class="actions"><a class="btn orange" target="_blank" rel="noopener" href="https://www.ticketmaster.com/the-wizard-of-oz-at-sphere-las-vegas-nevada-10-09-2026/event/17006464C5C7D91D">Sphere（拉斯维加斯巨型球）门票</a><a class="btn light" target="_blank" rel="noopener" href="https://www.fontainebleaulasvegas.com/event/tlc-salt-n-pepa-its-iconic/">演唱会官方页</a></div></article>
+        <article class="card span-12 accent"><span class="badge darkbadge">10月10日</span><h3>Las Vegas（拉斯维加斯）→ New York City（纽约）</h3><p><b>06:45</b>起床，<b>07:15</b>离开 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店），<b>07:40—08:00</b>到 Harry Reid International Airport（LAS，哈里·里德国际机场），<b>09:59—18:12</b> Delta Air Lines（达美航空）直飞 John F. Kennedy International Airport（JFK，纽约肯尼迪国际机场）。当前两人票面约¥2,323，托运行李费另计。</p><p>到达后乘 AirTrain JFK（肯尼迪机场轻轨）至 Jamaica Station（牙买加站），再乘 LIRR（长岛铁路）到 Penn Station（宾夕法尼亚车站），最后步行或短途出租车到 Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）。20:30左右入住，不排景点。</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/travel/flights?hl=zh-CN&curr=CNY&q=Flights%20from%20LAS%20to%20JFK%20on%202026-10-10%20oneway">核对航班</a></div></article>
+
+        <article class="card span-12 accent"><span class="badge orange">射击体验 · 推荐</span><h3>Battlefield Vegas（战场拉斯维加斯射击场）</h3><div class="compare"><div class="recommended"><h3>为什么选它</h3><ul><li><b>主排10月8日11:30：</b>先在 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）寄存行李，再坐约5—10分钟网约车过去；不承担10月6日航班延误导致错过预付时段的风险。</li><li>地址为 2771 South Sammy Davis Jr Drive（南萨米·戴维斯小路2771号），位于 Las Vegas Strip（拉斯维加斯大道）北段附近。</li><li>室内场地，不占半天；官网提供 Strip（拉斯维加斯大道）及 Fremont / Downtown（弗里蒙特 / 市中心）酒店免费 Humvee（军用悍马车）接送。</li><li>官网确认每位客人全程有 Range Safety Officer（靶场安全员）；套餐包含讲解、弹药、护目镜、耳罩、场地费和靶纸。</li><li>小红书多篇华人实测提到新手可完成、安全说明明确；也反复提到室内声音大、后坐力可能不适、实际射击时间比想象短。</li></ul></div><div><h3>价格与选择</h3><ul><li><b>推荐：</b>Group Shooting Package（团体射击套餐）每位99.99美元，当前官网摘要为 Glock 17（格洛克17手枪）20发 + Uzi（乌兹冲锋枪）或 MP5（MP5冲锋枪）25发。两位基础价199.98美元，另看支付页税费。</li><li><b>不优先：</b>每位144.99美元及以上的多枪套餐。小红书用户常见实付约145—280美元/人，但笔记年份、加枪与税费不同，不能作为结算价。</li><li><b>不建议首次尝试：</b>Barrett .50（巴雷特0.50口径步枪）、霰弹枪或强调大后坐力的套餐。体验短、费用上升，也更容易肩部不适。</li><li>官网在线订单退款会扣10%费用；确认10月8日档位、两位总价和取消条款后再付款。</li></ul></div></div><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.battlefieldvegas.com/packages/fan-favorites/group-shooting-packages/">官方套餐与价格</a><a class="btn light" target="_blank" rel="noopener" href="https://www.battlefieldvegas.com/frequently-asked-questions/">官方常见问题</a><a class="btn light" target="_blank" rel="noopener" href="https://www.battlefieldvegas.com/packages/fan-favorites/free-humvee-pickup/">免费接送说明</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/6803397a000000001c0280d4">小红书近期实测</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/5cdfb864000000000f02cffb">小红书新手反馈</a></div></article>
+
+        <article class="card span-12"><span class="badge blue">备选比较</span><h3>另外两类场地</h3><div class="table-wrap"><table><thead><tr><th>场地</th><th>当前公开价格</th><th>适合点</th><th>本行程结论</th></tr></thead><tbody><tr><td><b>The Range 702（702射击场）</b></td><td>官网体验页有89美元起项目；One and Done（单枪体验）79.95美元，Stimulus Package（刺激套餐）149.95美元</td><td>室内；官网明确列出免费观摩者选项；新手资料完整</td><td>位于 Spring Valley（春谷）方向，不如 Battlefield Vegas（战场拉斯维加斯射击场）顺路；只有想省到最低或一人射击、一人旁观时再比较</td></tr><tr><td><b>Machine Guns Vegas（拉斯维加斯机枪射击场）</b></td><td>官网说明入门套餐通常约125美元起；5人以上159美元/人，与两人行程无关</td><td>室内、可预约酒店接送</td><td>价格与套餐促销变化大；位置没有明显优势，不作为首选</td></tr><tr><td><b>Pro Gun Vegas（拉斯维加斯专业枪械射击场）/ Shoot Las Vegas（拉斯维加斯户外射击）</b></td><td>小红书常见约145—199美元/人，最终以官网为准</td><td>户外、空间感更好</td><td>单程约30—45分钟，通常占3—4小时；会压缩10月8日休息和表演，不纳入主行程</td></tr></tbody></table></div></article>
+
+        <article class="card span-12 dark"><span class="badge orange">安全边界</span><h3>可以体验，但不能按“绝对安全”理解</h3><p>这是有固定靶位、个人安全员和护具的商业实弹场，流程比自行接触枪械可控；实弹、噪声、热弹壳和后坐力仍有客观风险。两人都要清醒、能听懂并立即执行指令。枪械只在安全员交接后操作，枪口始终朝靶区，未被指示射击时手指离开扳机；听到 Cease Fire（停止射击）立即停下。</p><p>穿圆领或高领上衣、长裤、包脚鞋，避免低领、宽袖、围巾和垂坠首饰；可戴有帽檐的帽子，防止热弹壳落入衣领。室内全自动射击声压高，可向工作人员提出在耳塞外再戴耳罩。结束后先洗手、前臂和脸，再碰食物、隐形眼镜或化妆品。</p><p><b>证件与健康：</b>带护照原件；官网最低年龄为10岁，18岁以下需监护人，因此小红书“必须21岁”并非官网现行规则。怀孕、听力问题、肩颈旧伤、近期饮酒或使用影响判断的药物时跳过。</p></article>
+      </div>
+
+      <div class="section-head"><div><h2>给她拍 · 真人机位</h2></div><p>羚羊谷单人照动作保持简单；大道夜景只在有人流和安保的区域停留。</p></div>
+      <div class="shot-grid">
+        <figure class="shot"><img loading="lazy" src="assets/vegas-antelope-person2.jpg" alt="下羚羊谷真人拍照参考"><figcaption><b>Lower Antelope Canyon（下羚羊谷）</b>人靠岩壁侧身或背对镜头，摄影者用1倍镜头略仰拍；听从向导，不停队摆复杂动作。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/1996308">图源与参考</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/vegas-bellagio-person.jpg" alt="百乐宫喷泉拍照参考"><figcaption><b>Fountains of Bellagio（百乐宫喷泉）</b>从 Paris Las Vegas（巴黎拉斯维加斯酒店）一侧拍全景，人站栏杆前侧身；演出开始前10分钟占位。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2362031">图源与参考</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/vegas-fashion-show.jpg" alt="拉斯维加斯时尚秀购物中心"><figcaption><b>Fashion Show Mall（时尚秀购物中心）</b>恢复日以采购为主，不专门拍照。商场外白色顶棚可作建筑背景。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/2017914">图源与参考</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/vegas-sphere-person.jpeg" alt="拉斯维加斯巨型球真人拍照参考"><figcaption><b>Sphere（拉斯维加斯巨型球）</b>导航 Sphere Vista Point (Bridge)（巨型球天桥观景点），从 The Venetian Resort Las Vegas（拉斯维加斯威尼斯人度假村）与 Wynn Las Vegas（拉斯维加斯永利酒店）之间的天桥方向拍。人物靠玻璃边，摄影者压低镜头，让球体完整进入画面。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/3234310">图源与参考</a></figcaption></figure>
+      </div>
+      <div class="actions"><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/69b882a7000000001a02e4ee">小红书下羚羊谷机位</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/66129771000000001a00fe20">小红书巨型球单人机位</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/67500db700000000070302f7">小红书枫丹白露窗景</a></div>
+    </section>
+
+    <section class="panel" id="nyc" role="tabpanel">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">10月10—14日 · NEW YORK（纽约）</div><h2>下城、中央公园、比赛与机场前夜</h2></div>
+        <p>Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）靠近 Madison Square Garden（麦迪逊广场花园）。三晚不换位置，10月13日傍晚再去 John F. Kennedy International Airport（JFK，纽约肯尼迪国际机场）附近。</p>
+      </div>
+
+      <div class="grid">
+        <article class="card span-4"><span class="badge darkbadge">10月10日</span><h3>到达</h3><p>18:12到 John F. Kennedy International Airport（JFK，纽约肯尼迪国际机场）。默认乘 AirTrain（机场捷运）到 Jamaica Station（牙买加站），转 LIRR（长岛铁路）到 Penn Station（宾夕法尼亚车站），再乘短途黄色出租车到 Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）。两人约38—45美元，正常20:15—21:00入住。</p><p>当晚只吃简餐，不安排 Times Square（时代广场）。<b>采购：</b>Whole Foods Market Bryant Park（全食超市布莱恩特公园店），1095 Sixth Avenue（第六大道1095号），约07:00—22:00；21:00后不专程前往，改到第二天购买。</p></article>
+        <article class="card span-8"><span class="badge orange">10月11日</span><h3>Lower Manhattan（曼哈顿下城）+ Statue of Liberty（自由女神像）+ DUMBO（丹波区）</h3><div class="timeline"><div class="time-row"><div class="time">08:20—10:30</div><div class="time-card"><strong>Empire State Building（帝国大厦）、The Oculus（世贸中心交通枢纽）、9/11 Memorial（九一一纪念广场）</strong><p>帝国大厦只拍外观；纪念广场当天不进馆。</p></div></div><div class="time-row"><div class="time">10:40—14:05</div><div class="time-card"><strong>Wall Street（华尔街）与免费渡轮</strong><p>New York Stock Exchange（纽约证券交易所）、Charging Bull（华尔街铜牛）、Battery Park（炮台公园）；乘 Staten Island Ferry（史泰登岛渡轮）往返看 Statue of Liberty（自由女神像），回程后在 Stone Street（石街）午餐。</p></div></div><div class="time-row"><div class="time">14:20—18:35</div><div class="time-card"><strong>NYC Ferry（纽约渡轮）→ DUMBO（丹波区）→ Brooklyn Bridge（布鲁克林大桥）</strong><p>曼哈顿大桥机位、旋转木马、河岸，体力允许时走布鲁克林大桥回曼哈顿。</p></div></div></div><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Executive%20Hotel%20Le%20Soleil%20New%20York&amp;destination=Whitehall%20Terminal%2C%20New%20York&amp;waypoints=Empire%20State%20Building%7COculus%20World%20Trade%20Center%7CCharging%20Bull&amp;travelmode=transit">下城路线</a><a class="btn light" target="_blank" rel="noopener" href="https://www.ferry.nyc/routes-and-schedules/east-river/">NYC Ferry（纽约渡轮）时刻</a></div></article>
+        <article class="card span-8"><span class="badge blue">10月12日</span><h3>Central Park（中央公园）、Midtown（曼哈顿中城）、New York Knicks（纽约尼克斯）季前赛</h3><div class="timeline"><div class="time-row"><div class="time">08:30—12:15</div><div class="time-card"><strong>Central Park（中央公园）</strong><p>Bow Bridge（弓桥）、Bethesda Terrace（贝塞斯达露台）、The Mall（林荫大道）和 Gapstow Bridge（加普斯托桥）。</p></div></div><div class="time-row"><div class="time">12:30—16:45</div><div class="time-card"><strong>Fifth Avenue（第五大道）→ Times Square（时代广场）</strong><p>Apple Fifth Avenue（苹果第五大道店）、The Tiffany Landmark（蒂芙尼地标旗舰店）、St. Patrick's Cathedral（圣帕特里克大教堂）、Rockefeller Center（洛克菲勒中心）、Grand Central Terminal（中央车站）、New York Public Library（纽约公共图书馆）、Bryant Park（布莱恩特公园）和 Times Square（时代广场）。购物只进两家。</p></div></div><div class="time-row"><div class="time">16:45—18:15</div><div class="time-card"><strong>回酒店放购物袋、简单吃饭</strong><p>补妆并确认电子票；不带大包。</p></div></div><div class="time-row"><div class="time">比赛前60—75分钟</div><div class="time-card"><strong>Madison Square Garden（麦迪逊广场花园）</strong><p>Minnesota Timberwolves（明尼苏达森林狼）对 New York Knicks（纽约尼克斯）季前赛。酒店步行约10分钟。</p></div></div></div></article>
+        <article class="card span-4 dark"><span class="badge orange">比赛票</span><h3>Viagogo（票务转售平台）订单</h3><p>你截图中的弹窗是停车通行证加购，不是比赛门票附带内容。纽约市区不租车，不需要购买。</p><p>比赛前48小时确认电子票已转入官方账号或手机钱包；不要只保留订单截图。</p></article>
+        <article class="card span-7"><span class="badge darkbadge">10月13日</span><h3>Manhattan West Side（曼哈顿西侧）+ 购物 + 机场前夜</h3><p><b>08:45</b>退房寄存行李；<b>09:20</b> Vessel（维塞尔）和 The Shops at Hudson Yards（哈德逊城市广场购物中心）；<b>09:50—11:30</b> The High Line（高线公园）；<b>11:30—13:15</b> Chelsea Market（切尔西市场）与 Artists &amp; Fleas（艺术家与跳蚤市集）；<b>13:20—16:00</b> Little Island（小岛公园）与 Meatpacking District（肉库区）；<b>16:00</b>打车回酒店；<b>17:00</b>取行李后直接打车去JFK机场酒店。</p><p>西侧景点之间步行，不坐地铁；预计18:30—19:30入住机场酒店。购物只放在前半天的顺路位置，不延后16:00离场时间。</p></article>
+        <article class="card span-12 accent"><span class="badge orange">首次到纽约 · 地标覆盖</span><h3>三天按区域完成，不横穿曼哈顿</h3><p><b>10月11日下城与布鲁克林：</b>Empire State Building（帝国大厦）外观、The Oculus（世贸中心交通枢纽）、9/11 Memorial（九一一纪念广场）、Wall Street（华尔街）、Charging Bull（华尔街铜牛）、Battery Park（炮台公园）、Statue of Liberty（自由女神像）远观、DUMBO（丹波区）、Brooklyn Bridge（布鲁克林大桥）。</p><p><b>10月12日中央公园与中城：</b>Central Park（中央公园）、Fifth Avenue（第五大道）、St. Patrick's Cathedral（圣帕特里克大教堂）、Rockefeller Center（洛克菲勒中心）、Grand Central Terminal（中央车站）、New York Public Library（纽约公共图书馆）、Bryant Park（布莱恩特公园）、Times Square（时代广场）、Madison Square Garden（麦迪逊广场花园）。</p><p><b>10月13日西侧：</b>Vessel（维塞尔）、Hudson Yards（哈德逊城市广场）、The High Line（高线公园）、Chelsea Market（切尔西市场）、Little Island（小岛公园）、Meatpacking District（肉库区）。</p><p><b>没有强塞：</b>Metropolitan Museum of Art（大都会艺术博物馆）、SoHo（苏豪区）和登顶观景台需要各增加2—4小时，本版不占用比赛与机场转场。</p></article>
+        <article class="card span-12"><span class="badge blue">顺路购物</span><h3>只安排三段</h3><p><b>10月12日 Fifth Avenue（第五大道）：</b>The Tiffany Landmark（蒂芙尼地标旗舰店）、Nike House of Innovation NYC（耐克纽约创新旗舰店）、MoMA Design Store（纽约现代艺术博物馆设计商店）中选两家；New York Knicks Team Store（纽约尼克斯球队商店）在比赛前看球衣和城市限定商品。</p><p><b>10月13日 Hudson Yards（哈德逊城市广场）：</b>Alo Yoga（阿洛瑜伽）、Aritzia（阿里齐亚）、Lululemon（露露乐蒙）中选一家，最多30分钟。<b>Chelsea Market（切尔西市场）：</b>Artists &amp; Fleas（艺术家与跳蚤市集）适合买小件设计品。纽约购物不提供游客退税，先比较国内价格。</p></article>
+        <article class="card span-5 accent"><span class="badge orange">10月14日</span><h3>06:30起飞</h3><p>若住 TWA Hotel（环球航空酒店），02:45起床，03:20出门；若住机场外酒店，02:30起床，按接驳班次提前。目标03:30到国际航站楼。</p><p>早餐在10月13日下午先买好。固体食品可随身，饮料需过安检后购买。</p></article>
+        <div class="span-12 map"><iframe title="纽约酒店与麦迪逊广场花园地图" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Executive+Hotel+Le+Soleil+New+York&output=embed"></iframe><div class="map-note">Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）位于 West 36th Street（西36街），适合步行到 Madison Square Garden（麦迪逊广场花园）、Bryant Park（布莱恩特公园）与 Empire State Building（帝国大厦）周边。</div></div>
+      </div>
+
+      <div class="notice"><b>10月3日 · 米其林一星餐厅</b><p>晚餐安排在 Los Angeles（洛杉矶）的 Kali Restaurant（卡利餐厅）。New York City（纽约）10月13日不安排预约制午餐，给机场转场保留时间。</p></div>
+
+      <div class="section-head"><div><h2>给她拍 · 真人机位</h2></div><p>DUMBO（丹波区）下午人多，先确定单人构图，再等10—20秒的人流空隙。</p></div>
+      <div class="shot-grid">
+        <figure class="shot"><img loading="lazy" src="assets/nyc-dumbo-person.jpg" alt="丹波区曼哈顿大桥真人拍照参考"><figcaption><b>Dumbo – Manhattan Bridge View（丹波区曼哈顿大桥观景点）</b>导航到 Washington St &amp; Water St（华盛顿街与水街交叉口）。人站街边安全区，摄影者用2倍焦距压缩桥体。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/703414">图源与参考</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/nyc-carousel-person.jpg" alt="丹波区旋转木马真人拍照参考"><figcaption><b>Jane's Carousel（简氏旋转木马）</b>从 Brooklyn Bridge Park（布鲁克林大桥公园）河岸取景，人物站玻璃建筑外侧，让 Brooklyn Bridge（布鲁克林大桥）进入背景。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/post/1429599">图源与参考</a></figcaption></figure>
+        <figure class="shot"><img loading="lazy" src="assets/nyc-central-park-person.jpeg" alt="中央公园秋天真人拍照参考"><figcaption><b>Central Park（中央公园）</b>十月中旬未必达到红叶峰值。弓桥东侧与林荫大道适合走动抓拍，不要只拍正面站姿。<a class="source" target="_blank" rel="noopener" href="https://www.dealmoon.com/guide/1001999">图源与参考</a></figcaption></figure>
+      </div>
+      <div class="actions"><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/65a923f0000000002a0138e2">小红书DUMBO单人拍法</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/6871d1910000001c0315ea">小红书纽约女生机位</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/65464ee0000000001f038dd8">小红书纽约顺路打卡</a><a class="btn xhs" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/641c1797000000001300d969">小红书纽约购物区域</a></div>
+    </section>
+
+    <section class="panel" id="tips" role="tabpanel">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">美国小费参考</div><h2>按场景直接执行</h2></div>
+        <p>以下为两位成人的常用做法，不是法律要求。餐厅和网约车用刷卡或应用支付；酒店、向导和接驳车准备小额现金。</p>
+      </div>
+
+      <div class="notice warn"><b>先看账单，再填小费</b><p>出现 Gratuity Included（小费已包含）或 Automatic Gratuity（自动小费）时不再追加。只写 Service Charge（服务费）或 Hospitality Charge（服务费）时，先问 “Is gratuity included in the service charge?（服务费是否已经包含小费？）”。Resort Fee（度假村费）、Destination Fee（目的地服务费）、税费和停车费都不是小费。</p></div>
+
+      <div class="grid">
+        <article class="card span-4 dark"><span class="badge orange">默认值</span><h3>不想计算时按这一组</h3><ul><li>有服务员的正餐：税前金额20%。</li><li>出租车与网约车：车费15%；帮助搬大箱或服务好可给20%。</li><li>客房清洁：每间房每天5美元，按天留下。</li><li>行李员：每件2美元，合计最低5美元；自己搬则不给。</li><li>代客泊车：每次取车给5美元；自助停车不给。</li></ul></article>
+        <article class="card span-4"><span class="badge blue">可以不给</span><h3>屏幕出现选项也不代表必须给</h3><ul><li>便利店、超市、普通零售店和自助结账：0。</li><li>柜台点餐、咖啡和外带：0—2美元，可直接选择 No Tip（不付小费）。</li><li>地铁、公交、缆车、机场轻轨、火车和公共渡轮：0。</li><li>航空公司柜台、租车柜台、景点工作人员和商店店员：0。</li><li>主题乐园项目、演出检票和球场安检：0。</li></ul></article>
+        <article class="card span-4 accent"><span class="badge orange">现金</span><h3>出发时准备</h3><p>建议准备约180美元小额现金：1美元30张、5美元20张、10美元3张、20美元1张。两人分开放；没有发生服务就不必花完。</p><p>餐厅和网约车直接在卡单或应用内给，现金主要用于客房、行李、接驳车和向导。</p></article>
+      </div>
+
+      <div class="section-head"><div><h2>逐日小费清单</h2></div><p>金额均为两人合计，除非明确写“每人”。</p></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>日期</th><th>会遇到的服务</th><th>建议金额</th><th>不用给或避免重复</th></tr></thead>
+          <tbody>
+            <tr><td><b>9月29日</b><br>San Francisco（旧金山）</td><td>机场取车、酒店寄存、两段网约车、简餐</td><td>网约车各按15%，短程最低3美元；酒店行李员搬箱按每件2美元、最低5美元；正餐20%</td><td>Avis（安飞士租车）柜台、AirTrain（机场轻轨）、自助停车、缆车和柜台简餐不用给</td></tr>
+            <tr><td><b>9月30日</b><br>硅谷与 Cambria（坎布里亚）</td><td>Queen Anne Hotel（安妮女王酒店）客房、酒店早餐、午餐、El Colibri Hotel &amp; Spa（雅黛科乐比酒店及水疗中心）</td><td>退房前客房留5美元；有服务员的午餐20%；两家酒店若有人搬箱，每件2美元、最低5美元</td><td>免费欧陆早餐无桌边服务可不给，员工清理并提供服务可留2美元；校园、苹果游客中心、停车场和咖啡柜台不用给</td></tr>
+            <tr><td><b>10月1日</b><br>Santa Barbara（圣塔芭芭拉）与 Los Angeles（洛杉矶）</td><td>坎布里亚客房、Boathouse at Hendry's Beach（亨德里海滩船屋餐厅）、还车后网约车、洛伊斯行李员</td><td>客房5美元；船屋餐厅按税前20%，税前80美元即16美元；网约车15%、最低3美元；搬箱每件2美元、最低5美元</td><td>海滩停车和 Avis（安飞士租车）还车人员不用给；餐厅账单已含小费则不重复</td></tr>
+            <tr><td><b>10月2日</b><br>Universal Studios Hollywood（好莱坞环球影城）</td><td>洛伊斯客房、园区餐饮</td><td>客房5美元；桌边餐厅20%；酒吧每杯2美元或整单20%</td><td>地铁、免费接驳车、游乐项目、商店和柜台快餐不用给</td></tr>
+            <tr><td><b>10月3日</b><br>洛杉矶城市日</td><td>洛伊斯客房、多段网约车、农夫市集、Kali Restaurant（卡利餐厅）</td><td>客房5美元；每段网约车15%、短程最低3美元；卡利餐厅税前20%</td><td>农夫市集柜台0—2美元；卡利餐厅若已经加入小费或明确写小费已包含，不重复填写</td></tr>
+            <tr><td><b>10月4日</b><br>Disneyland Resort（迪士尼度假区）</td><td>洛伊斯客房、往返 Anaheim（安纳海姆）的长途网约车、园区餐饮</td><td>客房5美元；网约车15%，司机搬大箱才额外考虑；桌边餐厅20%</td><td>迪士尼演职人员、项目、商店和柜台快餐不用给</td></tr>
+            <tr><td><b>10月5日</b><br>洛杉矶购物与海边</td><td>洛伊斯客房、多段网约车、午晚餐或酒吧</td><td>客房5美元；网约车15%、短程最低3美元；正餐20%；酒吧每杯2美元</td><td>零售店、商场、码头和咖啡外带不用给</td></tr>
+            <tr><td><b>10月6日</b><br>洛杉矶飞 Las Vegas（拉斯维加斯）</td><td>洛伊斯退房、去机场网约车、机场行李服务、拉斯维加斯网约车、Flamingo（弗拉明戈）行李员</td><td>洛伊斯客房5美元；网约车各15%；若使用路边行李托运，每件2美元；Flamingo（弗拉明戈）搬箱每件2美元、最低5美元</td><td>航空柜台、安检和机组人员不用给；自己搬箱不用给行李费之外的小费</td></tr>
+            <tr><td><b>10月7日</b><br>Lower Antelope Canyon（下羚羊谷）一日团</td><td>Flamingo（弗拉明戈）客房、一日团司机或领队、羚羊谷纳瓦霍向导、途中餐饮</td><td>客房5美元；全日司机或领队每人20美元、两人40美元；峡谷当地向导每人5—10美元，主动帮助拍照可取上限；正餐20%</td><td>先看团费是否已经包含 gratuity（小费）；若司机兼领队只给一份，不拆成两份</td></tr>
+            <tr><td><b>10月8日</b><br>换酒店、射击与《O》</td><td>Flamingo（弗拉明戈）客房与行李、网约车、枫丹白露寄存、射击场安全员、酒吧</td><td>Flamingo（弗拉明戈）客房5美元；每次搬箱每件2美元、最低5美元；网约车15%；射击安全员服务好可给两人合计10—20美元；酒吧每杯2美元</td><td>射击场小费不是强制；《O》检票、引座和商店不用给；若使用免费悍马接送，可给司机5—10美元</td></tr>
+            <tr><td><b>10月9日</b><br>Sphere（拉斯维加斯巨型球）与演唱会</td><td>枫丹白露客房、网约车、餐厅和酒吧</td><td>客房5美元；网约车15%；正餐20%；酒吧每杯2美元或整单20%</td><td>巨型球、演唱会检票、引座和零售不用给；柜台餐饮0—2美元</td></tr>
+            <tr><td><b>10月10日</b><br>拉斯维加斯飞 New York City（纽约市）</td><td>枫丹白露退房、行李员、机场网约车、纽约末段出租车或网约车、纽约酒店行李员</td><td>客房5美元；搬箱每件2美元、最低5美元；网约车15%；纽约出租车15—20%、最低3美元</td><td>航空公司、AirTrain JFK（肯尼迪机场轻轨）和 LIRR（长岛铁路）不用给</td></tr>
+            <tr><td><b>10月11日</b><br>Lower Manhattan（曼哈顿下城）与 DUMBO（丹波区）</td><td>纽约酒店客房、Stone Street（石街）午餐</td><td>客房5美元；有服务员的午餐20%</td><td>地铁、NYC Ferry（纽约渡轮）、纪念馆和观景台不用给；柜台餐食0—2美元</td></tr>
+            <tr><td><b>10月12日</b><br>Central Park（中央公园）与篮球赛</td><td>纽约酒店客房、餐厅、Madison Square Garden（麦迪逊广场花园）餐饮</td><td>客房5美元；赛前正餐20%；球场酒吧每杯2美元或整单20%</td><td>公园、商店、比赛检票和柜台食品不用给</td></tr>
+            <tr><td><b>10月13日</b><br>Manhattan（曼哈顿）到机场酒店</td><td>纽约酒店客房与寄存、Chelsea Market（切尔西市场）、去机场出租车、机场酒店接驳</td><td>客房5美元；行李取回时每件2美元、最低5美元；出租车20%；接驳司机每人2美元或每件行李1—2美元，两人给5美元即可</td><td>切尔西市场柜台0—2美元；已经付固定车费仍按车费给出租车小费，但不对过路费和税费重复计算</td></tr>
+            <tr><td><b>10月14日</b><br>返程</td><td>机场酒店客房、凌晨接驳</td><td>离房前留5美元；接驳司机两人5美元，尤其是帮助搬箱时</td><td>机场值机、安检和机组人员不用给</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-head"><div><h2>特殊场景</h2></div><p>本行程最容易多给或漏给的部分。</p></div>
+      <div class="grid">
+        <article class="card span-4"><h3>Las Vegas（拉斯维加斯）赌场</h3><ul><li>赌场送来的饮料：每杯2美元；希望服务员较快回来，第一杯可给5美元。</li><li>低额桌台玩约1小时：荷官合计给5—10美元筹码即可，非强制。</li><li>老虎机兑奖工作人员：没有统一强制比例；只因正常兑奖不必按奖金百分比给。</li></ul></article>
+        <article class="card span-4"><h3>酒店服务</h3><ul><li>客房小费每天单独留5美元，并写 Housekeeping, thank you（客房清洁，谢谢）。</li><li>前台办理入住、简单问路和自己搬行李：0。</li><li>礼宾代订普通餐厅：5—10美元；只给信息不用给。</li><li>客房送餐：若账单未含小费，给18—20%；已经含小费不再加。</li></ul></article>
+        <article class="card span-4"><h3>付款计算</h3><ul><li>税前30美元：20%为6美元。</li><li>税前50美元：20%为10美元。</li><li>税前70美元：20%为14美元。</li><li>税前100美元：20%为20美元。</li><li>税前150美元：20%为30美元。</li><li>税前200美元：20%为40美元。</li></ul></article>
+      </div>
+
+      <div class="section-head"><div><h2>资料来源</h2></div><p>采用行业和礼仪机构给出的常用区间，再按本行程取容易执行的中间值。</p></div>
+      <div class="card source-list">
+        <a target="_blank" rel="noopener" href="https://emilypost.com/advice/general-tipping-guide">Emily Post General Tipping Guide（艾米莉·波斯特通用小费指南）</a>
+        <a target="_blank" rel="noopener" href="https://www.afar.com/magazine/how-much-to-tip-hotel-housekeeping-valets-and-more">AFAR Hotel Tipping Guide（AFAR酒店小费指南）</a>
+        <a target="_blank" rel="noopener" href="https://cluballiance.aaa.com/the-extra-mile/advice/travel/how-much-to-tip-in-hotels">AAA Hotel Tipping Guide（美国汽车协会酒店小费指南）</a>
+        <a target="_blank" rel="noopener" href="https://cluballiance.aaa.com/the-extra-mile/advice/car/seo-should-you-tip-your-uber-or-lyft-driver">AAA Rideshare Tipping Guide（美国汽车协会网约车小费指南）</a>
+        <a target="_blank" rel="noopener" href="https://www.visitsouthernutah.com/should-i-tip-my-guide-how-to-show-your-appreciation/">Visit Southern Utah Tour Guide Tipping（南犹他旅游局向导小费指南）</a>
+        <a target="_blank" rel="noopener" href="https://antelopecanyoninfo.com/faq/">Antelope Canyon Tours FAQ（羚羊谷旅行团常见问题）</a>
+        <a target="_blank" rel="noopener" href="https://www.battlefieldvegas.com/frequently-asked-questions/">Battlefield Vegas FAQ（战场拉斯维加斯射击场常见问题）</a>
+      </div>
+    </section>
+
+    <section class="panel" id="book" role="tabpanel">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">执行清单</div><h2>交通、早餐、购物与安全</h2></div>
+        <p>价格与营业时间为2026年9月20日搜索快照。支付前再核对。</p>
+      </div>
+
+      <div class="grid">
+        <article class="card span-6 dark"><span class="badge orange">先处理</span><h3>未来48小时</h3><ul class="checklist"><li>向 Queen Anne Hotel（安妮女王酒店）确认9月29日停车位、提前寄存和入口；备注安静、高楼层、远离电梯。</li><li>预订 Avis（安飞士租车）：9月29日12:00在 San Francisco International Airport（SFO，旧金山国际机场）取车，10月1日16:30前在门店代码Z9U的 Hollywood（好莱坞）门店还车。</li><li>预订10月3日19:45前后的 Kali Restaurant（卡利餐厅）。</li><li>购买10月6日 Southwest Airlines（西南航空）12:10航班。</li><li>购买10月10日 Delta Air Lines（达美航空）09:59航班。</li><li>在 Battlefield Vegas（战场拉斯维加斯射击场）付款页确认10月8日11:30档位、两位总价和取消条款。</li><li>预订从 Paris Las Vegas Tour Lobby（巴黎拉斯维加斯酒店旅游大堂）07:00出发的 Lower Antelope Canyon（下羚羊谷）小团。</li><li>向10月13日机场前夜酒店书面确认03:00—03:15接驳班次、上车点和航站楼。</li></ul></article>
+        <article class="card span-6"><span class="badge blue">租车方案</span><h3>车辆与还车点</h3><p><b>取车：</b>9月29日12:00，San Francisco International Airport Rental Car Center（旧金山国际机场租车中心）。</p><p><b>还车：</b>10月1日16:30前，Avis Car Rental – Hollywood（安飞士租车好莱坞门店），1333 North Highland Avenue（北高地大道1333号，门店代码Z9U）。</p><p><b>当前价格快照：</b>Toyota Camry or Similar（丰田凯美瑞或同级）总计约191.70美元；Tesla Short Range Model 3 or Similar（特斯拉Model 3短续航版或同级电动车）总计约203.04美元。最终以加入保险、附加驾驶员及异地还车费后的付款页为准。</p><p><b>电动车：</b>车型只保证级别，不保证一定是特斯拉；Avis（安飞士租车）要求还车电量至少70%，低于70%通常收35美元补能费，低于10%再加35美元。</p><p><b>保险：</b>核对碰撞损失豁免、第三者责任、道路救援和异地还车费；不要只看基础日租。</p></article>
+      </div>
+
+      <div class="section-head"><div><h2>Avis（安飞士租车）还车点对比</h2></div><p>营业时间来自官方门店页；Z9U是本行程默认选择。</p></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>门店</th><th>10月1日周四营业时间</th><th>距酒店</th><th>结论</th></tr></thead>
+          <tbody>
+            <tr><td>Avis at Loews Hollywood Hotel（安飞士洛伊斯好莱坞酒店店，AVHL1）</td><td>09:00—12:00、13:00—15:00</td><td>酒店大堂</td><td>关门太早，不选</td></tr>
+            <tr><td>Avis Car Rental – Hollywood（安飞士租车好莱坞门店，Z9U）<br>1333 North Highland Avenue（北高地大道1333号）</td><td>08:00—17:00；官方要求营业时间内还车</td><td>约1.3公里；网约车约5—10分钟</td><td><b>默认选择</b>；16:15到店</td></tr>
+            <tr><td>Avis at Hollywood Burbank Airport（安飞士好莱坞伯班克机场店，BUR）</td><td>05:30—23:00；支持24小时钥匙箱</td><td>约11公里；晚间网约车预留20—35分钟</td><td>只有计划17:00后还车时改选</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-head"><div><h2>具体航班</h2></div><p>两段都选白天直飞，避免红眼航班。</p></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>日期</th><th>航班选择</th><th>衔接</th><th>当前价格</th><th>备选</th></tr></thead>
+          <tbody>
+            <tr><td><b>10月6日</b></td><td>Southwest Airlines（西南航空）12:10—13:20<br>Hollywood Burbank Airport（BUR，好莱坞伯班克机场）→ Harry Reid International Airport（LAS，哈里·里德国际机场）</td><td>09:20离开 Loews Hollywood Hotel（洛伊斯好莱坞酒店）<br>09:50—10:10到机场</td><td>两人约¥2,738<br>托运行李另核对</td><td>14:55—16:05同价；不优先</td></tr>
+            <tr><td><b>10月10日</b></td><td>Delta Air Lines（达美航空）09:59—18:12<br>Harry Reid International Airport（LAS，哈里·里德国际机场）→ John F. Kennedy International Airport（JFK，纽约肯尼迪国际机场）</td><td>07:15离开 Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）<br>07:40—08:00到机场</td><td>两人约¥2,323<br>托运行李另计</td><td>07:10—15:14同价；睡眠更少</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-head"><div><h2>早餐采购</h2></div><p>按酒店位置选择。晚间以网约车和主路为主。</p></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>住宿</th><th>商店</th><th>营业时间快照</th><th>采购时间</th><th>建议购买</th></tr></thead>
+          <tbody>
+            <tr><td>Queen Anne Hotel（安妮女王酒店）</td><td>酒店欧陆早餐</td><td>公开时段约07:00—09:30；入住时确认</td><td>9月30日07:00</td><td>不必另买早餐；前一晚只准备车上饮水</td></tr>
+            <tr><td>El Colibri Hotel &amp; Spa（雅黛科乐比酒店及水疗中心）</td><td>Cookie Crock Market（曲奇克罗克市场）<br>1240 Knollwood Drive（诺尔伍德路1240号）</td><td>周一至周六约07:00—21:00</td><td>9月30日18:45—20:00</td><td>三明治、咖啡、水果</td></tr>
+            <tr><td>Loews Hollywood Hotel（洛伊斯好莱坞酒店）</td><td>Trader Joe's（乔氏超市）<br>1600 North Vine Street（北藤街1600号）</td><td>约09:00—21:00</td><td>10月1日19:00前后，网约车往返</td><td>贝果、奶酪、酸奶、零食</td></tr>
+            <tr><td>Flamingo Las Vegas Hotel &amp; Casino（弗拉明戈拉斯维加斯酒店）</td><td>Walgreens（沃尔格林药房）<br>3397 South Las Vegas Boulevard（南拉斯维加斯大道3397号）</td><td>以当天门店信息为准</td><td>10月6日20:30前，沿大道主路步行购买</td><td>羚羊谷早餐、水、能量棒；不深夜单独采购</td></tr>
+            <tr><td>Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）</td><td>Walgreens（沃尔格林药房）<br>3025 South Las Vegas Boulevard（南拉斯维加斯大道3025号）</td><td>24小时</td><td>10月9日18:00前</td><td>次日机场早餐、水</td></tr>
+            <tr><td>Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）</td><td>Whole Foods Market Bryant Park（全食超市布莱恩特公园店）<br>1095 Sixth Avenue（第六大道1095号）</td><td>约07:00—22:00</td><td>每天19:00前；10月13日买返程早餐</td><td>水果、沙拉、烘焙食品</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-head"><div><h2>从美国带回中国的商品</h2></div><p>看税后总价和行李额。美国一般没有游客增值税退税。</p></div>
+      <div class="grid">
+        <article class="card span-4"><h3>适合购买</h3><ul><li>Levi's（李维斯）、Coach（蔻驰）、Michael Kors（迈克高仕）等折扣款。</li><li>Nike（耐克）、New Balance（新百伦）、Patagonia（巴塔哥尼亚）等美国定价或奥特莱斯款。</li><li>Trader Joe's（乔氏超市）零食与调味品；不带鲜果、肉制品。</li></ul></article>
+        <article class="card span-4"><h3>旅行限定</h3><ul><li>Warriors Shop at Chase Center（大通中心勇士队商店）、New York Knicks Team Store（纽约尼克斯球队商店）的城市限定商品。</li><li>Disneyland Park（迪士尼乐园）、Universal Studios Hollywood（好莱坞环球影城）的园区限定徽章或服装。</li><li>MoMA Design Store（纽约现代艺术博物馆设计商店）的家居与文具。</li></ul></article>
+        <article class="card span-4"><h3>先比较再买</h3><ul><li>Apple（苹果）产品要加销售税；美国版 iPhone（苹果手机）多为仅电子卡版本，在中国使用不一定方便。</li><li>美妆在 Sephora（丝芙兰）先比国内活动价。</li><li>奢侈品不一定比国内便宜，结账前比较含税价。</li></ul></article>
+      </div>
+
+      <div class="section-head"><div><h2>每天的安全边界</h2></div><p>这些规则比“记住所有街区”更有效。</p></div>
+      <div class="grid">
+        <article class="card span-6"><h3>出门与回酒店</h3><ul class="checklist"><li>普通城市日08:30—09:30出门，21:30—22:00前回酒店。</li><li>主题乐园与比赛按官方散场路线走，散场后不追加夜景。</li><li>天黑后不在空街、停车楼、海滩和公交站久等。</li><li>手机只在靠墙或店内查看，包背在身前。</li></ul></article>
+        <article class="card span-6"><h3>城市重点</h3><ul class="checklist"><li>San Francisco（旧金山）：车内不留任何物品；不进入 Tenderloin（田德隆区）和 6th Street（第六街）中段。</li><li>Los Angeles（洛杉矶）：Hollywood Boulevard（好莱坞大道）22:00后不闲逛；Griffith Observatory（格里菲斯天文台）和 Santa Monica State Beach（圣塔莫尼卡州立海滩）回程用网约车。</li><li>Las Vegas（拉斯维加斯）：只走 Las Vegas Strip（拉斯维加斯大道）主段与有安保的酒店连接线；射击前不饮酒，只在 Range Safety Officer（靶场安全员）陪同下操作。</li><li>New York City（纽约）：优先走有店铺和人流的主路；深夜少换乘 New York City Subway（纽约地铁），必要时叫车。</li></ul></article>
+      </div>
+
+      <div class="section-head"><div><h2>资料来源</h2></div><p>官方信息用于营业时间、门店和项目归属；价格来自当日搜索快照。</p></div>
+      <div class="card source-list">
+        <a target="_blank" rel="noopener" href="https://www.queenanne.com/our-hotel/amenities">Queen Anne Hotel Amenities（安妮女王酒店设施与早餐）</a>
+        <a target="_blank" rel="noopener" href="https://www.sf.gov/visitor-safety-information-for-san-francisco">San Francisco Visitor Safety Information（旧金山市政府游客安全信息）</a>
+        <a target="_blank" rel="noopener" href="https://boathousesb.com/">Boathouse at Hendry's Beach（亨德里海滩船屋餐厅）官网</a>
+        <a target="_blank" rel="noopener" href="https://boathousesb.com/menu">Boathouse at Hendry's Beach Menu（亨德里海滩船屋餐厅菜单）</a>
+        <a target="_blank" rel="noopener" href="https://santabarbaraca.com/businesses/boathouse-hendrys-beach/">Visit Santa Barbara（圣塔芭芭拉旅游局）餐厅信息</a>
+        <a target="_blank" rel="noopener" href="https://www.avis.com/en/locations/nam/us/ca/hollywood/z9u">Avis Car Rental – Hollywood（安飞士租车好莱坞门店，Z9U）</a>
+        <a target="_blank" rel="noopener" href="https://www.avis.com/en/locations/nam/us/ca/hollywood/avhl1">Avis at Loews Hollywood Hotel（安飞士洛伊斯好莱坞酒店店，AVHL1）</a>
+        <a target="_blank" rel="noopener" href="https://www.avis.com/en/locations/nam/us/ca/burbank/bur">Avis at Hollywood Burbank Airport（安飞士好莱坞伯班克机场店，BUR）</a>
+        <a target="_blank" rel="noopener" href="https://www.avis.com/en/cars/electric-car-rentals">Avis Electric Car Rentals（安飞士电动车租赁政策）</a>
+        <a target="_blank" rel="noopener" href="https://disneyland.disney.go.com/admission/tickets/">Disneyland Resort Tickets（迪士尼度假区官方门票）</a>
+        <a target="_blank" rel="noopener" href="https://disneyland.disney.go.com/lightning-lane-passes/">Lightning Lane Passes（闪电通道）官方价格与规则</a>
+        <a target="_blank" rel="noopener" href="https://disneyland.disney.go.com/calendars/">Disneyland Resort Calendar（迪士尼度假区官方日历）</a>
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/651a6542000000002202960a">小红书：加州迪士尼主园万圣节路线参考</a>
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/66e2006a000000002603e2f5">小红书：主园星球大战、鬼屋与城堡路线参考</a>
+        <a target="_blank" rel="noopener" href="https://locations.traderjoes.com/ca/los-angeles/206/">Trader Joe's（乔氏超市）好莱坞门店</a>
+        <a target="_blank" rel="noopener" href="https://www.ralphs.com/stores/grocery/ca/los-angeles/sunset/703/00100">Ralphs（拉尔夫超市）日落大道门店</a>
+        <a target="_blank" rel="noopener" href="https://www.walgreens.com/locator/walgreens-3765+las+vegas+blvd+s-las+vegas-nv-89109/id=4763">Walgreens（沃尔格林药房）大道中段门店</a>
+        <a target="_blank" rel="noopener" href="https://www.wholefoodsmarket.com/stores/bryantpark">Whole Foods Market（全食超市）布莱恩特公园店</a>
+        <a target="_blank" rel="noopener" href="https://www.battlefieldvegas.com/packages/fan-favorites/group-shooting-packages/">Battlefield Vegas（战场拉斯维加斯射击场）官方套餐</a>
+        <a target="_blank" rel="noopener" href="https://www.battlefieldvegas.com/frequently-asked-questions/">Battlefield Vegas（战场拉斯维加斯射击场）官方规则</a>
+        <a target="_blank" rel="noopener" href="https://www.battlefieldvegas.com/packages/fan-favorites/free-humvee-pickup/">Humvee（军用悍马车）免费接送说明</a>
+        <a target="_blank" rel="noopener" href="https://www.therange702.com/shooting-experiences/">The Range 702（702射击场）官方体验价格</a>
+        <a target="_blank" rel="noopener" href="https://machinegunsvegas.com/shooting-experience/automatic-gun-shooting-range-las-vegas-available-weapons/">Machine Guns Vegas（拉斯维加斯机枪射击场）官方价格说明</a>
+        <a target="_blank" rel="noopener" href="https://www.google.com/travel/flights?hl=zh-CN&curr=CNY&q=Flights%20from%20BUR%20to%20LAS%20on%202026-10-06%20oneway">10月6日航班搜索</a>
+        <a target="_blank" rel="noopener" href="https://www.google.com/travel/flights?hl=zh-CN&curr=CNY&q=Flights%20from%20LAS%20to%20JFK%20on%202026-10-10%20oneway">10月10日航班搜索</a>
+        <a target="_blank" rel="noopener" href="https://www.mta.info/guides/airports/jfk/jfk-airport-to-manhattan">MTA（纽约大都会运输署）：JFK机场到曼哈顿</a>
+        <a target="_blank" rel="noopener" href="https://www.mta.info/fares-tolls/lirr-metro-north">MTA（纽约大都会运输署）：LIRR票价</a>
+        <a target="_blank" rel="noopener" href="https://www.thehighline.org/">The High Line（高线公园）官方网站</a>
+        <a target="_blank" rel="noopener" href="https://littleisland.org/rules-faq/">Little Island（小岛公园）官方开放时间</a>
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/6a4da9ad000000000f01fde3">小红书：纽约西侧不走回头路路线</a>
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/65464ee0000000001f038dd8">小红书：纽约三日经典路线</a>
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/65a0aab0000000001c011bb3">小红书：纽约渡轮、DUMBO与布鲁克林大桥路线</a>
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/explore/641c1797000000001300d969">小红书：纽约购物区域</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell"><b>2026美国蜜月执行路书</b> · 本地文件 · 酒店付款最后核对：2026年9月21日。航班、票价、营业时间与演出可能调整，付款前看最终页面。</div></footer>
+
+  <script>
+    const tabs=[...document.querySelectorAll('.tab')];
+    const panels=[...document.querySelectorAll('.panel')];
+    function openTab(id,scroll=true){
+      if(!document.getElementById(id)) id='overview';
+      tabs.forEach(t=>t.classList.toggle('active',t.dataset.tab===id));
+      panels.forEach(p=>p.classList.toggle('active',p.id===id));
+      history.replaceState(null,'','#'+id);
+      if(scroll) window.scrollTo({top:0,behavior:'smooth'});
+    }
+    tabs.forEach(t=>t.addEventListener('click',()=>openTab(t.dataset.tab)));
+    openTab(location.hash.slice(1)||'overview',false);
+  </script>
+</body>
+</html>
