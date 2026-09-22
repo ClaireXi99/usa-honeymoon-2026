@@ -32,7 +32,7 @@
     ['nyc','soleil','09:59飞纽约、18:12抵达','飞机＋机场捷运＋铁路＋出租车','枫丹白露退房；纽约入住'],
     ['nyc','soleil','中央公园、大都会、12:45卡萨莫诺、苏豪区、阿拉丁候选','地铁＋步行＋网约车','续住'],
     ['nyc','soleil','世贸、华尔街、自由女神远观、丹波区、布鲁克林大桥、尼克斯季前赛','地铁＋渡轮＋步行','续住'],
-    ['nyc','airport','第五大道购物、高线公园、切尔西市场、17:00去机场酒店','步行＋地铁＋出租车','市区退房寄存；机场酒店入住'],
+    ['nyc','airport','第五大道、10:30洛克菲勒观景台建议票、高线公园、切尔西市场、17:00去机场酒店','步行＋地铁＋出租车','市区退房寄存；机场酒店入住'],
     ['nyc',null,'03:30到航站楼、06:30起飞','酒店接驳或出租车＋飞机','凌晨退房；机上过夜']
   ];
   const days=$$('#daily article.day').map((node,i)=>({node,i,city:meta[i][0],hotel:hotels[meta[i][1]],brief:meta[i][2],transport:meta[i][3],transition:meta[i][4],dining:diningDays[i],date:new Date(Date.UTC(2026,8,29+i)).toISOString().slice(0,10)}));
@@ -117,7 +117,7 @@
     (i===7&&r.name.startsWith('10月6日 伯班克'))||
     (i===9&&(r.name.includes('《O》')||r.name.includes('Sphere')))||(i===11&&r.name.startsWith('10月10日 拉斯'))||
     (i===13&&r.name.startsWith('NBA'))||(i===15&&r.name.startsWith('10月14日 纽约')));
-  const extraKeys={3:['10月2日 ·'],4:['卡利餐厅 ·','10月3日 ·'],5:['10月4日 ·'],7:['10月6日 ·'],8:['下羚羊谷'],9:['10月8日 ·'],12:['卡萨莫诺餐厅小费','10月11日 · 阿拉丁','10月11日 · 大都会'],14:['机场前夜酒店']};
+  const extraKeys={3:['10月2日 ·'],4:['卡利餐厅 ·','10月3日 ·'],5:['10月4日 ·'],7:['10月6日 ·'],8:['下羚羊谷'],9:['10月8日 ·'],12:['卡萨莫诺餐厅小费','10月11日 · 阿拉丁','10月11日 · 大都会'],14:['机场前夜酒店','10月13日 · 洛克菲勒观景台']};
   const seatBasics='<p><b>Section / SEC（区域）→ Row（排）→ Seat（座位号）</b>，按这三个字段找位。普通座席不能在同排随意换座；不确定就把电子票给 Ushers（引座员）看。</p><p>只有票面明确写 General Admission / GA（不指定座位入场）或 Unreserved（不指定座位）时，才按该区域规则先到先得；Standing Room Only / SRO（仅站席）不提供座位。GA票上的数字有时只是库存编号，不能当固定座位。<a target="_blank" rel="noopener" href="https://help.ticketmaster.com/hc/en-us/articles/9663297585297-What-is-General-Admission-unreserved-seating-standing-or-Standing-Room-Only">票务平台规则</a></p>';
   const showGuides={
     9:'<h4>Sphere（巨型球《绿野仙踪》）</h4><p>普通座席按区域、排、座位号就座。已购406美元，计人民币2,720.20元；尚未提供电子票座位，不能据金额推断座位。按原行程11:00开场，10:15到场；实际场次看电子票。官方提前45分钟开门，不允许迟到入场，影片中不能拍照录像。<a target="_blank" rel="noopener" href="https://www.thesphere.com/shows/wizard-of-oz-experience">官方入场说明</a></p><h4>O by Cirque du Soleil（太阳马戏《O》）</h4><p>普通座席同样对号入座。已付人民币1,805元（票务商购买，票未完整交付，存在无法交票风险）。向票务商确认两张最终电子票的区域、排和座位号，以及是否相邻；只看到“201区”或座位范围，不能确定你们的两张票。</p><p>若最终是201区：官网把 O排6—9号、P排7—8号列为安全栏杆遮挡座位；不要把“201区还可以”理解为该区所有座位视野相同。这里是字母O排，不是数字0。<a target="_blank" rel="noopener" href="https://bellagio.mgmresorts.com/en/entertainment/o-by-cirque-du-soleil.html">百乐宫官方座位提示</a></p><p>17:45—18:00到剧场，18:30开场；若交付方式为 Will Call（现场取票），官方要求最晚提前1小时取票，须改为17:30前办妥，并提前核对取票人证件要求；不要只拿付款聊天记录进场。</p>',

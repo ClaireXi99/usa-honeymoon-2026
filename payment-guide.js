@@ -131,6 +131,11 @@
     '付款订单不等于有效入场票。先接受卖家转票，并在官方票务账户／支持的手机钱包中打开两张票；动态码不要只存截图。',
     '普通座席按Section（区域）、Row（排）、Seat（座位号）就座。提前检查两张是否相邻，场馆餐饮和周边另付，准备银行卡。'
   ],'https://www.msg.com/madison-square-garden/faqs');
+  add([14],'Top of the Rock（洛克菲勒观景台）','10月13日10:30建议；尚未购票','官网9月23日查询普通定时票两人票面98美元，含税约106.70美元，按6.7约人民币715元；价格和余票可变。',[
+    '官网选择2026年10月13日10:30、两名成人、Timed Admission（普通定时入场票）。入口50 West 50th Street（西50街50号），建议10:15前抵达；保存两张二维码。',
+    '普通票含观景台，不用为登顶另买Beam（钢梁体验）、Skylift（升降观景台）或快速通道。最后以付款页完整总价和退改条款为准。',
+    '建议10月7—9日查看短期天气后预订；要优先锁定时段也可现在买。官网改期申请至少提前24小时，仍受余票和规则限制。10月13日是离城日，天气不佳没有稳妥的次日改期空间。'
+  ],'https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/');
   add([14,15],'曼哈顿→机场酒店→航站楼','交通费用另付；酒店信息待补','JFK机场与曼哈顿的黄色出租车基本固定价70美元，附加费、过路费、小费另计；机场附近酒店不自动适用此固定价。',[
     '10月13日17:00出发时目的地填已订机场酒店完整地址，不是直接填JFK。酒店名称尚未补入，不能给出准确接驳车班次及固定车费；网约车按该地址报价。',
     '黄色出租车可刷卡，不能因刷卡或两位乘客、多件正常行李另加费用；保留收据。机场酒店不在航站楼内，不能拿70美元当酒店车程包干价。',
@@ -140,7 +145,7 @@
   document.querySelectorAll('.city-days article.day').forEach(day=>{
     const date=day.dataset.date,index=Math.round((Date.parse(date+'T00:00:00Z')-Date.UTC(2026,8,29))/86400000),rows=items.filter(x=>x.dates.includes(index));
     const section=document.createElement('section');section.className='payment-guide';section.id='pay-'+date;
-    section.innerHTML='<h4>怎么买票与付款</h4><p>核对：2026年9月22日 · 人民币按1美元＝6.7元参考。这里解释付款步骤，不重复加入预算；未收到订单不标记已付。</p>'+rows.map((x,i)=>`<details class="payment-item"${i===0?' open':''}><summary>${esc(x.title)}<span class="payment-status">${esc(x.status)}</span></summary><div><p><b>${esc(x.price)}</b></p>${x.steps.map(s=>`<p>${esc(s)}</p>`).join('')}<a href="${esc(x.url)}" target="_blank" rel="noopener">官方规则／购买入口 ↗</a></div></details>`).join('');
+    section.innerHTML='<h4>怎么买票与付款</h4><p>最近核对：2026年9月23日 · 人民币按1美元＝6.7元参考。这里解释付款步骤，不重复加入预算；未收到订单不标记已付。</p>'+rows.map((x,i)=>`<details class="payment-item"${i===0?' open':''}><summary>${esc(x.title)}<span class="payment-status">${esc(x.status)}</span></summary><div><p><b>${esc(x.price)}</b></p>${x.steps.map(s=>`<p>${esc(s)}</p>`).join('')}<a href="${esc(x.url)}" target="_blank" rel="noopener">官方规则／购买入口 ↗</a></div></details>`).join('');
     if(!rows.length)section.innerHTML+='<p>当天无新增预订门票。餐饮消费看餐厅卡，已订住宿的结算与预授权向前台核对。</p>';
     const common=document.createElement('details');common.className='payment-item';common.innerHTML='<summary>酒店、订位与小费<span class="payment-status">每天适用</span></summary><div><p>酒店费用以本页住宿卡与原订单为准。预授权是暂时占用额度，不应当作第二次房费；退房索取明细账，核对是否重复收已含的度假村费。预授权释放时间取决于酒店及银行。</p><p>餐厅预约若需银行卡担保，先看取消截止时间、未到店收费及是否预付。不会因为本页“建议预约”就自动收费；本次没有替你订位或付款。</p><p>小费按当天“费用参考”及“小费”页执行；准备小额美元。景点检票、公共交通和自助停车不需要小费。</p></div>';section.append(common);
     const cost=day.querySelector('.day-related-budget');cost.before(section);const a=document.createElement('a');a.href='#'+day.dataset.city+'/'+date+'/pay';a.textContent='购票付款';day.querySelector('.day-section-nav a[href$="/cost"]').before(a);
