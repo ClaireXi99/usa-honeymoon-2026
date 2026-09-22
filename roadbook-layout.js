@@ -27,7 +27,7 @@
     ['la','loews','购物、比弗利山庄、圣塔莫尼卡','网约车','续住；晚上整理行李'],
     ['vegas','flamingo','12:10飞拉斯维加斯、直升机夜景','飞机＋网约车','洛杉矶退房；弗拉明戈入住'],
     ['vegas','flamingo','下羚羊谷、马蹄湾一日团','小团接送','续住'],
-    ['vegas','fontaine','11:00巨型球、换酒店、18:30《O》','步行＋网约车','弗拉明戈寄存；下午枫丹白露入住'],
+    ['vegas','fontaine','11:00巨型球（已购）、换酒店、18:30《O》','步行＋网约车','弗拉明戈寄存；下午枫丹白露入住'],
     ['vegas','fontaine','艺术区、北奥特莱斯、酒店休息','网约车','续住；射击可替换艺术区'],
     ['nyc','soleil','09:59飞纽约、18:12抵达','飞机＋机场捷运＋铁路＋出租车','枫丹白露退房；纽约入住'],
     ['nyc','soleil','曼哈顿下城、自由女神像远观、丹波区','地铁＋渡轮＋步行','续住'],
@@ -113,9 +113,14 @@
   const ledgerOnDay=i=>budgetLedger.filter(r=>
     (i===0&&(r.name.startsWith('9月29日 上海')||r.category==='美国租车'))||
     (i===7&&r.name.startsWith('10月6日 伯班克'))||
-    (i===9&&r.name.includes('《O》'))||(i===11&&r.name.startsWith('10月10日 拉斯'))||
+    (i===9&&(r.name.includes('《O》')||r.name.includes('Sphere')))||(i===11&&r.name.startsWith('10月10日 拉斯'))||
     (i===13&&r.name.startsWith('NBA'))||(i===15&&r.name.startsWith('10月14日 纽约')));
   const extraKeys={3:['10月2日 ·'],4:['卡利餐厅 ·','10月3日 ·'],5:['10月4日 ·'],7:['10月6日 ·'],8:['下羚羊谷'],9:['10月8日 ·'],14:['机场前夜酒店']};
+  const seatBasics='<p><b>Section / SEC（区域）→ Row（排）→ Seat（座位号）</b>，按这三个字段找位。普通座席不能在同排随意换座；不确定就把电子票给 Ushers（引座员）看。</p><p>只有票面明确写 General Admission / GA（不指定座位入场）或 Unreserved（不指定座位）时，才按该区域规则先到先得；Standing Room Only / SRO（仅站席）不提供座位。GA票上的数字有时只是库存编号，不能当固定座位。<a target="_blank" rel="noopener" href="https://help.ticketmaster.com/hc/en-us/articles/9663297585297-What-is-General-Admission-unreserved-seating-standing-or-Standing-Room-Only">票务平台规则</a></p>';
+  const showGuides={
+    9:'<h4>Sphere（巨型球《绿野仙踪》）</h4><p>普通座席按区域、排、座位号就座。已购406美元，计人民币2,720.20元；尚未提供电子票座位，不能据金额推断座位。按原行程11:00开场，10:15到场；实际场次看电子票。官方提前45分钟开门，不允许迟到入场，影片中不能拍照录像。<a target="_blank" rel="noopener" href="https://www.thesphere.com/shows/wizard-of-oz-experience">官方入场说明</a></p><h4>O by Cirque du Soleil（太阳马戏《O》）</h4><p>普通座席同样对号入座。已付人民币1,805元（票务商购买，票未完整交付，存在无法交票风险）。向票务商确认两张最终电子票的区域、排和座位号，以及是否相邻；只看到“201区”或座位范围，不能确定你们的两张票。</p><p>若最终是201区：官网把 O排6—9号、P排7—8号列为安全栏杆遮挡座位；不要把“201区还可以”理解为该区所有座位视野相同。这里是字母O排，不是数字0。<a target="_blank" rel="noopener" href="https://bellagio.mgmresorts.com/en/entertainment/o-by-cirque-du-soleil.html">百乐宫官方座位提示</a></p><p>17:45—18:00到剧场，18:30开场；若交付方式为 Will Call（现场取票），官方要求最晚提前1小时取票，须改为17:30前办妥，并提前核对取票人证件要求；不要只拿付款聊天记录进场。</p>',
+    13:'<h4>NBA（美国职业篮球联赛）尼克斯季前赛</h4><p>Madison Square Garden（麦迪逊广场花园）的普通座席按电子票区域、排和座位号就座，不是同排随便坐。两张票需要分别核对，套房或仅站席则按各自票种规则。先找区入口，再请引座员指示所在排及座位；不要看见空位就换过去。<a target="_blank" rel="noopener" href="https://www.msg.com/madison-square-garden/seating/msg-knicks">球馆官方座位图</a></p><p>尚未提供最终区排座；订单确认或付款金额不能代替入场票。提前在官方票务账户或支持的手机钱包中打开两张票；动态票不要依赖二维码截图。</p>'
+  };
   for(const d of days){
     const {node,i,hotel:h}=d;const body=$('.day-body',node);
     node.dataset.date=d.date;node.dataset.city=d.city;node.tabIndex=-1;
@@ -132,6 +137,7 @@
     if(!gallery.children.length)gallery.replaceWith(make('p','empty-photos','暂无独立照片参考。'));
     $$('img',node).forEach(img=>{img.loading='lazy';img.decoding='async';});
     const dining=$('.daily-dining',node);dining.open=true;dining.id='food-'+d.date;body.append(dining);
+    if(showGuides[i]){const seats=make('section','show-seating card',`<h3>入场与座位</h3>${seatBasics}${showGuides[i]}`);seats.id='seating-'+d.date;body.append(seats);}
     if(supplements.has(i)){
       const extra=make('details','city-reference','<summary>当天补充资料</summary>');const grid=make('div','grid');supplements.get(i).forEach(card=>{card.classList.remove('span-4','span-5','span-6','span-7','span-8');card.classList.add('span-12');grid.append(card);});extra.append(grid);body.append(extra);
     }
@@ -153,6 +159,8 @@
   const summary=make('div','trip-summary');
   days.forEach(d=>summary.append(make('article','summary-day',`<div class="summary-date"><b>${d.dining.date}</b><small>周${'日一二三四五六'[new Date(d.date+'T12:00:00Z').getUTCDay()]}</small></div><div class="summary-main"><b>${d.brief}</b><small>${cities[d.city][0]} · ${d.transport}</small></div><div class="summary-stay">${d.hotel?.short||'机上过夜'}<small>${d.transition}</small></div><a href="${href(d)}" aria-label="查看${d.dining.date}详情">详情 ↗</a>`)));
   daily.append(summary);
+  const seatsSummary=make('details','city-reference','<summary>演出与球赛 · 如何看区、排、座位号</summary><div class="reference-body">'+seatBasics+showGuides[9]+showGuides[13]+'</div>');
+  document.getElementById('book').append(seatsSummary);
   // Replace the second competing overview timetable with one clear entry point.
   const oldTable=$$('#overview table').find(t=>$('th',t)?.textContent==='日期');
   if(oldTable)oldTable.closest('.table-wrap').replaceWith(make('div','notice','<b>16天行程</b><p>逐日执行查看简表；城市页按日期连续展示完整安排。</p><a class="btn light" href="#daily">查看逐日执行 →</a>'));

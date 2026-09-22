@@ -1,6 +1,7 @@
 /* Date-first navigation. Content nodes and the budget ledger remain single-source. */
 [hidden]{display:none!important}
 .panel.active{animation:none}
+.show-seating{margin-top:22px;box-shadow:none}.show-seating h4{margin:20px 0 8px;font-size:17px}.show-seating p{font-size:14px}.show-seating a{color:var(--sea)}
 body:not(:has(#overview.active)) .hero{display:none}
 .hero{padding:32px 0}.hero h1{font-size:48px}.hero .stats{margin-top:20px}
 .tab:focus-visible,.date-chip:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #df7b48;outline-offset:4px}
