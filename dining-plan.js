@@ -51,7 +51,7 @@ const diningDays = [
   {date:'10月14日',city:'返程',low:50,high:100,brief:'便携早餐／飞机餐',note:'06:30航班。前晚备面包，饮水过安检后补；不假设凌晨机场餐厅都已营业，飞机餐不重复计费。',meals:[]}
 ];
 
-const diningLink = (url,label) => `<a target="_blank" rel="noopener" href="${url.replaceAll('&','&amp;')}">${label}</a>`;
+const diningLink = (url,label) => url ? `<a target="_blank" rel="noopener" href="${url.replaceAll('&','&amp;')}">${label}</a>` : '';
 // Ranking reflects this dinner's budget and departure deadline, not stars alone.
 diningDays.find(d=>d.date==='10月6日').note += ' 综合排序依据：谷歌评分及评价数量、实际点单预算、步行位置、排队风险。三家均在林克步行街，步行预留10—15分钟为酒店出发的计划余量，不是实时导航值。另比较了 Gordon Ramsay Burger（拉姆齐汉堡，4.7分／3,784条）、Yard House（庭院餐厅，4.5分／7,072条）及 Battista’s Hole in the Wall（巴蒂斯塔意大利餐厅，4.5分／8,469条）：地图人均分别为20—60、20—30、30—40美元，且堂食需另留小费，故不作为两人250元这顿的首选。拉姆齐和巴蒂斯塔地图提供订位入口，若改去建议提前订；本次不替你预订。评分为9月22日页面快照，价格档位为用户报告，不等于含税结账价。';
 const diningRange = d => `人民币 ${d.low.toLocaleString('zh-CN')}–${d.high.toLocaleString('zh-CN')} 元`;

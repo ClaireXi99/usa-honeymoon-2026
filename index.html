@@ -71,6 +71,7 @@
     @media(max-width:560px){.budget-total-parts{grid-template-columns:1fr}.budget-total-parts>div{border-right:0;border-top:1px solid #385062;grid-template-columns:1fr auto}.budget-total-parts small{grid-column:1/-1}.budget-main-total{padding:22px 18px}.budget-main-total strong{font-size:29px}.budget-options{grid-template-columns:1fr}.budget-group summary{padding:15px;flex-wrap:wrap}.budget-group-title{flex-basis:80%}.budget-group-numbers{order:3;text-align:left;flex-basis:100%;grid-template-columns:1fr 1fr;font-size:12px}.budget-group-numbers b{display:block;margin-left:0}.budget-group-body>section{padding:16px}.budget-item{gap:10px}.budget-item span{font-size:14px}}
     @media print{.topbar,.actions{display:none!important}.panel{display:block!important;break-before:page}.hero{padding:25px 0}.card{box-shadow:none}.map iframe{height:180px}}
   </style>
+  <link rel="stylesheet" href="roadbook-layout.css?v=20260922">
 </head>
 <body>
   <nav class="topbar" aria-label="城市导航">
@@ -874,7 +875,8 @@
       if(scroll) window.scrollTo({top:0,behavior:'smooth'});
     }
     tabs.forEach(t=>t.addEventListener('click',()=>openTab(t.dataset.tab)));
-    openTab(location.hash.slice(1)||'overview',false);
+    // Date-aware navigation is initialized by roadbook-layout.js.
   </script>
+  <script src="roadbook-layout.js?v=20260922"></script>
 </body>
 </html>
