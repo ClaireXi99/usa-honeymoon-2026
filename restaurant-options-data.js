@@ -205,17 +205,17 @@ Woorijip~我们家韩式便当~4.5~3106~150-280~W~平价便当，适合白天或
 Osamil~五三一韩式餐吧~更适合慢吃和酒饮，不优先。
 Oncheon NYC~温泉韩餐~费用比汤饭简餐高。
 SEOUL SALON NYC~首尔沙龙~餐酒体验取向，飞行后不优先。`);
-  zone('lowermanhattan','世贸中心与金融区午餐',[12],'10月11日 · 12:00左右','Oculus（世贸中心交通枢纽）','World Trade Center Manhattan','下城走完一段先坐下吃饭，再去布鲁克林。商场餐饮和餐厅不是同一类型：柜台公共座位可能满，正式桌餐更稳但花时更久。周日尤其要核对营业时段。',`
+  zone('lowermanhattan','世贸中心与金融区备选餐厅',[13],'10月12日 · 下城用餐备选','Oculus（世贸中心交通枢纽）','World Trade Center Manhattan','主线在免费渡轮回程后于 Stone Street（石街）吃饭，再去 Pier 11（11号码头）。以下世贸附近餐厅用于改变上午路线时替换，会向北折返；不作为默认午餐。',`
 Gansevoort Liberty Market~甘斯沃尔特自由市场~4.3~1594~250-400~W~多个档口可各选口味，世贸附近少绕路；座位按现场空位。~饭碗或三明治~101 Liberty St New York
 Eataly~意大利美食市场世贸店~4.2~6674~350-600~R~室内吃饭、补水和购物能一次完成；柜台与正式餐厅分别经营。~意面、披萨或柜台简餐~101 Liberty St New York
 O’Hara’s~奥哈拉美式餐吧~4.6~5909~320-500~Q~附近完整座餐，想吃汉堡和主食时选。~汉堡或三明治~120 Cedar St New York
 Fogo de Chão Brazilian Steakhouse~巴西火烤牛排馆~4.7~2213~800-1300~R~想吃较完整的大餐才选；午餐会延长，非两人250元方案。~巴西烤肉~40 Cortlandt Way New York
 Cebichelsea~切维切海鲜餐厅~4.2~86~300-550~Q~市场内海鲜口味备选，评价数少，不专程追。~海鲜饭或当日主食~101 Liberty St New York
 Shake Shack Battery Park City~摇摇屋炮台公园城汉堡~4.3~3786~220-350~W~在世贸西北侧，需要走到穆雷街；价格低，适合作为市场座位满时的替换。~汉堡、共享薯条~215 Murray St New York`, `ONE Dine~世贸观景台餐厅~观景台入场条件与额外费用，不能当普通歇脚餐厅。
-Jakarta Munch at Hungry Pearl~雅加达小食~地图没有确认周日可用，不作本次稳妥午餐。
-Trinity Place Bar & Restaurant~三一广场餐厅~官网仅列周一至周五营业，不适合10月11日周日。
-Metropolis~大都会餐厅~官方场地页面显示周日休息，不能用10月11日午餐。`);
-  zone('dumbo','布鲁克林桥下轻食与休息',[12],'10月11日 · 16:45轻食休息','DUMBO（曼哈顿桥下街区）','DUMBO Brooklyn New York','20:00卡萨莫诺晚餐待预订；这里仅选饮品或少量轻食。完整桌餐仅在取消卡萨莫诺时替换，不叠加。17:30开始过桥。',`
+Jakarta Munch at Hungry Pearl~雅加达小食~本次未核实10月12日假日营业，不作稳妥午餐。
+Trinity Place Bar & Restaurant~三一广场餐厅~位置与默认石街至11号码头路线相比偏离，若改去需重新计算候船时间。
+Metropolis~大都会餐厅~本次未核实10月12日假日营业及候位，不作稳妥午餐。`);
+  zone('dumbo','布鲁克林桥下轻食与休息',[13],'10月12日 · 13:35—14:45','DUMBO（曼哈顿桥下街区）','DUMBO Brooklyn New York','这里以拍照和短休息为主；想坐下用餐则替换石街午餐，不叠加。14:45左右上桥；体力不足改地铁回酒店。',`
 Westville Dumbo~西村餐厅布鲁克林店~4.7~3550~320-500~R~蔬菜和主食选择多，正式座位适合走累后休息。~主食配蔬菜~81 Washington St Brooklyn
 Time Out Market New York~纽约时光美食市场~4.5~8560~300-500~W~口味选择多、离河岸近；共享座位，周末不保证马上坐下。~各选一个档口~55 Water St Brooklyn
 Lucky Rabbit Noodles~幸运兔面馆~4.6~1457~300-460~Q~想吃热面可换这里，不必坚持排披萨。~汤面~151 Front St Brooklyn
@@ -225,7 +225,7 @@ Cecconi’s DUMBO~切科尼布鲁克林餐厅~4.0~3373~700-1100~R~河景升级�
 Superfine~超凡餐厅~餐吧取向与备选重复。
 Dumbo Oyster Bar~布鲁克林桥下生蚝吧~评价样本少，今天不以生蚝为主。
 gair~盖尔餐吧~更偏酒吧体验，不作为走累后的优先主餐。`);
-  zone('midtown','中央公园南侧午餐与咖啡',[13],'10月12日 · 12:15左右','Central Park South（中央公园南侧）','Central Park South New York','从公园南侧出来再吃饭，接着顺路第五大道。下午不要为餐厅再回到公园北侧。便宜的咖啡选项按轻食预算，正式桌餐通常高于两人250元。',`
+  zone('midtown','第五大道购物休息与咖啡',[14],'10月13日 · 10:30—12:00','Central Park South（中央公园南侧）','Central Park South New York','从第五大道向南购物时择一店喝咖啡，不再安排博物馆。当天16:00前回酒店取行李。便宜的咖啡选项按轻食预算，正式桌餐需更多时间。',`
 Sip and Co~啜饮咖啡馆~4.5~771~160-300~Q~离公园南端近，适合咖啡轻食，不需要吃大餐。~咖啡、烘焙或三明治~41 W 58th St New York
 Sarabeth’s Central Park South~莎拉贝丝中央公园南店~4.1~4552~420-650~R~传统美式早午餐位置顺路；游客多，优先订12:15附近。~蛋类早餐、三明治~40 Central Park S New York
 Brasserie Cognac Central Park South~干邑法式小馆中央公园南店~4.6~378~450-700~R~想吃正式桌餐时的替换，周一也需看具体可订时段。~法式简餐~922 7th Ave New York
@@ -235,7 +235,7 @@ Jams~杰姆斯餐厅~4.2~1421~450-700~R~酒店内桌餐，想坐得久一点可�
 Gabriel’s Bar & Restaurant~加布里埃尔餐厅~与保留的意餐重复。
 Central Park Boathouse~中央公园船屋餐厅~离南端已较远，走出来后不再折返。
 Quality Italian~品质意餐~大份高价正餐，比赛日无需再加一顿。`);
-  zone('hudson','哈德逊广场出发前休息',[14],'10月13日 · 上午；必要时延后高线','Hudson Yards（哈德逊城市广场）','Hudson Yards New York','原计划09:20到达，多数餐厅11点才开。上午休息优先咖啡；只有迟出门才把以下午餐作为替换，不与切尔西市场再吃两餐。',`
+  zone('hudson','哈德逊广场至高线公园休息',[14],'10月13日 · 12:15—13:00','Hudson Yards（哈德逊城市广场）','Hudson Yards New York','第五大道之后转到哈德逊广场，走高线公园南下；多数正餐店11点后营业。咖啡轻食与切尔西市场午餐按食量二选一，不重复。',`
 Bluestone Lane 55 Hudson Yards Café~蓝石巷55号哈德逊咖啡~4.6~1282~180-320~Q~早上咖啡和小食最贴合时间，不用等商场餐厅开门。~咖啡、轻食~55 Hudson Yards New York
 YONO Hudson Yards~优诺哈德逊餐厅~4.4~74~200-380~Q~商场内轻食替代，评价样本较少。~当日简餐~20 Hudson Yards Level 4 New York
 Mercado Little Spain~小西班牙市场~4.4~10484~300-550~W~11点以后才作为午餐替换；多档口，座位需现场找。~西班牙小食、三明治~10 Hudson Yards New York
@@ -245,7 +245,7 @@ queensyard~皇后庭院餐厅~4.2~1624~800-1300~R~景观升级备选；小红书
 estiatorio Milos Hudson Yards~米洛斯海鲜餐厅~11:30后正餐，费用与时长较高。
 Greywind~灰风餐厅~正餐取向且增加步行。
 Electric Lemon~电光柠檬餐厅~酒店高层餐饮，价格较高，不用于短休息。`);
-  zone('chelsea','切尔西市场午餐与收尾',[14],'10月13日 · 11:30—13:15；下午按需补给','Chelsea Market（切尔西市场）','Chelsea Market New York','13点后往小岛公园和肉库区慢逛。15:30开始收尾，16点回酒店取行李；不临时排一小时的网红店。市场档口中，玉米卷更适合站着吃，想休息优先真正座餐。',`
+  zone('chelsea','切尔西市场小吃与收尾',[14],'10月13日 · 14:15—15:00','Chelsea Market（切尔西市场）','Chelsea Market New York','高线公园南端出园后逛市场、吃小吃并采购次日早餐；15:15前离开，16:00回酒店取行李。不排长队。',`
 Friedman’s~弗里德曼切尔西市场店~4.6~2426~350-550~Q~在市场内坐下吃完整主餐，更符合今天歇脚需要。~三明治、蛋类或午餐主菜~75 9th Ave New York
 Miznon~米兹农皮塔饼店~4.4~3034~280-420~W~快捷主食，离市场近；座位少时换桌餐。~皮塔饼~435 W 15th St New York
 Very Fresh Noodles~非常鲜面馆~4.5~2311~220-350~W~小红书有明确同店推荐；想吃中餐可以选，但高峰仍可能长队。~牛肉面或拌面~409 W 15th St New York
