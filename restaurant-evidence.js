@@ -49,6 +49,12 @@
   find('bellagio','Earl').comfort='快餐堂食；空位以现场为准';
   find('bellagio','Dirt Dog').comfort='休息座位未核实，不作长时间歇脚首选';
   find('chelsea','LOS TACOS').comfort='以站食为主，不保证有座位';
+  find('soho','Prince Street Pizza').comfort='外带为主；不作为坐下休息点';
+  find('soho','La Cabra').comfort='有少量座位，但小红书反馈常满座；不保证坐下';
+  find('soho','Blank Street').comfort='可外带；有无座位以现场为准';
+  find('soho','La Colombe').comfort='可坐下喝咖啡；空位以现场为准';
+  find('soho','Drip Drop').comfort='可坐下喝咖啡；空位以现场为准';
+  find('soho','Haraz').comfort='可坐下喝咖啡；空位以现场为准';
   for(const z of zones) for(const c of z.candidates.filter(c=>c.selected)) {
     if(c.comfort==='地图显示堂食；座位是否空闲以到店为准')c.comfort='可坐下用餐；空位、室内外位置以现场为准';
   }
@@ -82,14 +88,19 @@
     ['fontaine','La Fontaine','66fe3ab0000000002a033cdb','枫丹白露早午餐体验','周末早午餐笔记，不等于本次周五供应同一套菜。'],
     ['artsoutlets','Esther','6705c553000000002c02d91c','艺术区意大利餐厅探店','推荐手工意面和蔬菜，餐单随季节变化。'],
     ['artsoutlets','Esther','67faf2f9000000001c03646e','埃丝特厨房候位体验','未订位候位约一小时，支持本次提前订午餐。'],
-    ['lowermanhattan','Eataly','5ba84397910cf64aa92a4334','世贸意大利美食市场','明确世贸分店；旧价格不用于本次预算。'],
+    ['soho','La Cabra','683058aa000000002100823b','苏豪区 La Cabra（拉卡布拉咖啡）','笔记明确284 Lafayette St，喜欢手冲和面包，也写到门外排队。'],
+    ['soho','La Cabra','677dc07c000000001703de9a','苏豪区咖啡座位体验','笔记提醒苏豪区店常满座，更适合短暂停留。'],
+    ['soho','Prince Street Pizza','694fe492000000001e0318b9','王子街披萨试吃','喜欢辣香肠口味，但认为价格偏高；排队超过30分钟不值得。'],
+    ['lowermanhattan','Stone Street Tavern','693e2f99000000001f00d5bb','石街餐厅与街景','笔记明确列出石街酒馆、阿德里安披萨等，适合确认街道氛围。'],
+    ['lowermanhattan','Toro Loco','69bde66e000000001d01ee0d','石街墨西哥餐厅','笔记明确15 Stone Street，认为路过时值得吃，不必专程跨区。'],
+    ['lowermanhattan','Adrienne','66f63e12000000002a033f26','石街披萨与贝果','提到阿德里安方形披萨和利奥贝果，可作口味参考。'],
+    ['lowermanhattan','Leo','66f63e12000000002a033f26','石街贝果与餐厅','笔记提到利奥贝果；是否假日开门仍看门店公告。'],
     ['dumbo','Cecconi','62f2be53000000001200d56e','布鲁克林河景披萨','喜欢黑松露披萨和河景；景观桌只能请求，不能保证。'],
     ['dumbo','Cecconi','6322088d000000000802b62b','切科尼餐厅不同体验','认为沙拉和价格不划算，所以不把网红景观当作首选理由。'],
     ['dumbo','Time Out','62f9f2180000000016035364','布鲁克林美食市场体验','提到多种档口选择；实际商户以当前市场为准。'],
     ['hudson','queensyard','65f38d5b0000000012035016','哈德逊广场景观餐厅','肯定景色与环境，对食物记忆点较少。'],
     ['hudson','queensyard','6586510500000000380291ba','皇后庭院性价比体验','反映上菜慢和性价比低，最后一天不优先。'],
-    ['chelsea','Very Fresh','660b3fc0000000001a0124a6','切尔西市场面食探店','同店推荐，同时有排长队提示。'],
-    ['chelsea','Very Fresh','67c9054a0000000029035bcd','切尔西市场主食体验','具体点了牛肉面与担担面；只参考口味，不把人气当无条件推荐。']
+    ['chelsea','LOS TACOS','64cb042b00000000170194f5','切尔西市场玉米卷参考','笔记对比市场内档口，只参考口味和环境，不采用旧价格。']
   ];
   for(const [z,n,id,title,summary] of notes) {
     const c=find(z,n);if(c)c.xhs.push({title,url:`https://www.xiaohongshu.com/explore/${id}`,summary});

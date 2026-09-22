@@ -1,4 +1,4 @@
-/* Maps observations: 2026-09-22. Estimates are not menu quotations. */
+/* Maps observations: 2026-09-22 to 2026-09-23. Estimates are not menu quotations. */
 (() => {
   const maps = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
   const zones = [];
@@ -9,6 +9,7 @@
       return {name,zh,rating:+rating,reviews:+reviews,price:range.split('-').map(Number),selected:true,reason,dish,
         mapsUrl,walk:location || area,comfort:'地图显示堂食；座位是否空闲以到店为准',xhs:[],
         booking:mode==='R'?{mode:'recommended',text:'Google Maps（谷歌地图）显示订位入口；支持预约不等于必须预约。建议先查看可订时段。',advance:'建议提前1—3天；热门周末提前3—7天。这是行程建议，不是官方放位天数。',release:'未查到统一放位周期。',source:mapsUrl}:
+          mode==='F'?{mode:'walkin',text:'餐厅可预约，但本日免费渡轮到达时间浮动；建议到店询位，候位超过10分钟改外带。',advance:'不提前锁定午餐时段；假日营业和空位当天确认。',source:mapsUrl}:
           mode==='W'?{mode:'walkin',text:'柜台点单或现场候位；不依赖提前订桌。候位不保证立即入座。',advance:'无需提前几天；到附近再点单或排队。',source:mapsUrl}:
           {mode:'unknown',text:'地图未提供明确订位入口，不能据此判断不接受预约。可到店询位，或从地图拨打餐厅电话确认。',advance:'建议前一天确认两人能否预约；当天排队超过20分钟就换备选。',release:'未核实。',source:mapsUrl}};
     });
@@ -205,16 +206,26 @@ Woorijip~我们家韩式便当~4.5~3106~150-280~W~平价便当，适合白天或
 Osamil~五三一韩式餐吧~更适合慢吃和酒饮，不优先。
 Oncheon NYC~温泉韩餐~费用比汤饭简餐高。
 SEOUL SALON NYC~首尔沙龙~餐酒体验取向，飞行后不优先。`);
-  zone('lowermanhattan','世贸中心与金融区备选餐厅',[13],'10月12日 · 下城用餐备选','Oculus（世贸中心交通枢纽）','World Trade Center Manhattan','主线在免费渡轮回程后于 Stone Street（石街）吃饭，再去 Pier 11（11号码头）。以下世贸附近餐厅用于改变上午路线时替换，会向北折返；不作为默认午餐。',`
-Gansevoort Liberty Market~甘斯沃尔特自由市场~4.3~1594~250-400~W~多个档口可各选口味，世贸附近少绕路；座位按现场空位。~饭碗或三明治~101 Liberty St New York
-Eataly~意大利美食市场世贸店~4.2~6674~350-600~R~室内吃饭、补水和购物能一次完成；柜台与正式餐厅分别经营。~意面、披萨或柜台简餐~101 Liberty St New York
-O’Hara’s~奥哈拉美式餐吧~4.6~5909~320-500~Q~附近完整座餐，想吃汉堡和主食时选。~汉堡或三明治~120 Cedar St New York
-Fogo de Chão Brazilian Steakhouse~巴西火烤牛排馆~4.7~2213~800-1300~R~想吃较完整的大餐才选；午餐会延长，非两人250元方案。~巴西烤肉~40 Cortlandt Way New York
-Cebichelsea~切维切海鲜餐厅~4.2~86~300-550~Q~市场内海鲜口味备选，评价数少，不专程追。~海鲜饭或当日主食~101 Liberty St New York
-Shake Shack Battery Park City~摇摇屋炮台公园城汉堡~4.3~3786~220-350~W~在世贸西北侧，需要走到穆雷街；价格低，适合作为市场座位满时的替换。~汉堡、共享薯条~215 Murray St New York`, `ONE Dine~世贸观景台餐厅~观景台入场条件与额外费用，不能当普通歇脚餐厅。
-Jakarta Munch at Hungry Pearl~雅加达小食~本次未核实10月12日假日营业，不作稳妥午餐。
-Trinity Place Bar & Restaurant~三一广场餐厅~位置与默认石街至11号码头路线相比偏离，若改去需重新计算候船时间。
-Metropolis~大都会餐厅~本次未核实10月12日假日营业及候位，不作稳妥午餐。`);
+  zone('soho','苏豪区下午咖啡与小食',[12],'10月11日 · 卡萨莫诺午餐后至去剧院前','Prince Street（王子街）','Prince Street SoHo New York','这段只选一处喝咖啡或分食披萨，不按完整第二顿午餐计费。Google Maps（谷歌地图）2026年9月查询评分和位置；La Cabra（拉卡布拉咖啡）的小红书笔记也记录了排队与座位少，候位超过10分钟直接换店。约16:35要去王子街地铁站。',`
+Prince Street Pizza~王子街披萨~4.4~9234~70-120~W~小红书认为披萨值得尝试，也提到价格较高与排队；顺路且队短才买一两片分食。~辣香肠方形披萨~27 Prince St New York
+La Cabra~拉卡布拉咖啡~4.5~1203~100-180~W~小红书多次提到咖啡与面包，但座位不稳定；只作短休，不为排队压缩剧院时间。~咖啡、豆蔻面包~284 Lafayette St New York
+Blank Street~空白街咖啡~4.7~610~80-150~W~王子街上较快的咖啡替换，适合边走边喝。~咖啡、烘焙~181 Prince St New York
+La Colombe Coffee Workshop~鸽子咖啡工坊~4.2~262~100-180~W~靠近王子街地铁方向的另一处坐下或外带选择，座位以现场为准。~咖啡、烘焙~154 Prince St New York
+Drip Drop Café~滴落咖啡馆~4.7~859~80-150~W~在Thompson Street（汤普森街），比王子街主线偏西；适合取消部分购物后坐下。~咖啡、甜点~98 Thompson St New York
+Haraz Coffee House~哈拉兹咖啡馆~4.6~801~100-180~W~在Spring Street（春街），只在向西逛苏豪区时使用，避免从王子街来回折返。~咖啡、甜点~210 Spring St New York`, `Frame Cafe Soho~相框咖啡馆~地图评分样本仅64条，不为了它往Kenmare Street绕行。
+Joe’s Pizza~乔氏披萨~可作《蜘蛛侠2》关联，但现址不是电影旧店面，且与王子街披萨重复，别两家都排。
+Balthazar~巴尔萨泽餐厅~完整桌餐时间与12:45已订午餐冲突。
+Black Seed Bagels~黑籽贝果~本段已有午餐，贝果店不作为必吃点。`);
+  zone('lowermanhattan','石街与11号码头午餐',[13],'10月12日 · 免费渡轮回程后','Stone Street（石街）','Stone Street New York','Google Maps（谷歌地图）核对了这六家位置和评价；白厅码头→石街→11号码头纯步行约14分钟。10月12日假日实际营业以当天为准。午餐候位超过10分钟就换外带，不误付费渡轮。评分与评论数是查询时快照，会变化。',`
+Stone Street Tavern~石街酒馆~4.3~1426~260-400~F~主线首选；美式汉堡、三明治，周一官网11:30开。受免费渡轮影响不锁定预约，现场有位就坐。~汉堡或三明治~52 Stone St New York
+Toro Loco~疯牛墨西哥餐厅~4.7~5397~300-480~F~就在石街，想把赛前披萨保留时可换墨西哥主食；桌餐同样要看候位。~玉米卷或墨西哥饭~15 Stone St New York
+London & Martin Co.~伦敦与马丁餐厅~4.8~1407~320-500~F~石街另一家坐席选择；不要因高评分牺牲船班。~当日主菜或三明治~6 Stone St New York
+Adrienne’s Pizzabar~阿德里安披萨吧~4.4~2596~300-450~F~石街披萨备选；若午餐选它，NBA赛前改为别的简餐，避免一天两顿披萨。~方形披萨~54 Stone St New York
+Broadstone Bar & Kitchen~宽石餐吧~4.7~4319~320-500~F~在石街东侧Broad Street（宽街），去11号码头方向顺路。~美式主食~88 Broad St New York
+Leo’s Bagels~利奥贝果~4.3~2811~150-280~W~免费渡轮返程晚时最实用的外带备选，3 Hanover Square（汉诺威广场3号）靠近11号码头。~贝果三明治~3 Hanover Square New York`, `Gansevoort Liberty Market~甘斯沃尔特自由市场~在世贸附近，免费渡轮后需向北折返。
+Eataly~意大利美食市场世贸店~同样向北折返，不作为默认午餐。
+Fraunces Tavern~弗朗西斯酒馆~有历史主题但坐席午餐较慢，若选择需删减丹波区拍照。
+The Bedford Stone Street~贝德福德石街店~地图所查时段16:00才营业，不适合午餐。`);
   zone('dumbo','布鲁克林桥下轻食与休息',[13],'10月12日 · 13:35—14:45','DUMBO（曼哈顿桥下街区）','DUMBO Brooklyn New York','这里以拍照和短休息为主；想坐下用餐则替换石街午餐，不叠加。14:45左右上桥；体力不足改地铁回酒店。',`
 Westville Dumbo~西村餐厅布鲁克林店~4.7~3550~320-500~R~蔬菜和主食选择多，正式座位适合走累后休息。~主食配蔬菜~81 Washington St Brooklyn
 Time Out Market New York~纽约时光美食市场~4.5~8560~300-500~W~口味选择多、离河岸近；共享座位，周末不保证马上坐下。~各选一个档口~55 Water St Brooklyn
@@ -248,13 +259,14 @@ Electric Lemon~电光柠檬餐厅~酒店高层餐饮，价格较高，不用于�
   zone('chelsea','切尔西市场小吃与收尾',[14],'10月13日 · 14:15—15:00','Chelsea Market（切尔西市场）','Chelsea Market New York','高线公园南端出园后逛市场、吃小吃并采购次日早餐；15:15前离开，16:00回酒店取行李。不排长队。',`
 Friedman’s~弗里德曼切尔西市场店~4.6~2426~350-550~Q~在市场内坐下吃完整主餐，更符合今天歇脚需要。~三明治、蛋类或午餐主菜~75 9th Ave New York
 Miznon~米兹农皮塔饼店~4.4~3034~280-420~W~快捷主食，离市场近；座位少时换桌餐。~皮塔饼~435 W 15th St New York
-Very Fresh Noodles~非常鲜面馆~4.5~2311~220-350~W~小红书有明确同店推荐；想吃中餐可以选，但高峰仍可能长队。~牛肉面或拌面~409 W 15th St New York
+Los Mariscos~洛斯马里斯科斯海鲜玉米卷~4.7~3188~200-350~W~海鲜玉米卷与美式、披萨口味不同；谷歌地图评价较高，市场官网列周二营业。~鱼肉或虾玉米卷~409 W 15th St New York
 Lobster Place~龙虾海鲜市场~4.5~3889~400-700~W~海鲜特色选择，价格比普通主食高，公共座位不保证。~龙虾卷、熟海鲜~75 9th Ave New York
 Cull & Pistol~卡尔与皮斯托海鲜餐厅~4.6~1242~550-850~R~想要正式座位吃海鲜时选择，最好提前订午餐。~海鲜主菜~75 9th Ave New York
-LOS TACOS No.1~一号玉米卷~4.7~5665~180-300~W~味道和价格有优势，但不作为主要坐下休息点；吃完另找公共座位。~牛肉或猪肉玉米卷~75 9th Ave New York`, `ZiZi~滋滋地中海餐厅~14:30才开始，午餐时段不匹配。
+LOS TACOS No.1~一号玉米卷~4.7~5665~180-300~W~味道和价格有优势，但不作为主要坐下休息点；吃完另找公共座位。~牛肉或猪肉玉米卷~75 9th Ave New York`, `Very Fresh Noodles~非常鲜面馆~切尔西市场官网显示周二不营业，不能列入10月13日备选。
+ZiZi~滋滋地中海餐厅~14:30才开始，午餐时段不匹配。
 Cookshop~烹饪工坊餐厅~价格较高且需要另走一段。
 Shukette~舒凯特中东餐厅~17点开门，届时应在去机场路上。
 Westville Chelsea~西村切尔西餐厅~距离市场更远，优先市场内外紧邻选项。`);
 
-  window.restaurantResearch={checked:'2026-09-22',zones};
+  window.restaurantResearch={checked:'2026-09-22—23',zones};
 })();

@@ -32,7 +32,7 @@
     ['nyc','soleil','09:59飞纽约、18:12抵达','飞机＋机场捷运＋铁路＋出租车','枫丹白露退房；纽约入住'],
     ['nyc','soleil','中央公园、大都会、12:45卡萨莫诺、苏豪区、阿拉丁候选','地铁＋步行＋网约车','续住'],
     ['nyc','soleil','世贸、华尔街、自由女神远观、丹波区、布鲁克林大桥、尼克斯季前赛','地铁＋渡轮＋步行','续住'],
-    ['nyc','airport','第五大道购物、高线公园、切尔西市场、17:00去机场酒店','步行＋出租车','市区退房寄存；机场酒店入住'],
+    ['nyc','airport','第五大道购物、高线公园、切尔西市场、17:00去机场酒店','步行＋地铁＋出租车','市区退房寄存；机场酒店入住'],
     ['nyc',null,'03:30到航站楼、06:30起飞','酒店接驳或出租车＋飞机','凌晨退房；机上过夜']
   ];
   const days=$$('#daily article.day').map((node,i)=>({node,i,city:meta[i][0],hotel:hotels[meta[i][1]],brief:meta[i][2],transport:meta[i][3],transition:meta[i][4],dining:diningDays[i],date:new Date(Date.UTC(2026,8,29+i)).toISOString().slice(0,10)}));
