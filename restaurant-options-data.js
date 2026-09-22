@@ -215,12 +215,12 @@ Shake Shack Battery Park City~摇摇屋炮台公园城汉堡~4.3~3786~220-350~W~
 Jakarta Munch at Hungry Pearl~雅加达小食~地图没有确认周日可用，不作本次稳妥午餐。
 Trinity Place Bar & Restaurant~三一广场餐厅~官网仅列周一至周五营业，不适合10月11日周日。
 Metropolis~大都会餐厅~官方场地页面显示周日休息，不能用10月11日午餐。`);
-  zone('dumbo','布鲁克林桥下休息与晚餐',[12],'10月11日 · 15:00休息／17:15晚餐','DUMBO（曼哈顿桥下街区）','DUMBO Brooklyn New York','原计划朱莉安娜披萨仍可选；以下用于长队时替换。先在街区吃好休息，再走布鲁克林大桥，不空腹走到累。',`
+  zone('dumbo','布鲁克林桥下轻食与休息',[12],'10月11日 · 16:45轻食休息','DUMBO（曼哈顿桥下街区）','DUMBO Brooklyn New York','20:00卡萨莫诺晚餐待预订；这里仅选饮品或少量轻食。完整桌餐仅在取消卡萨莫诺时替换，不叠加。17:30开始过桥。',`
 Westville Dumbo~西村餐厅布鲁克林店~4.7~3550~320-500~R~蔬菜和主食选择多，正式座位适合走累后休息。~主食配蔬菜~81 Washington St Brooklyn
 Time Out Market New York~纽约时光美食市场~4.5~8560~300-500~W~口味选择多、离河岸近；共享座位，周末不保证马上坐下。~各选一个档口~55 Water St Brooklyn
 Lucky Rabbit Noodles~幸运兔面馆~4.6~1457~300-460~Q~想吃热面可换这里，不必坚持排披萨。~汤面~151 Front St Brooklyn
 BEEPUBLIC~蜜蜂共和国咖啡~4.6~726~140-280~Q~下午只休息喝咖啡的选项；金额按饮品小食。~咖啡、烘焙~181 Front St Brooklyn
-AlMar~阿尔玛意餐~4.3~838~450-700~R~正式晚餐替换，提前订17:15左右有利于后续过桥。~意面~111 Front St Brooklyn
+AlMar~阿尔玛意餐~4.3~838~450-700~R~仅在取消卡萨莫诺时替换，不预订第二顿晚餐。~意面~111 Front St Brooklyn
 Cecconi’s DUMBO~切科尼布鲁克林餐厅~4.0~3373~700-1100~R~河景升级选择；小红书对景色、服务和价格评价有分歧，不因拍照排首位。~披萨或意面~55 Water St Brooklyn`, `Celestine~塞莱斯汀地中海餐厅~费用较高，距离当日主线更偏东。
 Superfine~超凡餐厅~餐吧取向与备选重复。
 Dumbo Oyster Bar~布鲁克林桥下生蚝吧~评价样本少，今天不以生蚝为主。

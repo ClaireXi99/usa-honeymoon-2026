@@ -1,6 +1,6 @@
 /* Reservation reminders; these are not booking confirmations. */
 (() => {
-  const rows=[
+  const rows=[['2026-10-11','Casa Mono（卡萨莫诺）','优先预订','20:00 · 两人 · 室内座位','建议提前2–3周预订，现在查看10月11日20:00两人室内座位。官网未公布固定放位周期；未核实余位、尚未代订。取消及未到店费用以确认页为准。','https://www.opentable.com/r/casa-mono-new-york'],
     ['2026-09-30','Robin’s Restaurant（罗宾餐厅）','选定后再订','19:00—19:15 · 两人','海边晚餐备选；决定去就现在查看余位，不与月光石海滩餐吧重复订。','https://www.robinsrestaurant.com/reservations'],
     ['2026-09-30','Moonstone Beach Bar & Grill（月光石海滩餐吧）','现场候位','19:15前到店','不接受预约；日落后直接过去，长队则换备选。','https://www.moonstonebeach.com/'],
     ['2026-10-01','Boathouse at Hendry’s Beach（亨德里海滩船屋餐厅）','现场候位','10:30左右登记','不按提前订桌安排；候位超过20分钟就改简餐，12:00离开圣塔芭芭拉。','https://boathousesb.com/'],
@@ -20,5 +20,5 @@
     const node=document.createElement('section');node.className='reservation-reminders';node.innerHTML='<h4>餐厅订位</h4><p class="reservation-caption">尚未代订。优先预订不等于强制预约；其他备选选定后再订。</p>'+selected.map(render).join('');
     day.querySelector('.daily-dining .dining-inner')?.prepend(node);
   });
-  const overview=document.createElement('details');overview.className='city-reference';overview.id='restaurant-reservations';overview.innerHTML='<summary>餐厅订位清单与入口</summary><div class="reference-body"><p>先订卡利和百乐宫面馆。其他餐厅选定后再订，不同时占多个备选位置；提前天数是行程建议，不是官方放位承诺。付款前查看取消、未到店及银行卡担保规则。</p>'+rows.map(r=>'<h4>'+r[0].slice(5).replace('-','月')+'日</h4>'+render(r)).join('')+'</div>';document.getElementById('book').append(overview);
+  const overview=document.createElement('details');overview.className='city-reference';overview.id='restaurant-reservations';overview.innerHTML='<summary>餐厅订位清单与入口</summary><div class="reference-body"><p>先订卡利、百乐宫面馆和卡萨莫诺。其他餐厅选定后再订，不同时占多个备选位置；提前天数是行程建议，不是官方放位承诺。付款前查看取消、未到店及银行卡担保规则。</p>'+rows.map(r=>'<h4>'+r[0].slice(5).replace('-','月')+'日</h4>'+render(r)).join('')+'</div>';document.getElementById('book').append(overview);
 })();
