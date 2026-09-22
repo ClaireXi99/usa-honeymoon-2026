@@ -1,4 +1,4 @@
-/* City tabs contain consecutive days, not a second date filter. */
+/* City tabs contain a date selector and one active day. */
 (() => {
   'use strict';
   const $ = (s, root=document) => root.querySelector(s);
@@ -47,7 +47,9 @@
     const panel=document.getElementById(id);originals[id]=make('div','reference-body');
     while(panel.firstChild)originals[id].append(panel.firstChild);
     $('.section-head',originals[id])?.remove();
-    panel.append(make('header','city-heading',`<div><span class="city-range">${range} · 2026</span><h2>${name}</h2></div><p>按日期顺序查看住宿、行程与餐厅</p>`));
+    panel.append(make('header','city-heading',`<div><span class="city-range">${range} · 2026</span><h2>${name}</h2></div><p>选择日期，查看当天住宿、行程与餐厅</p>`));
+    const dateNav=make('nav','city-date-tabs');dateNav.setAttribute('role','tablist');dateNav.setAttribute('aria-label',name+'日期');
+    days.filter(d=>d.city===id).forEach(d=>{const button=make('button','city-date-tab',`<b>${d.dining.date}</b><span>周${'日一二三四五六'[new Date(d.date+'T12:00:00Z').getUTCDay()]}</span>`);button.type='button';button.dataset.date=d.date;button.id='date-tab-'+d.date;button.setAttribute('role','tab');button.setAttribute('aria-controls','date-panel-'+d.date);button.addEventListener('click',()=>navigate(href(d)));dateNav.append(button);});panel.append(dateNav);
     bodies[id]=make('div','city-days');panel.append(bodies[id]);
     const details=make('details','city-reference','<summary>本城资料 · 停车、地图与购票</summary>');
     details.id='reference-'+id;details.append(originals[id]);referenceFor[id]=details;panel.append(details);
@@ -123,7 +125,7 @@
   };
   for(const d of days){
     const {node,i,hotel:h}=d;const body=$('.day-body',node);
-    node.dataset.date=d.date;node.dataset.city=d.city;node.tabIndex=-1;
+    node.dataset.date=d.date;node.dataset.city=d.city;node.tabIndex=-1;node.id='date-panel-'+d.date;node.setAttribute('role','tabpanel');node.setAttribute('aria-labelledby','date-tab-'+d.date);
     $('.day-head p',node).textContent=d.brief;
     const nav=make('nav','day-section-nav',`<a href="${href(d)}/stay">住宿</a><a href="${href(d)}/route">时间轴</a><a href="${href(d)}/photos">照片</a><a href="${href(d)}/food">餐厅</a><a href="${href(d)}/cost">费用参考</a>`);nav.setAttribute('aria-label',d.dining.date+'内容导航');
     const total=h?hotelTotal(h):0;
@@ -163,13 +165,14 @@
   document.getElementById('book').append(seatsSummary);
   // Replace the second competing overview timetable with one clear entry point.
   const oldTable=$$('#overview table').find(t=>$('th',t)?.textContent==='日期');
-  if(oldTable)oldTable.closest('.table-wrap').replaceWith(make('div','notice','<b>16天行程</b><p>逐日执行查看简表；城市页按日期连续展示完整安排。</p><a class="btn light" href="#daily">查看逐日执行 →</a>'));
+  if(oldTable)oldTable.closest('.table-wrap').replaceWith(make('div','notice','<b>16天行程</b><p>逐日执行查看简表；城市页选择日期查看当天完整安排。</p><a class="btn light" href="#daily">查看逐日执行 →</a>'));
   document.querySelector('main').append(document.getElementById('budget'));
   // Replace the old replaceState-only tabs, supporting back/forward and day deep links.
   $$('.tabs .tab').forEach(old=>{const next=old.cloneNode(true);old.replaceWith(next);next.setAttribute('role','tab');next.setAttribute('aria-controls',next.dataset.tab);next.id='tab-'+next.dataset.tab;next.addEventListener('click',()=>navigate('#'+next.dataset.tab));});
   const cityTabs=$$('.tabs .tab');const panelList=$$('.panel');
   panelList.forEach(panel=>panel.setAttribute('aria-labelledby','tab-'+panel.id));
   const oldDay=/^#(?:itinerary-day-|dining-day-)(\d+)$/;
+  const selectedDates={};
   function renderLocation(scroll=true){
     let value=location.hash||'#overview';const legacy=value.match(oldDay);
     if(legacy&&days[+legacy[1]])value=href(days[+legacy[1]]);
@@ -177,18 +180,24 @@
     panelList.forEach(p=>p.classList.toggle('active',p.id===city));
     cityTabs.forEach(t=>{const active=t.dataset.tab===city;t.classList.toggle('active',active);t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;});
     $('.tab.active')?.scrollIntoView({block:'nearest',inline:'nearest'});
+    if(cities[city]){
+      const local=days.filter(d=>d.city===city);const active=local.find(d=>d.date===date)||local.find(d=>d.date===selectedDates[city])||local[0];selectedDates[city]=active.date;
+      local.forEach(d=>{d.node.hidden=d!==active;const tab=document.getElementById('date-tab-'+d.date);tab.classList.toggle('active',d===active);tab.setAttribute('aria-selected',String(d===active));tab.tabIndex=d===active?0:-1;});
+      document.getElementById('date-tab-'+active.date)?.scrollIntoView({block:'nearest',inline:'nearest'});
+    }
     let target=null;
     if(date==='reference'&&referenceFor[city]){
       referenceFor[city].open=true;target=(part&&document.getElementById(part))||referenceFor[city];
     }else if(date){
       const d=days.find(d=>d.date===date&&d.city===city);
-      if(d)target=part?document.getElementById(({food:'food',cost:'cost',photos:'photos',stay:'stay',route:'route'}[part]||'route')+'-'+date):d.node;
+      if(d)target=part?document.getElementById(({food:'food',cost:'cost',photos:'photos',stay:'stay',route:'route',pay:'pay'}[part]||'route')+'-'+date):document.querySelector('#'+city+' .city-date-tabs');
     }
     if(target)requestAnimationFrame(()=>target.scrollIntoView({block:'start',behavior:'instant'}));
     else if(scroll)window.scrollTo({top:0,behavior:'instant'});
   }
   function navigate(hash){if(location.hash===hash)renderLocation();else location.hash=hash;}
   window.addEventListener('hashchange',()=>renderLocation());
+  $$('.city-date-tabs').forEach(nav=>nav.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)||!event.target.matches('.city-date-tab'))return;event.preventDefault();const tabs=$$('.city-date-tab',nav),index=tabs.indexOf(event.target);const next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].focus();tabs[next].click();}));
   document.addEventListener('click',event=>{const anchor=event.target.closest('a[href^="#"]');if(anchor&&anchor.getAttribute('href')===location.hash){event.preventDefault();renderLocation();}});
   $('.tabs').addEventListener('keydown',event=>{
     if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)||!event.target.matches('.tab'))return;

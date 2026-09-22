@@ -71,7 +71,7 @@
     @media(max-width:560px){.budget-total-parts{grid-template-columns:1fr}.budget-total-parts>div{border-right:0;border-top:1px solid #385062;grid-template-columns:1fr auto}.budget-total-parts small{grid-column:1/-1}.budget-main-total{padding:22px 18px}.budget-main-total strong{font-size:29px}.budget-options{grid-template-columns:1fr}.budget-group summary{padding:15px;flex-wrap:wrap}.budget-group-title{flex-basis:80%}.budget-group-numbers{order:3;text-align:left;flex-basis:100%;grid-template-columns:1fr 1fr;font-size:12px}.budget-group-numbers b{display:block;margin-left:0}.budget-group-body>section{padding:16px}.budget-item{gap:10px}.budget-item span{font-size:14px}}
     @media print{.topbar,.actions{display:none!important}.panel{display:block!important;break-before:page}.hero{padding:25px 0}.card{box-shadow:none}.map iframe{height:180px}}
   </style>
-  <link rel="stylesheet" href="roadbook-layout.css?v=20260922">
+  <link rel="stylesheet" href="roadbook-layout.css?v=20260922-dates-pay">
   <link rel="stylesheet" href="restaurant-options.css?v=20260922-dining">
 </head>
 <body>
@@ -801,9 +801,9 @@
     const budgetEstimates=[
       {category:'hotel',name:'机场前夜酒店 · 10月13日',low:1400,high:2400,note:'1晚，含税；订单金额待补'},
       {category:'transport',name:'Uber（优步）／出租车',low:2700,high:4000,note:'城市打车、迪士尼往返及机场接送；小费另列'},
-      {category:'transport',name:'地铁、机场捷运及铁路',low:350,high:500,note:'两人公共交通'},
+      {category:'transport',name:'缆车、地铁、机场铁路与渡轮',low:550,high:750,note:'两人；含旧金山缆车、洛杉矶地铁往返、JFK进城铁路、一次纽约渡轮及市内地铁；不含出租车'},
       {category:'transport',name:'充电、停车及过路费',low:600,high:1000,note:'旧金山至洛杉矶自驾段'},
-      {category:'transport',name:'美国国内航班行李费',low:0,high:800,note:'机票已含所需行李则为0'},
+      {category:'transport',name:'美国国内航班行李费',low:0,high:1206,note:'两段国内航班，两人各托运第一件、均无豁免时按45美元×4×6.7；若票已含或已付则扣除，不含超重超件'},
       ...diningDays.map(d=>({category:'food',name:d.date+' · '+d.city,low:d.low,high:d.high,note:d.brief+'；两人含税，不含小费'+(d.date==='10月3日'?'；卡利另列':'')})),
       {category:'food',name:'卡利餐厅 · 米其林一星晚餐',low:1380,high:1620,note:'两人一顿；含税，不含小费及酒'},
       {category:'experience',name:'10月4日 · 迪士尼主园票＋多项目通票',low:2921.20,high:2921.20,note:'两人；官网小计436美元 × 6.7；9月22日核价，未购买'},
@@ -878,7 +878,8 @@
     tabs.forEach(t=>t.addEventListener('click',()=>openTab(t.dataset.tab)));
     // Date-aware navigation is initialized by roadbook-layout.js.
   </script>
-  <script src="roadbook-layout.js?v=20260922"></script>
+  <script src="roadbook-layout.js?v=20260922-dates-pay"></script>
+  <script src="payment-guide.js?v=20260922-dates-pay"></script>
   <script src="restaurant-options-data.js?v=20260922-dining"></script>
   <script src="restaurant-evidence.js?v=20260922-dining"></script>
   <script src="restaurant-options-ui.js?v=20260922-dining"></script>
