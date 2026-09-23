@@ -6,7 +6,7 @@
     const candidates = chosen.trim().split('\n').map(line => {
       const [name,zh,rating,reviews,range,mode,reason,dish,location] = line.split('~');
       const mapsUrl=maps(`${name} ${location || area}`);
-      return {name,zh,rating:+rating,reviews:+reviews,price:range.split('-').map(Number),selected:true,reason,dish,
+      return {name,zh,rating:rating ? +rating : null,reviews:reviews ? +reviews : null,price:range.split('-').map(Number),selected:true,reason,dish,
         mapsUrl,walk:location || area,comfort:'地图显示堂食；座位是否空闲以到店为准',xhs:[],
         booking:mode==='R'?{mode:'recommended',text:'Google Maps（谷歌地图）显示订位入口；支持预约不等于必须预约。建议先查看可订时段。',advance:'建议提前1—3天；热门周末提前3—7天。这是行程建议，不是官方放位天数。',release:'未查到统一放位周期。',source:mapsUrl}:
           mode==='F'?{mode:'walkin',text:'餐厅可预约，但本日免费渡轮到达时间浮动；建议到店询位，候位超过10分钟改外带。',advance:'不提前锁定午餐时段；假日营业和空位当天确认。',source:mapsUrl}:
@@ -96,7 +96,7 @@ Hollywood & Dine~好莱坞食堂~3.0~130~230-380~W~位置方便时兜底，评�
 Buca di Beppo Italian Restaurant~布卡意餐~城市大道园外餐厅，更适合离园后。
 The Front Yard~前院餐厅~不在园内，需要额外交通。
 The Toothsome Chocolate Emporium & Savory Feast Kitchen~齿轮巧克力工坊~园外且用餐较慢，不作园内休息点。`);
-  zone('grove','农夫市场与格罗夫午餐',[4],'10月3日 · 12:15左右','The Original Farmers Market（原始农夫市场）','6333 W 3rd St Los Angeles','晚餐已有卡利，午餐以主食为主，不点多道大餐。市场公共座位不保证有空位；人多先看座位再决定买哪家。',`
+  zone('grove','农夫市场与格罗夫午餐',[4],'10月3日 · 11:00左右','The Original Farmers Market（始祖农夫市集）','6333 W 3rd St Los Angeles','晚餐已有卡利，午餐以主食为主，不点多道大餐。市场公共座位不保证有空位；人多先看座位再决定买哪家。',`
 Noodle Art~一面之缘~4.7~445~200-320~W~小红书有具体探店；在市场内，想吃热面最直接。~炒拉条、牛肉面，口味评价有分歧
 Pampas Grill Churrascaria~潘帕斯巴西烤肉~4.5~2205~280-440~W~按重量取餐，可控制份量；肉取太多容易超预算。~烤肉配蔬菜和米饭
 Gott’s LA Farmers Market~戈茨洛杉矶农夫市场店~4.3~62~240-380~W~柜台点单，适合不想挑档口时；评价数量目前不多。~汉堡、薯条
@@ -116,11 +116,11 @@ Messhall Kitchen~食堂厨房~4.4~1126~280-480~R~山下桌餐备用；如果只�
 The Dresden Restaurant & Lounge~德累斯顿餐厅酒廊~偏夜间餐酒体验，今天已有晚餐。
 Little Dom’s~小多姆意餐~正餐取向，不必在卡利前再吃。
 Los Feliz Cafe~洛斯费利斯早餐餐厅~距离与较早结束时间均不占优。`);
-  zone('disney','迪士尼主园餐厅',[5],'10月4日 · 午餐／下午休息／晚餐','Disneyland Park（迪士尼乐园主园）','Disneyland Park Anaheim','午餐优先广场餐厅，西侧游玩时用饿熊替换；不为餐厅跨园。下面有快餐和预约桌餐，选一家即可。两人价格不含人物早餐或演出套餐。',`
+  zone('disney','迪士尼主园餐厅',[5],'10月4日 · 午餐／下午休息／晚餐','Disneyland Park（迪士尼乐园主园）','Disneyland Park Anaheim','午餐按西侧所在位置在朗托烤肉店与饿熊烧烤餐厅之间二选一，晚餐在广场餐厅；不为吃饭折返。两人价格不含人物早餐或演出套餐。',`
 Plaza Inn~广场餐厅~4.4~559~280-430~W~午晚餐是柜台式，室内外有座位；小红书有实际炸鸡和休息体验。~炸鸡套餐、当日鱼类主菜
 Hungry Bear Barbecue Jamboree~饿熊烧烤餐厅~3.9~956~260-400~W~西侧园区玩累时就近，官方确认有遮棚座位。~烧烤餐盘
 The Tropical Hideaway~热带秘境小食店~4.4~147~140-260~W~适合下午冰品和短休息，不代替完整正餐。~菠萝冰品、包点
-Carnation Cafe~康乃馨咖啡餐厅~3.9~587~400-650~R~美国小镇大街桌餐，想稳定坐下休息可提前订。~美式主菜
+Ronto Roasters~朗托烤肉店~~~220-320~W~仅在仍处银河边缘、已供应且有合适手机取餐时段时选；离开后不折返。~朗托烤肉卷
 Cafe Orleans~新奥尔良咖啡餐厅~4.2~1490~450-700~R~新奥尔良区域桌餐；没有预约时别为候位耗太久。~三明治或新奥尔良风味主菜
 Blue Bayou Restaurant~蓝湾餐厅~4.1~1958~850-1300~R~加勒比海盗场景内用餐，属于环境升级选项，不是性价比首选。~主菜套餐`, `Goofy’s Kitchen~高飞厨房~在迪士尼酒店内，不在主园。
 Tangaroa Terrace Tropical Bar & Grill~坦加罗亚热带餐吧~园外酒店餐厅，单园当天不绕出。
