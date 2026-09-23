@@ -15,7 +15,7 @@
     flamingo:hotel('10月6—8日','Flamingo Las Vegas Hotel & Casino（弗拉明戈拉斯维加斯酒店）','弗拉明戈酒店','3555 South Las Vegas Boulevard（南拉斯维加斯大道3555号）','10月6日—8日 · 2晚','订单已含度假村费，最新扣款状态待核对。10月8日退房后在此寄存，看完巨型球回来取。'),
     fontaine:hotel('10月8—10日','Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）','枫丹白露酒店','Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）','10月8日—10日 · 2晚','已报房款3,698.25元，到店另付835.18元。8日下午入住；10日06:45出发去机场。'),
     soleil:hotel('10月10—13日','Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）','纽约勒苏蕾行政酒店','Executive Hotel Le Soleil New York（纽约勒苏蕾行政酒店）','10月10日—13日 · 3晚','房费扣款状态待核对，已含所报度假村费和城市税。13日退房寄存行李，16:00回酒店取行李，17:00出发去机场酒店。'),
-    airport:hotel(null,'John F. Kennedy International Airport（纽约肯尼迪国际机场）附近酒店','机场附近酒店','', '10月13日—14日 · 1晚','已报在外部平台预订，酒店名称和实付金额待补。必须确认凌晨接驳班次、是否预约及出发航站楼。')
+    airport:hotel(null,'John F. Kennedy International Airport（纽约肯尼迪国际机场）附近酒店 · 待订','机场酒店待订','', '10月13日—14日 · 1晚','尚未预订。推荐先比较 Courtyard by Marriott New York JFK Airport（纽约肯尼迪机场万怡酒店）可取消房型与同日其他平台；预订前确认02:30左右班车可直达 Terminal 8（8号航站楼）。')
   };
   const meta=[
     ['sf','anne','渡轮大楼、加州街缆车、金门大桥','机场取车＋市内网约车','抵达后先寄存'],
@@ -33,7 +33,7 @@
     ['nyc','soleil','中央公园、大都会、12:45卡萨莫诺、苏豪区、阿拉丁候选','地铁＋步行＋网约车','续住'],
     ['nyc','soleil','世贸、华尔街、自由女神远观、丹波区、布鲁克林大桥、尼克斯季前赛','地铁＋渡轮＋步行','续住'],
     ['nyc','airport','第五大道、10:30洛克菲勒观景台建议票、高线公园、切尔西市场、17:00去机场酒店','步行＋地铁＋出租车','市区退房寄存；机场酒店入住'],
-    ['nyc',null,'03:15—03:30到航站楼、06:30起飞','确认的直达接驳或预约车＋飞机','凌晨退房；机上过夜']
+    ['nyc',null,'03:15—03:30到T8、经达拉斯转机返沪','机场酒店接驳或预约车＋两段飞机','凌晨退房；10月15日到上海']
   ];
   const days=$$('#daily article.day').map((node,i)=>({node,i,city:meta[i][0],hotel:hotels[meta[i][1]],brief:meta[i][2],transport:meta[i][3],transition:meta[i][4],dining:diningDays[i],date:new Date(Date.UTC(2026,8,29+i)).toISOString().slice(0,10)}));
   if(days.length!==16)throw new Error('Expected 16 itinerary days');
@@ -130,7 +130,7 @@
     const nav=make('nav','day-section-nav',`<a href="${href(d)}/stay">住宿</a><a href="${href(d)}/route">时间轴</a><a href="${href(d)}/photos">照片</a><a href="${href(d)}/food">餐厅</a><a href="${href(d)}/cost">费用参考</a>`);nav.setAttribute('aria-label',d.dining.date+'内容导航');
     const total=h?hotelTotal(h):0;
     const mapQuery=h?encodeURIComponent(h.name.split('（')[0]+(h.address!==h.name?' '+h.address.split('（')[0]:'')):'';
-    const stay=make('section','stay-card',h?`<div><span class="label">当晚住宿 · ${d.transition}</span><h4>${h.name}</h4><p>${h.dates}</p>${h.address&&h.address!==h.name?`<p>${h.address}</p>`:''}<p>${h.note}</p>${h.address?`<a href="https://www.google.com/maps/search/?api=1&amp;query=${mapQuery}" target="_blank" rel="noopener">酒店位置 ↗</a>`:''}</div><div class="stay-price">${total?money(total):'金额待补'}<small>${total?'整段住宿合计，不是单晚价':'暂按总预算预留'}</small></div>`:`<div><span class="label">返程</span><h4>凌晨从机场酒店退房</h4><p>03:15—03:30到实际出发航站楼，06:30起飞。航司、航班号、机场酒店地址和接驳班次待补。</p></div>`);
+    const stay=make('section','stay-card',h?`<div><span class="label">当晚住宿 · ${d.transition}</span><h4>${h.name}</h4><p>${h.dates}</p>${h.address&&h.address!==h.name?`<p>${h.address}</p>`:''}<p>${h.note}</p>${h.address?`<a href="https://www.google.com/maps/search/?api=1&amp;query=${mapQuery}" target="_blank" rel="noopener">酒店位置 ↗</a>`:''}</div><div class="stay-price">${total?money(total):'金额待补'}<small>${total?'整段住宿合计，不是单晚价':'暂按总预算预留'}</small></div>`:`<div><span class="label">返程</span><h4>凌晨从机场酒店退房</h4><p>03:15—03:30到 JFK Terminal 8（肯尼迪机场8号航站楼）；06:30 AA475（美国航空）飞 DFW（达拉斯），10:40换乘 AA127（美国航空）飞上海。10月15日15:20到 PVG Terminal 2（浦东机场2号航站楼）。机场酒店仍待订。</p></div>`);
     stay.id='stay-'+d.date;body.prepend(nav,stay);
     const route=$('.detail-grid',body);const routeTitle=make('h4','day-section-title','时间轴与交通');routeTitle.id='route-'+d.date;route.before(routeTitle);
     const galleries=$$('.photo-duo',body);const gallery=make('div','photo-duo');
