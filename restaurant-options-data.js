@@ -216,17 +216,17 @@ Haraz Coffee House~哈拉兹咖啡馆~4.6~801~100-180~W~在Spring Street（春�
 Joe’s Pizza~乔氏披萨~可作《蜘蛛侠2》关联，但现址不是电影旧店面，且与王子街披萨重复，别两家都排。
 Balthazar~巴尔萨泽餐厅~完整桌餐时间与12:45已订午餐冲突。
 Black Seed Bagels~黑籽贝果~本段已有午餐，贝果店不作为必吃点。`);
-  zone('lowermanhattan','石街与11号码头午餐',[13],'10月12日 · 免费渡轮回程后','Stone Street（石街）','Stone Street New York','Google Maps（谷歌地图）核对了这六家位置和评价；白厅码头→石街→11号码头纯步行约14分钟。10月12日假日实际营业以当天为准。午餐候位超过10分钟就换外带，不误付费渡轮。评分与评论数是查询时快照，会变化。',`
-Stone Street Tavern~石街酒馆~4.3~1426~260-400~F~主线首选；美式汉堡、三明治，周一官网11:30开。受免费渡轮影响不锁定预约，现场有位就坐。~汉堡或三明治~52 Stone St New York
+  zone('lowermanhattan','金融区与11号码头午餐',[13],'10月12日 · 免费渡轮回程后','Hanover Square（汉诺威广场）','Hanover Square New York','10月12日是假日，免费渡轮回程与下一段付费船时刻可能浮动。默认 Leo’s Bagels（利奥贝果）外带；只有确认至少一小时余量、且无需等座时才在 Stone Street（石街）坐下吃。以下 Google Maps（谷歌地图）评分和评论数为查询时快照，营业当天再核。',`
+Leo’s Bagels~利奥贝果~4.3~2811~140-220~W~主线默认外带；3 Hanover Square（汉诺威广场3号）靠近11号码头，假日开门状态当天核。~贝果三明治~3 Hanover Square New York
+Stone Street Tavern~石街酒馆~4.3~1426~260-400~F~仅免费船顺利且有至少一小时余量时坐下；受船班影响不锁预约，排队即换外带。~汉堡或三明治~52 Stone St New York
 Toro Loco~疯牛墨西哥餐厅~4.7~5397~300-480~F~就在石街，想把赛前披萨保留时可换墨西哥主食；桌餐同样要看候位。~玉米卷或墨西哥饭~15 Stone St New York
 London & Martin Co.~伦敦与马丁餐厅~4.8~1407~320-500~F~石街另一家坐席选择；不要因高评分牺牲船班。~当日主菜或三明治~6 Stone St New York
 Adrienne’s Pizzabar~阿德里安披萨吧~4.4~2596~300-450~F~石街披萨备选；若午餐选它，NBA赛前改为别的简餐，避免一天两顿披萨。~方形披萨~54 Stone St New York
-Broadstone Bar & Kitchen~宽石餐吧~4.7~4319~320-500~F~在石街东侧Broad Street（宽街），去11号码头方向顺路。~美式主食~88 Broad St New York
-Leo’s Bagels~利奥贝果~4.3~2811~150-280~W~免费渡轮返程晚时最实用的外带备选，3 Hanover Square（汉诺威广场3号）靠近11号码头。~贝果三明治~3 Hanover Square New York`, `Gansevoort Liberty Market~甘斯沃尔特自由市场~在世贸附近，免费渡轮后需向北折返。
+Broadstone Bar & Kitchen~宽石餐吧~4.7~4319~320-500~F~在石街东侧Broad Street（宽街），去11号码头方向顺路。~美式主食~88 Broad St New York`, `Gansevoort Liberty Market~甘斯沃尔特自由市场~在世贸附近，免费渡轮后需向北折返。
 Eataly~意大利美食市场世贸店~同样向北折返，不作为默认午餐。
 Fraunces Tavern~弗朗西斯酒馆~有历史主题但坐席午餐较慢，若选择需删减丹波区拍照。
 The Bedford Stone Street~贝德福德石街店~地图所查时段16:00才营业，不适合午餐。`);
-  zone('dumbo','布鲁克林桥下轻食与休息',[13],'10月12日 · 13:35—14:45','DUMBO（曼哈顿桥下街区）','DUMBO Brooklyn New York','这里以拍照和短休息为主；想坐下用餐则替换石街午餐，不叠加。14:45左右上桥；体力不足改地铁回酒店。',`
+  zone('dumbo','布鲁克林桥下轻食与休息',[13],'10月12日 · 午餐后至14:30','DUMBO（曼哈顿桥下街区）','DUMBO Brooklyn New York','这里以拍照和短休息为主；若免费船返程晚，Time Out Market（时光美食市场）可替换金融区午餐，不叠加。14:30尚未到 Washington Street & Prospect Street（华盛顿街与普罗斯佩克特街）东北角步道入口，就不再上桥、改地铁回酒店。',`
 Westville Dumbo~西村餐厅布鲁克林店~4.7~3550~320-500~R~蔬菜和主食选择多，正式座位适合走累后休息。~主食配蔬菜~81 Washington St Brooklyn
 Time Out Market New York~纽约时光美食市场~4.5~8560~300-500~W~口味选择多、离河岸近；共享座位，周末不保证马上坐下。~各选一个档口~55 Water St Brooklyn
 Lucky Rabbit Noodles~幸运兔面馆~4.6~1457~300-460~Q~想吃热面可换这里，不必坚持排披萨。~汤面~151 Front St Brooklyn
