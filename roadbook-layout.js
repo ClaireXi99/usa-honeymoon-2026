@@ -33,7 +33,7 @@
     ['nyc','soleil','中央公园、大都会、12:45卡萨莫诺、苏豪区、阿拉丁候选','地铁＋步行＋网约车','续住'],
     ['nyc','soleil','世贸、华尔街、自由女神远观、丹波区、布鲁克林大桥、尼克斯季前赛','地铁＋渡轮＋步行','续住'],
     ['nyc','airport','第五大道、10:30洛克菲勒观景台建议票、高线公园、切尔西市场、17:00去机场酒店','步行＋地铁＋出租车','市区退房寄存；机场酒店入住'],
-    ['nyc',null,'03:30到航站楼、06:30起飞','酒店接驳或出租车＋飞机','凌晨退房；机上过夜']
+    ['nyc',null,'03:15—03:30到航站楼、06:30起飞','确认的直达接驳或预约车＋飞机','凌晨退房；机上过夜']
   ];
   const days=$$('#daily article.day').map((node,i)=>({node,i,city:meta[i][0],hotel:hotels[meta[i][1]],brief:meta[i][2],transport:meta[i][3],transition:meta[i][4],dining:diningDays[i],date:new Date(Date.UTC(2026,8,29+i)).toISOString().slice(0,10)}));
   if(days.length!==16)throw new Error('Expected 16 itinerary days');
@@ -130,7 +130,7 @@
     const nav=make('nav','day-section-nav',`<a href="${href(d)}/stay">住宿</a><a href="${href(d)}/route">时间轴</a><a href="${href(d)}/photos">照片</a><a href="${href(d)}/food">餐厅</a><a href="${href(d)}/cost">费用参考</a>`);nav.setAttribute('aria-label',d.dining.date+'内容导航');
     const total=h?hotelTotal(h):0;
     const mapQuery=h?encodeURIComponent(h.name.split('（')[0]+(h.address!==h.name?' '+h.address.split('（')[0]:'')):'';
-    const stay=make('section','stay-card',h?`<div><span class="label">当晚住宿 · ${d.transition}</span><h4>${h.name}</h4><p>${h.dates}</p>${h.address&&h.address!==h.name?`<p>${h.address}</p>`:''}<p>${h.note}</p>${h.address?`<a href="https://www.google.com/maps/search/?api=1&amp;query=${mapQuery}" target="_blank" rel="noopener">酒店位置 ↗</a>`:''}</div><div class="stay-price">${total?money(total):'金额待补'}<small>${total?'整段住宿合计，不是单晚价':'暂按总预算预留'}</small></div>`:`<div><span class="label">返程</span><h4>凌晨从机场酒店退房</h4><p>03:30前到航站楼，06:30起飞。机上过夜，不再增加酒店费用。</p></div>`);
+    const stay=make('section','stay-card',h?`<div><span class="label">当晚住宿 · ${d.transition}</span><h4>${h.name}</h4><p>${h.dates}</p>${h.address&&h.address!==h.name?`<p>${h.address}</p>`:''}<p>${h.note}</p>${h.address?`<a href="https://www.google.com/maps/search/?api=1&amp;query=${mapQuery}" target="_blank" rel="noopener">酒店位置 ↗</a>`:''}</div><div class="stay-price">${total?money(total):'金额待补'}<small>${total?'整段住宿合计，不是单晚价':'暂按总预算预留'}</small></div>`:`<div><span class="label">返程</span><h4>凌晨从机场酒店退房</h4><p>03:15—03:30到实际出发航站楼，06:30起飞。航司、航班号、机场酒店地址和接驳班次待补。</p></div>`);
     stay.id='stay-'+d.date;body.prepend(nav,stay);
     const route=$('.detail-grid',body);const routeTitle=make('h4','day-section-title','时间轴与交通');routeTitle.id='route-'+d.date;route.before(routeTitle);
     const galleries=$$('.photo-duo',body);const gallery=make('div','photo-duo');
