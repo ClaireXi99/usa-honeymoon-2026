@@ -95,7 +95,7 @@
     const oldNote = inner.querySelector('.dining-note');
     const oldGrid = inner.querySelector('.meal-grid');
     if (oldGrid) {
-      const fixed = [...oldGrid.children].filter(c => /Kali Restaurant|卡利餐厅/.test(c.querySelector('h4')?.textContent || ''));
+      const fixed = [...oldGrid.children].filter(c => /Kali Steak|Kali Restaurant|卡利餐厅|卡利牛排餐厅/.test(c.querySelector('h4')?.textContent || ''));
       const prior = document.createElement('details');
       prior.className = 'restaurant-original';
       prior.innerHTML = '<summary>早餐与既定用餐</summary><p class="restaurant-original-note">原行程的用餐安排。附近餐厅备选用于替换或临时休息，不增加一顿餐。</p>';

@@ -22,7 +22,7 @@
     ['road','colibri','斯坦福、苹果游客中心、月光石海滩','101号公路自驾','退房后开车；海边入住'],
     ['la','loews','圣塔芭芭拉早午餐、好莱坞还车','101号公路＋短途网约车','还车后入住'],
     ['la','loews','好莱坞环球影城','地铁B线＋园区接驳','续住'],
-    ['la','loews','好莱坞标志、天文台、卡利晚餐','网约车','续住'],
+    ['la','loews','星光大道、电影博物馆、好莱坞标志、天文台、卡利晚餐','步行＋网约车','续住'],
     ['la','loews','迪士尼主园','往返网约车','续住'],
     ['la','loews','购物、比弗利山庄、圣塔莫尼卡','网约车','续住；晚上整理行李'],
     ['vegas','flamingo','12:10飞拉斯维加斯、直升机夜景','飞机＋网约车','洛杉矶退房；弗拉明戈入住'],
@@ -108,7 +108,7 @@
     const card=$$('.card',originals[city]).find(c=>($('h3',c)?.textContent||'').startsWith(match));
     if(card){if(!supplements.has(index))supplements.set(index,[]);supplements.get(index).push(card);card.remove();}
   };
-  moveCard('la','Kali Restaurant',4);
+  moveCard('la','Kali Steak',4);
   moveCard('vegas','Battlefield Vegas',10);moveCard('vegas','另外两类场地',10);moveCard('vegas','可以体验',10);
   moveCard('nyc','Viagogo',13);
   const tipRows=$$('#tips tbody tr');
@@ -117,7 +117,7 @@
     (i===7&&r.name.startsWith('10月6日 伯班克'))||
     (i===9&&(r.name.includes('《O》')||r.name.includes('Sphere')))||(i===11&&r.name.startsWith('10月10日 拉斯'))||
     (i===13&&r.name.startsWith('NBA'))||(i===15&&r.name.startsWith('10月14日 纽约')));
-  const extraKeys={3:['10月2日 ·'],4:['卡利餐厅 ·','10月3日 ·'],5:['10月4日 ·'],7:['10月6日 ·'],8:['下羚羊谷'],9:['10月8日 ·'],12:['卡萨莫诺餐厅小费','10月11日 · 阿拉丁','10月11日 · 大都会'],14:['机场前夜酒店','10月13日 · 洛克菲勒观景台']};
+  const extraKeys={3:['10月2日 ·'],4:['卡利牛排餐厅 ·','10月3日 ·'],5:['10月4日 ·'],7:['10月6日 ·'],8:['下羚羊谷'],9:['10月8日 ·'],12:['卡萨莫诺餐厅小费','10月11日 · 阿拉丁','10月11日 · 大都会'],14:['机场前夜酒店','10月13日 · 洛克菲勒观景台']};
   const seatBasics='<p><b>Section / SEC（区域）→ Row（排）→ Seat（座位号）</b>，按这三个字段找位。普通座席不能在同排随意换座；不确定就把电子票给 Ushers（引座员）看。</p><p>只有票面明确写 General Admission / GA（不指定座位入场）或 Unreserved（不指定座位）时，才按该区域规则先到先得；Standing Room Only / SRO（仅站席）不提供座位。GA票上的数字有时只是库存编号，不能当固定座位。<a target="_blank" rel="noopener" href="https://help.ticketmaster.com/hc/en-us/articles/9663297585297-What-is-General-Admission-unreserved-seating-standing-or-Standing-Room-Only">票务平台规则</a></p>';
   const showGuides={
     9:'<h4>Sphere（巨型球《绿野仙踪》）</h4><p>普通座席按区域、排、座位号就座。已购406美元，计人民币2,720.20元；尚未提供电子票座位，不能据金额推断座位。按原行程11:00开场，10:15到场；实际场次看电子票。官方提前45分钟开门，不允许迟到入场，影片中不能拍照录像。<a target="_blank" rel="noopener" href="https://www.thesphere.com/shows/wizard-of-oz-experience">官方入场说明</a></p><h4>O by Cirque du Soleil（太阳马戏《O》）</h4><p>普通座席同样对号入座。已付人民币1,805元（票务商购买，票未完整交付，存在无法交票风险）。向票务商确认两张最终电子票的区域、排和座位号，以及是否相邻；只看到“201区”或座位范围，不能确定你们的两张票。</p><p>若最终是201区：官网把 O排6—9号、P排7—8号列为安全栏杆遮挡座位；不要把“201区还可以”理解为该区所有座位视野相同。这里是字母O排，不是数字0。<a target="_blank" rel="noopener" href="https://bellagio.mgmresorts.com/en/entertainment/o-by-cirque-du-soleil.html">百乐宫官方座位提示</a></p><p>17:45—18:00到剧场，18:30开场；若交付方式为 Will Call（现场取票），官方要求最晚提前1小时取票，须改为17:30前办妥，并提前核对取票人证件要求；不要只拿付款聊天记录进场。</p>',
@@ -145,7 +145,7 @@
     }
     if(i===3||i===5){const link=make('a','reference-jump','乐园票价与通行规则 →');link.href='#la/reference/dated-park-tickets';body.append(link);}
     const cost=make('section','day-related-budget',`<h4>当天费用参考</h4><p>人民币 · 两人。引用分类总预算中的项目，不是额外支出；不作为完整单日总价。</p>`);cost.id='cost-'+d.date;
-    const rows=[...ledgerOnDay(i).map(r=>({name:r.name,price:money(r.amount),note:'已确定金额 · '+r.note})),{name:'日常餐饮',price:budgetRange(d.dining.low,d.dining.high),note:'含税，不含小费'+(i===4?'；卡利另列':'')},...budgetEstimates.filter(r=>(r.category!=='food'||r.name.startsWith('卡利餐厅'))&&(extraKeys[i]||[]).some(k=>r.name.startsWith(k))).map(r=>({name:r.name,price:budgetRange(r.low,r.high),note:'预估 · '+r.note}))];
+    const rows=[...ledgerOnDay(i).map(r=>({name:r.name,price:money(r.amount),note:'已确定金额 · '+r.note})),{name:'日常餐饮',price:budgetRange(d.dining.low,d.dining.high),note:'含税，不含小费'+(i===4?'；卡利晚餐另列':'')},...budgetEstimates.filter(r=>(r.category!=='food'||r.name.startsWith('卡利牛排餐厅'))&&(extraKeys[i]||[]).some(k=>r.name.startsWith(k))).map(r=>({name:r.name,price:budgetRange(r.low,r.high),note:'预估 · '+r.note}))];
     rows.forEach(r=>cost.append(make('div','day-cost-row',`<span>${r.name}<small>${r.note}</small></span><b>${r.price}</b>`)));
     const tip=tipRows.find(row=>$('td b',row)?.textContent===d.dining.date);
     if(tip){const cells=$$('td',tip);cost.append(make('div','day-tip',`<b>当天小费</b><p>${cells[2].innerHTML}</p><p>${cells[3].innerHTML}</p>`));}

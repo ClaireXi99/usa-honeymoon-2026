@@ -96,8 +96,8 @@ Hollywood & Dine~好莱坞食堂~3.0~130~230-380~W~位置方便时兜底，评�
 Buca di Beppo Italian Restaurant~布卡意餐~城市大道园外餐厅，更适合离园后。
 The Front Yard~前院餐厅~不在园内，需要额外交通。
 The Toothsome Chocolate Emporium & Savory Feast Kitchen~齿轮巧克力工坊~园外且用餐较慢，不作园内休息点。`);
-  zone('grove','农夫市场与格罗夫午餐',[4],'10月3日 · 11:00左右','The Original Farmers Market（始祖农夫市集）','6333 W 3rd St Los Angeles','晚餐已有卡利，午餐以主食为主，不点多道大餐。市场公共座位不保证有空位；人多先看座位再决定买哪家。',`
-Noodle Art~一面之缘~4.7~445~200-320~W~小红书有具体探店；在市场内，想吃热面最直接。~炒拉条、牛肉面，口味评价有分歧
+  zone('grove','农夫市集可选小吃',[4],'10月3日 · 10:45左右，停20—30分钟','The Original Farmers Market（始祖农夫市集）','6333 W 3rd St Los Angeles','这站可直接跳过。主线只吃一份小吃，不安排完整午餐；以下其他店仅在主动替换小吃方案时考虑。11:15左右步行约0.6英里去电影学院博物馆。',`
+Bob’s Coffee & Doughnuts~鲍勃咖啡与甜甜圈~4.3~460~70-150~W~市场内柜台小吃，适合短停；不为排队延误博物馆。~甜甜圈和饮品
 Pampas Grill Churrascaria~潘帕斯巴西烤肉~4.5~2205~280-440~W~按重量取餐，可控制份量；肉取太多容易超预算。~烤肉配蔬菜和米饭
 Gott’s LA Farmers Market~戈茨洛杉矶农夫市场店~4.3~62~240-380~W~柜台点单，适合不想挑档口时；评价数量目前不多。~汉堡、薯条
 Du-Pars Restaurant and Bakery~杜帕餐厅与烘焙~4.3~3126~300-460~Q~想要完整桌餐、避免公共座位时备选。~煎饼、三明治
@@ -106,7 +106,7 @@ Savta~萨夫塔餐厅~4.5~161~400-600~R~桌餐升级备选；今晚还有正式�
 Bacari W. 3rd~第三街巴卡里餐厅~主要晚餐取向。
 Sticky Rice~糯米泰餐~不在市场内，需要额外步行。
 Ettore Vino e Cucina~埃托雷意餐酒馆~与晚间卡利安排重复，午餐不再安排慢餐。`);
-  zone('griffith','天文台前山下休息',[4],'10月3日 · 下午，按体力选','Los Feliz（洛斯费利斯街区）','Los Feliz Los Angeles','这是去天文台前的山下替换，不是山顶步行可达的咖啡店。如果已在天文台，不为吃东西下山再上山。下午只点饮品或小食，别影响卡利晚餐。',`
+  zone('griffith','天文台前山下休息',[],'仅作替换方案','Los Feliz（洛斯费利斯街区）','Los Feliz Los Angeles','本日主线在好莱坞湖公园休息，不绕行洛斯费利斯找咖啡店。',`
 Alcove~壁龛咖啡餐厅~4.5~2167~130-260~Q~咖啡和蛋糕适合短休息；价格是两人饮品小食，不是一顿正餐。~咖啡、分享一份蛋糕~1929 Hillhurst Ave Los Angeles
 House of Pies~派屋餐厅~4.3~3999~140-280~Q~想坐下吃甜点的平价替换，不需要点完整晚饭。~派、咖啡~1869 N Vermont Ave Los Angeles
 Fred 62~弗雷德62美式餐厅~4.5~2136~180-320~Q~美式餐厅，可点小食；适合同行者想咸食时。~三明治或分享小食~1850 N Vermont Ave Los Angeles
