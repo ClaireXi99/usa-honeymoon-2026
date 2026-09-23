@@ -5,7 +5,7 @@
     ['2026-09-30','Moonstone Beach Bar & Grill（月光石海滩餐吧）','现场候位','19:15前到店','不接受预约；日落后直接过去，长队则换备选。','https://www.moonstonebeach.com/'],
     ['2026-10-01','Boathouse at Hendry’s Beach（亨德里海滩船屋餐厅）','现场候位','10:30左右登记','不按提前订桌安排；候位超过20分钟就改简餐，12:00离开圣塔芭芭拉。','https://boathousesb.com/'],
     ['2026-10-02','Toadstool Cafe（奇诺比奥咖啡屋）','选定后再订','午餐 · 两人','想吃就现在从环球官方页查看预约；没有合适时段用其他园内餐厅。','https://www.universalstudioshollywood.com/web/en/us/things-to-do/dining/toadstool-cafe'],
-    ['2026-10-03','Kali Restaurant（卡利餐厅）','优先预订','19:45 · 两人','现在查看余位。优先19:45；若订19:30，需要18:35离开天文台。以订位确认邮件为准。','https://resy.com/cities/los-angeles-ca/venues/kali?date=2026-10-03&seats=2'],
+    ['2026-10-03','Kali Restaurant（卡利餐厅）','优先预订','目标19:45 · 两人','尚未确认订位。若订到19:45，18:35日落后立即去天文台官方网约车区，18:40前叫车；19:30场次无法稳定兼顾日落，不作为首选。','https://resy.com/cities/los-angeles-ca/venues/kali?date=2026-10-03&seats=2'],
     ['2026-10-04','Blue Bayou Restaurant（蓝湾餐厅）','选定后再订','园内桌餐三选一','现在查看迪士尼应用余位；需要有效主园门票和同日入园预约。吃柜台快餐则不用订桌。','https://disneyland.disney.go.com/dining/disneyland/blue-bayou-restaurant/'],
     ['2026-10-04','Cafe Orleans（新奥尔良餐厅）','选定后再订','园内桌餐三选一','与蓝湾、康乃馨选一家，不同时预订多顿桌餐；无合适时段就保留快餐。','https://disneyland.disney.go.com/dining/disneyland/cafe-orleans/'],
     ['2026-10-04','Carnation Cafe（康乃馨咖啡馆）','选定后再订','园内桌餐三选一','现在查看应用余位；官方部分餐厅最早提前60天放位，目前已进入预约窗口。','https://disneyland.disney.go.com/dining/disneyland/carnation-cafe/'],

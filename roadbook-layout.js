@@ -10,7 +10,7 @@
   const hotel=(key,name,short,address,dates,note) => ({key,name,short,address,dates,note});
   const hotels={
     anne:hotel('9月29—30日','Queen Anne Hotel（安妮女王酒店）','安妮女王酒店','1590 Sutter Street, San Francisco（旧金山萨特街1590号）','9月29日—30日 · 1晚','已含早餐。抵达先寄存所有行李，取车游览时车内不留物品；停车按酒店实际收费。'),
-    colibri:hotel('9月30日—10月1日','El Colibri Hotel & Spa（雅黛科乐比酒店及水疗中心）','雅黛科乐比酒店','5620 Moonstone Beach Drive, Cambria（坎布里亚月光石海滩路5620号）','9月30日—10月1日 · 1晚','先放行李，再短途开车去海滩。次日早餐提前准备；房间楼层以酒店安排为准。'),
+    colibri:hotel('9月30日—10月1日','El Colibri Hotel & Spa（雅黛科乐比酒店及水疗中心）','雅黛科乐比酒店','5620 Moonstone Beach Drive, Cambria（坎布里亚月光石海滩路5620号）','9月30日—10月1日 · 1晚','先放行李，再从酒店附近步行到木栈道；次日早餐提前准备。酒店称有免费特斯拉充电位，空位以到店为准。'),
     loews:hotel('10月1—6日','Loews Hollywood Hotel（洛伊斯好莱坞酒店）','洛伊斯好莱坞酒店','1755 North Highland Avenue, Los Angeles（洛杉矶北高地大道1755号）','10月1日—6日 · 5晚','不换酒店。房费已含目的地服务费；早餐不含。10月1日还车后带行李叫车到酒店，不拖箱步行。'),
     flamingo:hotel('10月6—8日','Flamingo Las Vegas Hotel & Casino（弗拉明戈拉斯维加斯酒店）','弗拉明戈酒店','3555 South Las Vegas Boulevard（南拉斯维加斯大道3555号）','10月6日—8日 · 2晚','订单已含度假村费，最新扣款状态待核对。10月8日退房后在此寄存，看完巨型球回来取。'),
     fontaine:hotel('10月8—10日','Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）','枫丹白露酒店','Fontainebleau Las Vegas（拉斯维加斯枫丹白露酒店）','10月8日—10日 · 2晚','已报房款3,698.25元，到店另付835.18元。8日下午入住；10日06:45出发去机场。'),

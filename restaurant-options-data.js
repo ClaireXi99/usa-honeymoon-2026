@@ -16,7 +16,7 @@
     rejected.trim().split('\n').forEach(line=>{const [name,zh,reason]=line.split('~');candidates.push({name,zh,reason,selected:false,mapsUrl:maps(`${name} ${area}`)});});
     zones.push({id,title,dates,window,anchor,note,area,mapsUrl:maps(`restaurants ${area}`),candidates});
   }
-  zone('ferry','轮渡大楼午餐',[0],'9月29日 · 14:10—14:45','Ferry Building（轮渡大楼）','Ferry Building San Francisco','只留35分钟时优先柜台简餐；海鲜桌餐需要延长至60—75分钟，并相应减少下午逛街时间。',`
+  zone('ferry','轮渡大楼午餐',[0],'9月29日 · 14:20—15:05','Ferry Building Marketplace（渡轮大楼市集）','Ferry Building San Francisco','主线为戈茨柜台简餐，然后同楼只选一家小店；海鲜桌餐需60—75分钟，须删逛店或缆车。',`
 Gott’s SF Ferry Building~戈茨轮渡大楼店~4.3~2580~240-380~W~就在轮渡大楼，点餐直接，适合落地第一餐。~汉堡、薯条；饮料按需~1 Ferry Building San Francisco
 Hog Island Oyster Co.~霍格岛生蚝餐厅~4.6~4166~450-800~W~海鲜有地方特色；排队超过20分钟不等，避免压缩金门大桥时间。~蛤蜊浓汤、生蚝；生食按个人接受度选择~1 Ferry Building San Francisco
 Perry’s Embarcadero~佩里滨海大道店~4.2~1212~320-480~R~想坐下吃完整午餐时选；不是轮渡大楼内档口。~汉堡或三明治~155 Steuart St San Francisco
@@ -26,7 +26,7 @@ La Mar Cocina Peruana San Francisco~拉玛秘鲁餐厅~4.5~5013~900-1500~R~升�
 Waterbar Restaurant~水吧海鲜餐厅~价位高，落地短午餐不优先。
 Boulevard~林荫大道餐厅~主要是晚餐时段，不适合14点午餐。
 Angler~垂钓者海鲜餐厅~费用和用餐时间都超过本段简餐需要。`);
-  zone('japantown','日本城晚餐',[0],'9月29日 · 19:45左右','Queen Anne Hotel（安妮女王酒店）返回方向','Japantown San Francisco','当天飞行加观光后，不为热门店长时间站着排队。主食店候位超过20分钟，直接换同区下一家。',`
+  zone('japantown','日本城晚餐',[0],'9月29日 · 19:30左右','Queen Anne Hotel（安妮女王酒店）步行方向','Japantown San Francisco','先把车停回酒店再步行前往；当天飞行加观光后，不为热门店长时间站着排队。主食店候位超过20分钟，直接换同区下一家。',`
 HINODEYA Ramen Japantown~日出屋日本城拉面~4.5~3323~280-400~Q~热汤面比长桌餐更适合第一晚；官网列周二营业至22点。~高汤拉面~1737 Buchanan St San Francisco
 Udon Mugizo - SF~麦藏乌冬面旧金山店~4.7~2544~300-440~Q~评分高，小红书有明确探店；也有排队超过一小时的记录，不硬等。~明太子奶油乌冬或汤乌冬~1581 Webster St San Francisco
 Kui Shin Bo~贪吃坊日料~4.4~886~220-350~Q~同一商场范围内的平价替换，比专门开车找店省事。~定食、面饭~22 Peace Plaza San Francisco
