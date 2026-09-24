@@ -1,0 +1,11 @@
+.sf-day2-guide .sf-route-stops{padding-bottom:13px}
+.sf-day2-choice{padding:15px 18px;border-bottom:1px solid var(--line);background:#f8f9f5}
+.sf-day2-choice h5{margin:0 0 9px;font-size:14px}
+.sf-day2-choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sf-day2-choice-card{padding:12px 13px;border:1px solid #cbd9db;border-radius:12px;background:#fff}
+.sf-day2-choice-card.optional{border-color:#dba37d;background:#fff8f0}
+.sf-day2-choice-card b{font-size:13px}.sf-day2-choice-card p{font-size:12px;color:var(--muted);margin:5px 0 10px}
+.sf-day2-choice-card a{display:inline-block;padding:6px 10px;border-radius:8px;background:#20566e;color:#fff;text-decoration:none;font-size:12px;font-weight:700}
+.sf-day2-choice-card.optional a{background:#ab542b}
+.sf-day2-choice>p{font-size:12px;color:var(--muted);margin:10px 0 0}
+@media(max-width:700px){.sf-day2-choice{padding:13px 12px}.sf-day2-choice-grid{grid-template-columns:1fr}}
