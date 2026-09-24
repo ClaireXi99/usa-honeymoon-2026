@@ -114,6 +114,7 @@
   const tipRows=$$('#tips tbody tr');
   const ledgerOnDay=i=>budgetLedger.filter(r=>
     (i===0&&(r.name.startsWith('9月29日 上海')||r.category==='美国租车'))||
+    (i===4&&r.name.startsWith('10月3日 · 学院电影博物馆'))||
     (i===7&&r.name.startsWith('10月6日 伯班克'))||
     (i===9&&(r.name.includes('《O》')||r.name.includes('Sphere')))||(i===11&&r.name.startsWith('10月10日 拉斯'))||
     (i===13&&r.name.startsWith('NBA'))||(i===15&&r.name.startsWith('10月14日 纽约')));
