@@ -24,9 +24,10 @@
     .topbar{position:sticky;top:0;z-index:30;background:rgba(18,40,58,.96);color:#fff;border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px)}
     .topbar .shell{display:flex;align-items:center;gap:20px;min-height:66px}
     .brand{white-space:nowrap;font-weight:800}.brand small{display:block;color:#b9cad7;font-size:10px;letter-spacing:.13em}
-    .tabs{display:flex;gap:5px;overflow:auto;padding:8px 0;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+    .tabs{display:flex;gap:5px;overflow:auto;padding:8px 0;scrollbar-width:none;flex:1;min-width:0}.tabs::-webkit-scrollbar{display:none}
     .tab{border:0;background:transparent;color:#c2d1dc;border-radius:999px;padding:9px 13px;cursor:pointer;white-space:nowrap;font-size:13px;font-weight:750}
     .tab.active{background:var(--orange);color:#fff}
+    .photo-special-link{flex:0 0 auto;color:#fff;text-decoration:none;font-size:12px;font-weight:800;background:#ef7547;border-radius:999px;padding:9px 13px;white-space:nowrap}
     .hero{background:linear-gradient(135deg,#102436,#1b5062);color:#fff;padding:54px 0 40px}
     .hero-grid{display:grid;grid-template-columns:1.35fr .75fr;gap:32px;align-items:end}
     .eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#ffca9d}
@@ -95,6 +96,7 @@
         <button class="tab" data-tab="book">交通·采购·安全</button>
         <button class="tab" data-tab="budget">费用预算</button>
       </div>
+      <a class="photo-special-link" href="photo-special/">摄影特辑 ↗</a>
     </div>
   </nav>
 
