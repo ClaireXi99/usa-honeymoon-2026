@@ -9,7 +9,6 @@
   const localDate = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
   let activeDay = days.find(d => d.date === localDate)?.date || days[0]?.date;
   let activeView = 'days';
-  let activeFilter = 'all';
   const $ = (selector) => document.querySelector(selector);
   const el = (tag, className, content) => { const node = document.createElement(tag); if (className) node.className = className; if (content != null) node.textContent = content; return node; };
   const persist = () => {
@@ -46,20 +45,25 @@
     const panel = $('#day-panel'); panel.replaceChildren();
     const head = el('div','day-heading');
     const title = el('div'); title.append(el('span','kicker',`${fmtDate(d.date)} · ${d.city}`),el('h3','',d.title),el('p','',d.priority));
+    if (d.prompt) title.append(el('p','day-prompt',`今天留下：${d.prompt}`));
+    if (d.must?.length) title.append(el('p','day-must',`最少拍 ${d.must.length} 条：${d.must.join(' · ')}`));
     const done = d.shots.filter(s => saved.shots[s[0]]?.done).length;
-    head.append(title,el('span','progress',`${done} / ${d.shots.length} 已拍`)); panel.append(head);
+    const essentialDone = (d.must || []).filter(id => saved.shots[id]?.done).length;
+    head.append(title,el('span','progress',d.must?.length ? `关键 ${essentialDone} / ${d.must.length} · 全部 ${done} / ${d.shots.length}` : '今日零必拍')); panel.append(head);
     const list = el('div','shot-list');
-    for (const s of d.shots) {
+    for (const s of [...d.shots].sort((a,b) => Number(d.must?.includes(b[0])) - Number(d.must?.includes(a[0])))) {
       const [id,place,action,method,tags] = s;
       const state = saved.shots[id] || {};
-      const card = el('article',`shot-card${state.done?' complete':''}`);
-      const top = el('div','shot-top'); top.append(el('span','shot-id',id),el('span','shot-place',place)); card.append(top);
+      const card = el('article',`shot-card${state.done?' complete':''}${d.must?.includes(id)?' essential':''}`);
+      const top = el('div','shot-top'); top.append(el('span','shot-id',id),el('span','shot-place',place));
+      if (d.must?.includes(id)) top.append(el('span','must-label','先拍'));
+      card.append(top);
       card.append(el('h4','',action),el('p','shot-method',method));
       const tagRow = el('div','tags');
       for (const tag of tags.split(',')) {
         const tagButton = el('button','tag',`# ${tag}`); tagButton.type='button';
         tagButton.title=`查看“${tag}”成片主题`;
-        tagButton.addEventListener('click', () => { showView('themes'); activeFilter='all'; renderFilter(); renderThemes(tag); });
+        tagButton.addEventListener('click', () => { showView('themes'); renderThemes(tag); });
         tagRow.append(tagButton);
       }
       card.append(tagRow);
@@ -77,20 +81,23 @@
     if(index>0){const prev=el('button','','← 前一天');prev.type='button';prev.onclick=()=>{activeDay=days[index-1].date;renderTabs();renderDay();};paging.append(prev);}
     if(index<days.length-1){const next=el('button','','后一天 →');next.type='button';next.onclick=()=>{activeDay=days[index+1].date;renderTabs();renderDay();};paging.append(next);} panel.append(paging);
   }
-  function renderFilter(){document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===activeFilter));}
-  document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{activeFilter=b.dataset.filter;renderFilter();renderThemes();}));
   function renderThemes(focus){
     const grid=$('#theme-grid');grid.replaceChildren();
-    for(const t of themes.filter(x=>activeFilter==='all'||x.tier===activeFilter)){
+    for(const t of themes){
       const matches=flat.filter(x=>x.tags.includes(t.id));
       const card=el('article',`theme-card${focus===t.id?' focused':''}`);card.id=`theme-${t.id}`;
-      const meta=el('div','theme-meta');meta.append(el('span',t.tier==='主片'?'tier core':'tier',t.tier),el('span','',t.length));card.append(meta);
+      const meta=el('div','theme-meta');meta.append(el('span','tier core',t.label),el('span','',t.length));card.append(meta);
       card.append(el('h3','',t.name),el('p','',t.idea));
+      if (t.references?.length) {
+        const refs=el('div','theme-refs');refs.append(el('span','','看抖音参考 · '));
+        for(const ref of t.references){const a=el('a','',ref[0]);a.href=ref[1];a.target='_blank';a.rel='noopener noreferrer';refs.append(a);}
+        card.append(refs);
+      }
       const info=el('dl');
-      for(const [name,value] of [['要拍',t.need],['我会怎么剪',t.edit]]){info.append(el('dt','',name),el('dd','',value));}
+      for(const [name,value] of [['开场',t.hook],['情绪线',t.beats],['配乐',t.music],['现场拍',t.need],['后期剪',t.edit]]){info.append(el('dt','',name),el('dd','',value));}
       card.append(info);
-      const coverage=el('div','coverage');coverage.append(el('b','',`${matches.length} 个镜头 · ${new Set(matches.map(x=>x.day.date)).size} 天`));
-      const ids=el('small','',matches.map(x=>x.shot[0]).join(' · '));coverage.append(ids);card.append(coverage);grid.append(card);
+      const coverage=el('div','coverage');coverage.append(el('b','',`可复用素材池：${matches.length} 条 · ${new Set(matches.map(x=>x.day.date)).size} 天（不用全拍）`));
+      const ids=el('small','',`优先镜头：${t.anchor.join(' · ')}`);coverage.append(ids);card.append(coverage);grid.append(card);
     }
     if(focus) requestAnimationFrame(()=>$('#theme-'+CSS.escape(focus))?.scrollIntoView({block:'center',behavior:'smooth'}));
   }
@@ -99,5 +106,5 @@
     const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
     const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download='摄影特辑-拍摄记录.json';link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);
   });
-  renderTabs();renderDay();renderFilter();
+  renderTabs();renderDay();
 })();
