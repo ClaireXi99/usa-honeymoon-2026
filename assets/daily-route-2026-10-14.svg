@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 636" role="img" aria-label="2026-10-14 纽约 → 达拉斯转机 → 上海 路线顺序图">
+<rect width="760" height="100%" fill="#f8f5ef"/>
+<rect x="0" y="0" width="760" height="112" fill="#173444"/>
+<text x="36" y="43" fill="#c8dfda" font-size="18" font-family="sans-serif" font-weight="700">2026-10-14 · 机场接驳与两段航班</text>
+<text x="36" y="84" fill="white" font-size="28" font-family="sans-serif" font-weight="700">纽约 → 达拉斯转机 → 上海</text>
+<line x1="70" y1="173" x2="70" y2="267" stroke="#546fa8" stroke-width="5"/>
+<path d="M 62 255 L 70 266 L 78 255" fill="none" stroke="#546fa8" stroke-width="4"/>
+<text x="111" y="248" fill="#546fa8" font-size="17" font-family="sans-serif" font-weight="700">接驳</text>
+<rect x="111" y="128" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="155" r="22" fill="#c5743d" stroke="white" stroke-width="4"/>
+<text x="70" y="162" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">1</text>
+<text x="130" y="163" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">JFK 附近酒店 · 待订 · 待订</text>
+<line x1="70" y1="285" x2="70" y2="379" stroke="#365b93" stroke-width="5"/>
+<path d="M 62 367 L 70 378 L 78 367" fill="none" stroke="#365b93" stroke-width="4"/>
+<text x="111" y="360" fill="#365b93" font-size="17" font-family="sans-serif" font-weight="700">航班</text>
+<rect x="111" y="240" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="267" r="22" fill="#23646b" stroke="white" stroke-width="4"/>
+<text x="70" y="274" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">2</text>
+<text x="130" y="275" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">JFK Terminal 8</text>
+<line x1="70" y1="397" x2="70" y2="491" stroke="#365b93" stroke-width="5"/>
+<path d="M 62 479 L 70 490 L 78 479" fill="none" stroke="#365b93" stroke-width="4"/>
+<text x="111" y="472" fill="#365b93" font-size="17" font-family="sans-serif" font-weight="700">航班</text>
+<rect x="111" y="352" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="379" r="22" fill="#23646b" stroke="white" stroke-width="4"/>
+<text x="70" y="386" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">3</text>
+<text x="130" y="387" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">DFW 转机</text>
+<rect x="111" y="464" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="491" r="22" fill="#23646b" stroke="white" stroke-width="4"/>
+<text x="70" y="498" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">4</text>
+<text x="130" y="499" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">PVG Terminal 2</text>
+<text x="36" y="611" fill="#657781" font-size="18" font-family="sans-serif">顺序示意 · 非地理地图 · 实际地面导航请用下方分段链接</text>
+</svg>

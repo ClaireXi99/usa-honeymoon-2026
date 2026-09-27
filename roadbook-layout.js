@@ -134,10 +134,12 @@
     const stay=make('section','stay-card',h?`<div><span class="label">当晚住宿 · ${d.transition}</span><h4>${h.name}</h4><p>${h.dates}</p>${h.address&&h.address!==h.name?`<p>${h.address}</p>`:''}<p>${h.note}</p>${h.address?`<a href="https://www.google.com/maps/search/?api=1&amp;query=${mapQuery}" target="_blank" rel="noopener">酒店位置 ↗</a>`:''}</div><div class="stay-price">${total?money(total):'金额待补'}<small>${total?'整段住宿合计，不是单晚价':'暂按总预算预留'}</small></div>`:`<div><span class="label">返程</span><h4>凌晨从机场酒店退房</h4><p>03:15—03:30到 JFK Terminal 8（肯尼迪机场8号航站楼）；06:30 AA475（美国航空）飞 DFW（达拉斯），10:40换乘 AA127（美国航空）飞上海。10月15日15:20到 PVG Terminal 2（浦东机场2号航站楼）。机场酒店仍待订。</p></div>`);
     stay.id='stay-'+d.date;body.prepend(nav,stay);
     const route=$('.detail-grid',body);const routeTitle=make('h4','day-section-title','时间轴与交通');routeTitle.id='route-'+d.date;route.before(routeTitle);
-    const galleries=$$('.photo-duo',body);const gallery=make('div','photo-duo');
-    galleries.forEach(g=>{while(g.firstChild)gallery.append(g.firstChild);g.remove();});
-    const photosTitle=make('h4','day-section-title','照片与机位');photosTitle.id='photos-'+d.date;route.after(photosTitle,gallery);
-    if(!gallery.children.length)gallery.replaceWith(make('p','empty-photos','暂无独立照片参考。'));
+    $$('.photo-duo',body).forEach(g=>g.remove());
+    const photosTitle=make('h4','day-section-title','拍照参考');photosTitle.id='photos-'+d.date;
+    const dayKey=d.date.slice(5).replace('-','');
+    const guideEntry=make('a','photo-guide-entry',`<span>${d.dining.date} · ${cities[d.city][0]}</span><b>查看当天拍照参考 <span aria-hidden="true">↗</span></b>`);
+    guideEntry.href='photo-guide.html?v=20260927f#day-'+dayKey;
+    route.after(photosTitle,guideEntry);
     $$('img',node).forEach(img=>{img.loading='lazy';img.decoding='async';});
     const dining=$('.daily-dining',node);dining.open=true;dining.id='food-'+d.date;body.append(dining);
     if(showGuides[i]){const seats=make('section','show-seating card',`<h3>入场与座位</h3>${seatBasics}${showGuides[i]}`);seats.id='seating-'+d.date;body.append(seats);}

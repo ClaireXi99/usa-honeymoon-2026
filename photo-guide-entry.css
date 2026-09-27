@@ -1,0 +1,5 @@
+.photo-guide-entry{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:11px 0 18px;padding:13px 16px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;font-size:13px}
+.photo-guide-entry:hover{border-color:var(--sea)}
+.photo-guide-entry:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.photo-guide-entry b{color:var(--sea);font-size:12px;white-space:nowrap}
+@media(max-width:560px){.photo-guide-entry{align-items:flex-start;flex-direction:column;gap:6px;padding:11px 13px}}

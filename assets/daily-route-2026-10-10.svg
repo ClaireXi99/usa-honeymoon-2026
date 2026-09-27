@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 860" role="img" aria-label="2026-10-10 拉斯维加斯 → 纽约 路线顺序图">
+<rect width="760" height="100%" fill="#f8f5ef"/>
+<rect x="0" y="0" width="760" height="112" fill="#173444"/>
+<text x="36" y="43" fill="#c8dfda" font-size="18" font-family="sans-serif" font-weight="700">2026-10-10 · 网约车 · 航班 · 轨道交通</text>
+<text x="36" y="84" fill="white" font-size="28" font-family="sans-serif" font-weight="700">拉斯维加斯 → 纽约</text>
+<line x1="70" y1="173" x2="70" y2="267" stroke="#287c79" stroke-width="5"/>
+<path d="M 62 255 L 70 266 L 78 255" fill="none" stroke="#287c79" stroke-width="4"/>
+<text x="111" y="248" fill="#287c79" font-size="17" font-family="sans-serif" font-weight="700">驾车 / 叫车</text>
+<rect x="111" y="128" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="155" r="22" fill="#23646b" stroke="white" stroke-width="4"/>
+<text x="70" y="162" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">1</text>
+<text x="130" y="163" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">Fontainebleau 酒店</text>
+<line x1="70" y1="285" x2="70" y2="379" stroke="#365b93" stroke-width="5"/>
+<path d="M 62 367 L 70 378 L 78 367" fill="none" stroke="#365b93" stroke-width="4"/>
+<text x="111" y="360" fill="#365b93" font-size="17" font-family="sans-serif" font-weight="700">航班</text>
+<rect x="111" y="240" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="267" r="22" fill="#23646b" stroke="white" stroke-width="4"/>
+<text x="70" y="274" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">2</text>
+<text x="130" y="275" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">LAS 机场</text>
+<line x1="70" y1="397" x2="70" y2="491" stroke="#546fa8" stroke-width="5"/>
+<path d="M 62 479 L 70 490 L 78 479" fill="none" stroke="#546fa8" stroke-width="4"/>
+<text x="111" y="472" fill="#546fa8" font-size="17" font-family="sans-serif" font-weight="700">公共交通</text>
+<rect x="111" y="352" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="379" r="22" fill="#23646b" stroke="white" stroke-width="4"/>
+<text x="70" y="386" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">3</text>
+<text x="130" y="387" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">JFK 机场</text>
+<line x1="70" y1="509" x2="70" y2="603" stroke="#546fa8" stroke-width="5"/>
+<path d="M 62 591 L 70 602 L 78 591" fill="none" stroke="#546fa8" stroke-width="4"/>
+<text x="111" y="584" fill="#546fa8" font-size="17" font-family="sans-serif" font-weight="700">公共交通</text>
+<rect x="111" y="464" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="491" r="22" fill="#23646b" stroke="white" stroke-width="4"/>
+<text x="70" y="498" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">4</text>
+<text x="130" y="499" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">Jamaica 站</text>
+<line x1="70" y1="621" x2="70" y2="715" stroke="#287c79" stroke-width="5"/>
+<path d="M 62 703 L 70 714 L 78 703" fill="none" stroke="#287c79" stroke-width="4"/>
+<text x="111" y="696" fill="#287c79" font-size="17" font-family="sans-serif" font-weight="700">驾车 / 叫车</text>
+<rect x="111" y="576" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="603" r="22" fill="#23646b" stroke="white" stroke-width="4"/>
+<text x="70" y="610" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">5</text>
+<text x="130" y="611" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">Penn / Moynihan 站</text>
+<rect x="111" y="688" width="604" height="58" rx="13" fill="white" stroke="#d8ddd9"/>
+<circle cx="70" cy="715" r="22" fill="#23646b" stroke="white" stroke-width="4"/>
+<text x="70" y="722" text-anchor="middle" fill="white" font-size="20" font-family="sans-serif" font-weight="700">6</text>
+<text x="130" y="723" fill="#173444" font-size="23" font-family="sans-serif" font-weight="700">Le Soleil 酒店</text>
+<text x="36" y="835" fill="#657781" font-size="18" font-family="sans-serif">顺序示意 · 非地理地图 · 实际地面导航请用下方分段链接</text>
+</svg>

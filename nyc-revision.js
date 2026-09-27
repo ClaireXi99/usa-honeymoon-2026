@@ -58,36 +58,18 @@
 
   document.querySelector('#date-panel-2026-10-13 .stay-card').insertAdjacentHTML('afterend',`<section class="card" style="margin:16px 0"><span class="badge orange">待订 · 10月13—14日 · 两人一晚</span><h4>JFK（肯尼迪机场）酒店对比</h4><p>2026年9月23日 Booking.com（缤客）含税、可取消房型价格快照；实际价格与取消条款以付款页为准。早班机不为含早早餐加价。</p><div class="table-wrap"><table><thead><tr><th>酒店</th><th>可取消总价</th><th>凌晨去T8</th></tr></thead><tbody><tr><td><a target="_blank" rel="noopener" href="https://www.booking.com/hotel/us/courtyard-nyc-jfk-airport.html?checkin=2026-10-13&amp;checkout=2026-10-14&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0">Courtyard by Marriott New York JFK Airport（纽约肯尼迪机场万怡酒店）</a> · 评分7.5</td><td>约¥2,015</td><td>预订页称24小时接驳、离店每半小时送指定航站楼；预订前确认02:30与T8。优先比较。</td></tr><tr><td><a target="_blank" rel="noopener" href="https://www.booking.com/hotel/us/hampton-inn-ny-jfk.html?checkin=2026-10-13&amp;checkout=2026-10-14&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0">Hampton Inn NY-JFK（纽约肯尼迪机场欢朋酒店）</a> · 评分7.2</td><td>约¥1,854</td><td>官网接驳到 Federal Circle（联邦环路站），再转免费 AirTrain（机场捷运）。</td></tr><tr><td><a target="_blank" rel="noopener" href="https://www.booking.com/hotel/us/marriott-new-york-jfk-airport.html?checkin=2026-10-13&amp;checkout=2026-10-14&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0">Marriott New York JFK Airport（纽约肯尼迪机场万豪酒店）</a> · 评分8.2</td><td>约¥2,400</td><td>设施评分较高；官网班车信息以 Federal Circle（联邦环路站）为主，直达T8需确认。</td></tr><tr><td><a target="_blank" rel="noopener" href="https://www.booking.com/hotel/us/twa.html?checkin=2026-10-13&amp;checkout=2026-10-14&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0">TWA Hotel（环球航空酒店）</a> · 评分7.7</td><td>约¥2,664</td><td>连通 Terminal 5（5号航站楼），去T8仍需乘免费 AirTrain（机场捷运）。</td></tr></tbody></table></div><p>本行程优先万怡的可取消房型：价格比TWA低，且若凌晨直达T8班车确认，可以少一次换乘。若直达班车无法确认，改用预约车。</p></section>`);
 
-  // Move the existing real-person DUMBO examples to the new Brooklyn day.
-  const first=document.getElementById('date-panel-2026-10-11');
-  const second=document.getElementById('date-panel-2026-10-12');
-  const brooklynPhotos=second.querySelector('.photo-duo');
-  for(const figure of first.querySelectorAll('.photo-duo figure')){
-    if(figure.querySelector('img[src*="nyc-dumbo"],img[src*="nyc-carousel"]'))brooklynPhotos.append(figure);
-  }
-  for(const figure of second.querySelectorAll('.photo-duo figure')){
-    if(figure.querySelector('img[src*="nyc-central"]'))first.querySelector('.photo-duo').append(figure);
-  }
-  for(const panel of [first,second]){
-    const seen=new Set();
-    for(const figure of panel.querySelectorAll('.photo-duo figure')){
-      const src=figure.querySelector('img')?.getAttribute('src');
-      if(seen.has(src))figure.remove();else seen.add(src);
-    }
-  }
-
-  // The overview's “逐日执行” tab has a second copy of these three days.
-  // Keep its timeline, notes and photo order identical to the city/date tabs.
+  // The city/date panels are canonical; the photo examples live in photo-guide.html.
+  // Older layouts may still contain full day copies in the overview.
   for(const date of ['2026-10-11','2026-10-12','2026-10-13']){
     const label=`${Number(date.slice(-2))}日`;
     const daily=[...document.querySelectorAll('#daily article.day')].find(el=>el.querySelector('.day-head h3')?.textContent.startsWith(`10月${label}`));
     const city=document.getElementById('date-panel-'+date);
-    if(!daily||!city)throw new Error('Missing daily or city copy for '+date);
+    if(!city)throw new Error('Missing city copy for '+date);
+    if(!daily)continue;
     daily.querySelector('.day-head h3').textContent=city.querySelector('.day-head h3').textContent;
     daily.querySelector('.day-head p').textContent=city.querySelector('.day-head p').textContent;
     daily.querySelector('.timeline').innerHTML=city.querySelector('.timeline').innerHTML;
     daily.querySelector('.ops').innerHTML=city.querySelector('.ops').innerHTML;
-    daily.querySelector('.photo-duo').innerHTML=city.querySelector('.photo-duo').innerHTML;
   }
 
   const body=document.querySelector('#nyc .reference-body');

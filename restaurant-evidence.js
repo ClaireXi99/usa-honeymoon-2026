@@ -3,7 +3,7 @@
   const zones=window.restaurantResearch.zones;
   const find=(z,n)=>zones.find(x=>x.id===z).candidates.find(c=>c.name.includes(n));
   const policy=(z,n,mode,official,text,advance,release='官网未明确统一放位周期。')=>{
-    const c=find(z,n);c.official=official;c.booking={mode,text,advance,release,source:official};
+    const c=find(z,n);if(!c)return;c.official=official;c.booking={mode,text,advance,release,source:official};
   };
   policy('ferry','Gott','walkin','https://www.gotts.com/faq/','官网：小团体先到先坐；两人无需订桌。','无需提前预约；到店点单。');
   policy('ferry','Hog','walkin','https://hogislandoysters.com/restaurants/san-francisco/','官网明确不接受预约。','无需提前几天；当天长队就换同楼简餐。');
